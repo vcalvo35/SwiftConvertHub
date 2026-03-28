@@ -691,3 +691,30 @@ a:hover { text-decoration: underline; }
 .related-articles ul { list-style: none; padding: 0; }
 .related-articles li { margin-bottom: 8px; }
 .related-articles a { font-size: .875rem; color: var(--primary); }
+
+/* =========================================================
+   Lang button (EN/ES toggle)
+   ========================================================= */
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 11px;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+  line-height: 1;
+  min-width: 38px;
+}
+.lang-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
