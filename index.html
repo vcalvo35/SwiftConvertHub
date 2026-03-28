@@ -69,24 +69,50 @@
         <a href="#length" class="btn-primary" data-i18n="hero_cta">&#9889; Start Converting</a>
         <a href="/about.html" class="btn-secondary" data-i18n="hero_cta2">Learn More</a>
       </div>
-      <div class="hero-stats fade-up fade-up-d3">
-        <div class="stat">
-          <div class="stat-num">5</div>
-          <div class="stat-label" data-i18n="stat1_label">Categories</div>
+
+      <!-- Stats checkmark bar -->
+      <div class="stats-bar fade-up fade-up-d3">
+        <div class="stat-check">
+          <span class="stat-check-icon">&#10003;</span>
+          <span><strong>5</strong> <span data-i18n="stat1_label">Categories</span></span>
         </div>
-        <div class="stat">
-          <div class="stat-num">50+</div>
-          <div class="stat-label" data-i18n="stat2_label">Unit Types</div>
+        <div class="stat-check">
+          <span class="stat-check-icon">&#10003;</span>
+          <span><strong>50+</strong> <span data-i18n="stat2_label">Unit Types</span></span>
         </div>
-        <div class="stat">
-          <div class="stat-num">100%</div>
-          <div class="stat-label" data-i18n="stat3_label">Free Forever</div>
+        <div class="stat-check">
+          <span class="stat-check-icon">&#10003;</span>
+          <span><strong>100%</strong> <span data-i18n="stat3_label">Free Forever</span></span>
         </div>
-        <div class="stat">
-          <div class="stat-num">0</div>
-          <div class="stat-label" data-i18n="stat4_label">No Login</div>
+        <div class="stat-check">
+          <span class="stat-check-icon">&#10003;</span>
+          <span data-i18n="stat4_label">No Login</span>
         </div>
       </div>
+    </div>
+
+    <!-- Category showcase tiles (flush bottom of hero) -->
+    <div class="cat-showcase fade-up" role="navigation" aria-label="Converter categories">
+      <a href="#length" class="cat-tile cat-length">
+        <span class="cat-tile-icon">&#128207;</span>
+        <span class="cat-tile-name" data-i18n="cat_length">Length</span>
+      </a>
+      <a href="#weight" class="cat-tile cat-weight">
+        <span class="cat-tile-icon">&#9878;&#65039;</span>
+        <span class="cat-tile-name" data-i18n="cat_weight">Weight</span>
+      </a>
+      <a href="#temperature" class="cat-tile cat-temp">
+        <span class="cat-tile-icon">&#127777;&#65039;</span>
+        <span class="cat-tile-name" data-i18n="cat_temp">Temperature</span>
+      </a>
+      <a href="#storage" class="cat-tile cat-storage">
+        <span class="cat-tile-icon">&#128190;</span>
+        <span class="cat-tile-name" data-i18n="cat_storage">Storage</span>
+      </a>
+      <a href="#binary" class="cat-tile cat-binary">
+        <span class="cat-tile-icon">&#128162;</span>
+        <span class="cat-tile-name" data-i18n="cat_binary">Binary</span>
+      </a>
     </div>
   </header>
 
@@ -112,35 +138,38 @@
         </div>
 
         <div class="converter-card">
-          <div class="card-header">
-            <div class="card-icon length">&#128207;</div>
-            <div>
-              <div class="card-title" data-i18n="card_length_title">Length &amp; Distance</div>
-              <div class="card-subtitle" data-i18n="card_length_sub">Metric &#8596; Imperial &#8596; Astronomical</div>
+          <div class="converter-card-accent"></div>
+          <div class="converter-card-inner">
+            <div class="card-header">
+              <div class="card-icon length">&#128207;</div>
+              <div>
+                <div class="card-title" data-i18n="card_length_title">Length &amp; Distance</div>
+                <div class="card-subtitle" data-i18n="card_length_sub">Metric &#8596; Imperial &#8596; Astronomical</div>
+              </div>
             </div>
-          </div>
-          <div class="converter-ui">
-            <div class="converter-field">
-              <label for="len-from" data-i18n="label_from">From</label>
-              <select id="len-from" onchange="convertLength()"></select>
-              <label for="len-val" style="margin-top:10px" data-i18n="label_value">Value</label>
-              <input type="number" id="len-val" data-i18n-placeholder="ph_enter_value" placeholder="Enter value" oninput="convertLength()" />
+            <div class="converter-ui">
+              <div class="converter-field">
+                <label for="len-from" data-i18n="label_from">From</label>
+                <select id="len-from" onchange="convertLength()"></select>
+                <label for="len-val" style="margin-top:10px" data-i18n="label_value">Value</label>
+                <input type="number" id="len-val" data-i18n-placeholder="ph_enter_value" placeholder="Enter value" oninput="convertLength()" />
+              </div>
+              <button class="swap-btn" onclick="swapLength()" title="Swap units" aria-label="Swap units">&#8644;</button>
+              <div class="converter-field">
+                <label for="len-to" data-i18n="label_to">To</label>
+                <select id="len-to" onchange="convertLength()"></select>
+                <label for="len-result" style="margin-top:10px" data-i18n="label_result">Result</label>
+                <input type="text" id="len-result" readonly data-i18n-placeholder="ph_result" placeholder="Result" />
+              </div>
             </div>
-            <button class="swap-btn" onclick="swapLength()" title="Swap units" aria-label="Swap units">&#8644;</button>
-            <div class="converter-field">
-              <label for="len-to" data-i18n="label_to">To</label>
-              <select id="len-to" onchange="convertLength()"></select>
-              <label for="len-result" style="margin-top:10px" data-i18n="label_result">Result</label>
-              <input type="text" id="len-result" readonly data-i18n-placeholder="ph_result" placeholder="Result" />
+            <div class="quick-list" aria-label="Quick conversions">
+              <button class="quick-chip" onclick="quickConvert('len','kilometer','mile',1)">1 km &#8594; miles</button>
+              <button class="quick-chip" onclick="quickConvert('len','mile','kilometer',1)">1 mile &#8594; km</button>
+              <button class="quick-chip" onclick="quickConvert('len','foot','meter',1)">1 ft &#8594; m</button>
+              <button class="quick-chip" onclick="quickConvert('len','meter','foot',1)">1 m &#8594; ft</button>
+              <button class="quick-chip" onclick="quickConvert('len','inch','centimeter',1)">1 in &#8594; cm</button>
+              <button class="quick-chip" onclick="quickConvert('len','meter','inch',1)">1 m &#8594; in</button>
             </div>
-          </div>
-          <div class="quick-list" aria-label="Quick conversions">
-            <button class="quick-chip" onclick="quickConvert('len','kilometer','mile',1)">1 km &#8594; miles</button>
-            <button class="quick-chip" onclick="quickConvert('len','mile','kilometer',1)">1 mile &#8594; km</button>
-            <button class="quick-chip" onclick="quickConvert('len','foot','meter',1)">1 ft &#8594; m</button>
-            <button class="quick-chip" onclick="quickConvert('len','meter','foot',1)">1 m &#8594; ft</button>
-            <button class="quick-chip" onclick="quickConvert('len','inch','centimeter',1)">1 in &#8594; cm</button>
-            <button class="quick-chip" onclick="quickConvert('len','meter','inch',1)">1 m &#8594; in</button>
           </div>
         </div>
       </div>
@@ -164,34 +193,37 @@
           <p data-i18n="sec_weight_p">Convert between kilograms, pounds, ounces, stones, tonnes and more.</p>
         </div>
         <div class="converter-card">
-          <div class="card-header">
-            <div class="card-icon weight">&#9878;&#65039;</div>
-            <div>
-              <div class="card-title" data-i18n="card_weight_title">Weight &amp; Mass</div>
-              <div class="card-subtitle" data-i18n="card_weight_sub">Metric &#8596; Imperial &#8596; Avoirdupois</div>
+          <div class="converter-card-accent"></div>
+          <div class="converter-card-inner">
+            <div class="card-header">
+              <div class="card-icon weight">&#9878;&#65039;</div>
+              <div>
+                <div class="card-title" data-i18n="card_weight_title">Weight &amp; Mass</div>
+                <div class="card-subtitle" data-i18n="card_weight_sub">Metric &#8596; Imperial &#8596; Avoirdupois</div>
+              </div>
             </div>
-          </div>
-          <div class="converter-ui">
-            <div class="converter-field">
-              <label for="wt-from" data-i18n="label_from">From</label>
-              <select id="wt-from" onchange="convertWeight()"></select>
-              <label for="wt-val" style="margin-top:10px" data-i18n="label_value">Value</label>
-              <input type="number" id="wt-val" data-i18n-placeholder="ph_enter_value" placeholder="Enter value" oninput="convertWeight()" />
+            <div class="converter-ui">
+              <div class="converter-field">
+                <label for="wt-from" data-i18n="label_from">From</label>
+                <select id="wt-from" onchange="convertWeight()"></select>
+                <label for="wt-val" style="margin-top:10px" data-i18n="label_value">Value</label>
+                <input type="number" id="wt-val" data-i18n-placeholder="ph_enter_value" placeholder="Enter value" oninput="convertWeight()" />
+              </div>
+              <button class="swap-btn" onclick="swapWeight()" title="Swap units" aria-label="Swap units">&#8644;</button>
+              <div class="converter-field">
+                <label for="wt-to" data-i18n="label_to">To</label>
+                <select id="wt-to" onchange="convertWeight()"></select>
+                <label for="wt-result" style="margin-top:10px" data-i18n="label_result">Result</label>
+                <input type="text" id="wt-result" readonly data-i18n-placeholder="ph_result" placeholder="Result" />
+              </div>
             </div>
-            <button class="swap-btn" onclick="swapWeight()" title="Swap units" aria-label="Swap units">&#8644;</button>
-            <div class="converter-field">
-              <label for="wt-to" data-i18n="label_to">To</label>
-              <select id="wt-to" onchange="convertWeight()"></select>
-              <label for="wt-result" style="margin-top:10px" data-i18n="label_result">Result</label>
-              <input type="text" id="wt-result" readonly data-i18n-placeholder="ph_result" placeholder="Result" />
+            <div class="quick-list">
+              <button class="quick-chip" onclick="quickConvert('wt','kilogram','pound',1)">1 kg &#8594; lbs</button>
+              <button class="quick-chip" onclick="quickConvert('wt','pound','kilogram',1)">1 lb &#8594; kg</button>
+              <button class="quick-chip" onclick="quickConvert('wt','kilogram','ounce',1)">1 kg &#8594; oz</button>
+              <button class="quick-chip" onclick="quickConvert('wt','stone','kilogram',1)">1 stone &#8594; kg</button>
+              <button class="quick-chip" onclick="quickConvert('wt','tonne','pound',1)">1 tonne &#8594; lbs</button>
             </div>
-          </div>
-          <div class="quick-list">
-            <button class="quick-chip" onclick="quickConvert('wt','kilogram','pound',1)">1 kg &#8594; lbs</button>
-            <button class="quick-chip" onclick="quickConvert('wt','pound','kilogram',1)">1 lb &#8594; kg</button>
-            <button class="quick-chip" onclick="quickConvert('wt','kilogram','ounce',1)">1 kg &#8594; oz</button>
-            <button class="quick-chip" onclick="quickConvert('wt','stone','kilogram',1)">1 stone &#8594; kg</button>
-            <button class="quick-chip" onclick="quickConvert('wt','tonne','pound',1)">1 tonne &#8594; lbs</button>
           </div>
         </div>
       </div>
@@ -206,44 +238,47 @@
           <p data-i18n="sec_temp_p">Convert between Celsius, Fahrenheit, Kelvin and Rankine instantly.</p>
         </div>
         <div class="converter-card">
-          <div class="card-header">
-            <div class="card-icon temp">&#127777;&#65039;</div>
-            <div>
-              <div class="card-title" data-i18n="card_temp_title">Temperature</div>
-              <div class="card-subtitle" data-i18n="card_temp_sub">Celsius &#8596; Fahrenheit &#8596; Kelvin &#8596; Rankine</div>
+          <div class="converter-card-accent"></div>
+          <div class="converter-card-inner">
+            <div class="card-header">
+              <div class="card-icon temp">&#127777;&#65039;</div>
+              <div>
+                <div class="card-title" data-i18n="card_temp_title">Temperature</div>
+                <div class="card-subtitle" data-i18n="card_temp_sub">Celsius &#8596; Fahrenheit &#8596; Kelvin &#8596; Rankine</div>
+              </div>
             </div>
-          </div>
-          <div class="converter-ui">
-            <div class="converter-field">
-              <label for="tmp-from" data-i18n="label_from">From</label>
-              <select id="tmp-from" onchange="convertTemp()">
-                <option value="celsius">Celsius (&#176;C)</option>
-                <option value="fahrenheit">Fahrenheit (&#176;F)</option>
-                <option value="kelvin">Kelvin (K)</option>
-                <option value="rankine">Rankine (&#176;R)</option>
-              </select>
-              <label for="tmp-val" style="margin-top:10px" data-i18n="label_value">Value</label>
-              <input type="number" id="tmp-val" data-i18n-placeholder="ph_enter_value" placeholder="Enter value" oninput="convertTemp()" />
+            <div class="converter-ui">
+              <div class="converter-field">
+                <label for="tmp-from" data-i18n="label_from">From</label>
+                <select id="tmp-from" onchange="convertTemp()">
+                  <option value="celsius">Celsius (&#176;C)</option>
+                  <option value="fahrenheit">Fahrenheit (&#176;F)</option>
+                  <option value="kelvin">Kelvin (K)</option>
+                  <option value="rankine">Rankine (&#176;R)</option>
+                </select>
+                <label for="tmp-val" style="margin-top:10px" data-i18n="label_value">Value</label>
+                <input type="number" id="tmp-val" data-i18n-placeholder="ph_enter_value" placeholder="Enter value" oninput="convertTemp()" />
+              </div>
+              <button class="swap-btn" onclick="swapTemp()" title="Swap units" aria-label="Swap units">&#8644;</button>
+              <div class="converter-field">
+                <label for="tmp-to" data-i18n="label_to">To</label>
+                <select id="tmp-to" onchange="convertTemp()">
+                  <option value="celsius">Celsius (&#176;C)</option>
+                  <option value="fahrenheit" selected>Fahrenheit (&#176;F)</option>
+                  <option value="kelvin">Kelvin (K)</option>
+                  <option value="rankine">Rankine (&#176;R)</option>
+                </select>
+                <label for="tmp-result" style="margin-top:10px" data-i18n="label_result">Result</label>
+                <input type="text" id="tmp-result" readonly data-i18n-placeholder="ph_result" placeholder="Result" />
+              </div>
             </div>
-            <button class="swap-btn" onclick="swapTemp()" title="Swap units" aria-label="Swap units">&#8644;</button>
-            <div class="converter-field">
-              <label for="tmp-to" data-i18n="label_to">To</label>
-              <select id="tmp-to" onchange="convertTemp()">
-                <option value="celsius">Celsius (&#176;C)</option>
-                <option value="fahrenheit" selected>Fahrenheit (&#176;F)</option>
-                <option value="kelvin">Kelvin (K)</option>
-                <option value="rankine">Rankine (&#176;R)</option>
-              </select>
-              <label for="tmp-result" style="margin-top:10px" data-i18n="label_result">Result</label>
-              <input type="text" id="tmp-result" readonly data-i18n-placeholder="ph_result" placeholder="Result" />
+            <div class="quick-list">
+              <button class="quick-chip" onclick="quickConvert('tmp','celsius','fahrenheit',100)">100&#176;C &#8594; &#176;F</button>
+              <button class="quick-chip" onclick="quickConvert('tmp','fahrenheit','celsius',32)">32&#176;F &#8594; &#176;C</button>
+              <button class="quick-chip" onclick="quickConvert('tmp','celsius','kelvin',0)">0&#176;C &#8594; K</button>
+              <button class="quick-chip" onclick="quickConvert('tmp','fahrenheit','celsius',98.6)">98.6&#176;F &#8594; &#176;C</button>
+              <button class="quick-chip" onclick="quickConvert('tmp','celsius','fahrenheit',37)">37&#176;C &#8594; &#176;F</button>
             </div>
-          </div>
-          <div class="quick-list">
-            <button class="quick-chip" onclick="quickConvert('tmp','celsius','fahrenheit',100)">100&#176;C &#8594; &#176;F</button>
-            <button class="quick-chip" onclick="quickConvert('tmp','fahrenheit','celsius',32)">32&#176;F &#8594; &#176;C</button>
-            <button class="quick-chip" onclick="quickConvert('tmp','celsius','kelvin',0)">0&#176;C &#8594; K</button>
-            <button class="quick-chip" onclick="quickConvert('tmp','fahrenheit','celsius',98.6)">98.6&#176;F &#8594; &#176;C</button>
-            <button class="quick-chip" onclick="quickConvert('tmp','celsius','fahrenheit',37)">37&#176;C &#8594; &#176;F</button>
           </div>
         </div>
       </div>
@@ -267,34 +302,37 @@
           <p data-i18n="sec_storage_p">Convert between bits, bytes, KB, MB, GB, TB, PB and binary prefixes (KiB, MiB, GiB).</p>
         </div>
         <div class="converter-card">
-          <div class="card-header">
-            <div class="card-icon storage">&#128190;</div>
-            <div>
-              <div class="card-title" data-i18n="card_storage_title">Digital Storage</div>
-              <div class="card-subtitle" data-i18n="card_storage_sub">Decimal &#8596; Binary (IEC) &#8596; Bits</div>
+          <div class="converter-card-accent"></div>
+          <div class="converter-card-inner">
+            <div class="card-header">
+              <div class="card-icon storage">&#128190;</div>
+              <div>
+                <div class="card-title" data-i18n="card_storage_title">Digital Storage</div>
+                <div class="card-subtitle" data-i18n="card_storage_sub">Decimal &#8596; Binary (IEC) &#8596; Bits</div>
+              </div>
             </div>
-          </div>
-          <div class="converter-ui">
-            <div class="converter-field">
-              <label for="st-from" data-i18n="label_from">From</label>
-              <select id="st-from" onchange="convertStorage()"></select>
-              <label for="st-val" style="margin-top:10px" data-i18n="label_value">Value</label>
-              <input type="number" id="st-val" data-i18n-placeholder="ph_enter_value" placeholder="Enter value" oninput="convertStorage()" />
+            <div class="converter-ui">
+              <div class="converter-field">
+                <label for="st-from" data-i18n="label_from">From</label>
+                <select id="st-from" onchange="convertStorage()"></select>
+                <label for="st-val" style="margin-top:10px" data-i18n="label_value">Value</label>
+                <input type="number" id="st-val" data-i18n-placeholder="ph_enter_value" placeholder="Enter value" oninput="convertStorage()" />
+              </div>
+              <button class="swap-btn" onclick="swapStorage()" title="Swap units" aria-label="Swap units">&#8644;</button>
+              <div class="converter-field">
+                <label for="st-to" data-i18n="label_to">To</label>
+                <select id="st-to" onchange="convertStorage()"></select>
+                <label for="st-result" style="margin-top:10px" data-i18n="label_result">Result</label>
+                <input type="text" id="st-result" readonly data-i18n-placeholder="ph_result" placeholder="Result" />
+              </div>
             </div>
-            <button class="swap-btn" onclick="swapStorage()" title="Swap units" aria-label="Swap units">&#8644;</button>
-            <div class="converter-field">
-              <label for="st-to" data-i18n="label_to">To</label>
-              <select id="st-to" onchange="convertStorage()"></select>
-              <label for="st-result" style="margin-top:10px" data-i18n="label_result">Result</label>
-              <input type="text" id="st-result" readonly data-i18n-placeholder="ph_result" placeholder="Result" />
+            <div class="quick-list">
+              <button class="quick-chip" onclick="quickConvert('st','gigabyte','megabyte',1)">1 GB &#8594; MB</button>
+              <button class="quick-chip" onclick="quickConvert('st','terabyte','gigabyte',1)">1 TB &#8594; GB</button>
+              <button class="quick-chip" onclick="quickConvert('st','megabyte','kilobyte',1)">1 MB &#8594; KB</button>
+              <button class="quick-chip" onclick="quickConvert('st','gigabyte','byte',1)">1 GB &#8594; Bytes</button>
+              <button class="quick-chip" onclick="quickConvert('st','kilobyte','bit',1)">1 KB &#8594; Bits</button>
             </div>
-          </div>
-          <div class="quick-list">
-            <button class="quick-chip" onclick="quickConvert('st','gigabyte','megabyte',1)">1 GB &#8594; MB</button>
-            <button class="quick-chip" onclick="quickConvert('st','terabyte','gigabyte',1)">1 TB &#8594; GB</button>
-            <button class="quick-chip" onclick="quickConvert('st','megabyte','kilobyte',1)">1 MB &#8594; KB</button>
-            <button class="quick-chip" onclick="quickConvert('st','gigabyte','byte',1)">1 GB &#8594; Bytes</button>
-            <button class="quick-chip" onclick="quickConvert('st','kilobyte','bit',1)">1 KB &#8594; Bits</button>
           </div>
         </div>
       </div>
@@ -309,48 +347,51 @@
           <p data-i18n="sec_binary_p">Convert between Decimal, Binary, Hexadecimal and Octal number systems instantly.</p>
         </div>
         <div class="converter-card">
-          <div class="card-header">
-            <div class="card-icon binary">&#128162;</div>
-            <div>
-              <div class="card-title" data-i18n="card_binary_title">Binary &amp; Number Systems</div>
-              <div class="card-subtitle" data-i18n="card_binary_sub">Decimal &#8596; Binary &#8596; Hex &#8596; Octal</div>
+          <div class="converter-card-accent"></div>
+          <div class="converter-card-inner">
+            <div class="card-header">
+              <div class="card-icon binary">&#128162;</div>
+              <div>
+                <div class="card-title" data-i18n="card_binary_title">Binary &amp; Number Systems</div>
+                <div class="card-subtitle" data-i18n="card_binary_sub">Decimal &#8596; Binary &#8596; Hex &#8596; Octal</div>
+              </div>
             </div>
-          </div>
-          <div class="binary-input-row">
-            <div class="converter-field">
-              <label for="bin-from" data-i18n="label_input_base">Input Base</label>
-              <select id="bin-from" onchange="convertBinary()">
-                <option value="10" selected data-i18n="bin_opt_dec">Decimal (Base 10)</option>
-                <option value="2" data-i18n="bin_opt_bin">Binary (Base 2)</option>
-                <option value="16" data-i18n="bin_opt_hex">Hexadecimal (Base 16)</option>
-                <option value="8" data-i18n="bin_opt_oct">Octal (Base 8)</option>
-              </select>
+            <div class="binary-input-row">
+              <div class="converter-field">
+                <label for="bin-from" data-i18n="label_input_base">Input Base</label>
+                <select id="bin-from" onchange="convertBinary()">
+                  <option value="10" selected>Decimal (Base 10)</option>
+                  <option value="2">Binary (Base 2)</option>
+                  <option value="16">Hexadecimal (Base 16)</option>
+                  <option value="8">Octal (Base 8)</option>
+                </select>
+              </div>
+              <div class="converter-field">
+                <label for="bin-input" data-i18n="label_enter_number">Enter Number</label>
+                <input type="text" id="bin-input" data-i18n-placeholder="ph_enter_number" placeholder="e.g. 255" oninput="convertBinary()" />
+              </div>
             </div>
-            <div class="converter-field">
-              <label for="bin-input" data-i18n="label_enter_number">Enter Number</label>
-              <input type="text" id="bin-input" data-i18n-placeholder="ph_enter_number" placeholder="e.g. 255" oninput="convertBinary()" />
-            </div>
-          </div>
-          <div class="binary-ui">
-            <div>
-              <div class="base-tag">DEC</div>
-              <div class="binary-label" data-i18n="bin_label_dec">Decimal (Base 10)</div>
-              <div class="binary-result" id="bin-dec">&#8212;</div>
-            </div>
-            <div>
-              <div class="base-tag">BIN</div>
-              <div class="binary-label" data-i18n="bin_label_bin">Binary (Base 2)</div>
-              <div class="binary-result" id="bin-bin">&#8212;</div>
-            </div>
-            <div>
-              <div class="base-tag">HEX</div>
-              <div class="binary-label" data-i18n="bin_label_hex">Hexadecimal (Base 16)</div>
-              <div class="binary-result" id="bin-hex">&#8212;</div>
-            </div>
-            <div>
-              <div class="base-tag">OCT</div>
-              <div class="binary-label" data-i18n="bin_label_oct">Octal (Base 8)</div>
-              <div class="binary-result" id="bin-oct">&#8212;</div>
+            <div class="binary-ui">
+              <div>
+                <div class="base-tag">DEC</div>
+                <div class="binary-label" data-i18n="bin_label_dec">Decimal (Base 10)</div>
+                <div class="binary-result" id="bin-dec">&#8212;</div>
+              </div>
+              <div>
+                <div class="base-tag">BIN</div>
+                <div class="binary-label" data-i18n="bin_label_bin">Binary (Base 2)</div>
+                <div class="binary-result" id="bin-bin">&#8212;</div>
+              </div>
+              <div>
+                <div class="base-tag">HEX</div>
+                <div class="binary-label" data-i18n="bin_label_hex">Hexadecimal (Base 16)</div>
+                <div class="binary-result" id="bin-hex">&#8212;</div>
+              </div>
+              <div>
+                <div class="base-tag">OCT</div>
+                <div class="binary-label" data-i18n="bin_label_oct">Octal (Base 8)</div>
+                <div class="binary-result" id="bin-oct">&#8212;</div>
+              </div>
             </div>
           </div>
         </div>
@@ -363,40 +404,52 @@
   <section class="section" style="background:var(--bg-alt)">
     <div class="container">
       <div class="section-header text-center">
-        <div class="section-label" style="margin:0 auto 12px" data-i18n="why_label">&#128269; Why Us</div>
+        <div class="section-label" style="margin:0 auto 12px;border-left:none;padding-left:0;border-bottom:2px solid var(--primary);padding-bottom:4px;" data-i18n="why_label">&#128269; Why Us</div>
         <h2 data-i18n="why_h2">The Smartest Way to Convert Units</h2>
         <p data-i18n="why_p">Everything you need, nothing you don&#8217;t.</p>
       </div>
       <div class="feature-grid">
         <div class="feature-card">
           <div class="feature-icon">&#9889;</div>
-          <h3 data-i18n="feat1_h3">Instant Results</h3>
-          <p data-i18n="feat1_p">Conversions happen as you type &#8212; no button to press, no waiting. Pure speed.</p>
+          <div class="feat-text">
+            <h3 data-i18n="feat1_h3">Instant Results</h3>
+            <p data-i18n="feat1_p">Conversions happen as you type &#8212; no button to press, no waiting. Pure speed.</p>
+          </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">&#128202;</div>
-          <h3 data-i18n="feat2_h3">High Precision</h3>
-          <p data-i18n="feat2_p">Up to 10 significant digits of accuracy. Scientific notation for very large or small values.</p>
+          <div class="feat-text">
+            <h3 data-i18n="feat2_h3">High Precision</h3>
+            <p data-i18n="feat2_p">Up to 10 significant digits of accuracy. Scientific notation for very large or small values.</p>
+          </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">&#127769;</div>
-          <h3 data-i18n="feat3_h3">Dark &amp; Light Mode</h3>
-          <p data-i18n="feat3_p">Switch between themes with one click. Your preference is saved automatically.</p>
+          <div class="feat-text">
+            <h3 data-i18n="feat3_h3">Dark &amp; Light Mode</h3>
+            <p data-i18n="feat3_p">Switch between themes with one click. Your preference is saved automatically.</p>
+          </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">&#128242;</div>
-          <h3 data-i18n="feat4_h3">Mobile Friendly</h3>
-          <p data-i18n="feat4_p">Works perfectly on phones and tablets. Convert on the go, anywhere.</p>
+          <div class="feat-text">
+            <h3 data-i18n="feat4_h3">Mobile Friendly</h3>
+            <p data-i18n="feat4_p">Works perfectly on phones and tablets. Convert on the go, anywhere.</p>
+          </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">&#128274;</div>
-          <h3 data-i18n="feat5_h3">No Account Needed</h3>
-          <p data-i18n="feat5_p">No sign-up, no email, no tracking. Just open and convert.</p>
+          <div class="feat-text">
+            <h3 data-i18n="feat5_h3">No Account Needed</h3>
+            <p data-i18n="feat5_p">No sign-up, no email, no tracking. Just open and convert.</p>
+          </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">&#127881;</div>
-          <h3 data-i18n="feat6_h3">Always Free</h3>
-          <p data-i18n="feat6_p">Every converter on this site is free and always will be.</p>
+          <div class="feat-text">
+            <h3 data-i18n="feat6_h3">Always Free</h3>
+            <p data-i18n="feat6_p">Every converter on this site is free and always will be.</p>
+          </div>
         </div>
       </div>
     </div>

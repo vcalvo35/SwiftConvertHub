@@ -1,5 +1,5 @@
-/* =========================================================
-   SwiftConvertHub — components.js
+﻿/* =========================================================
+   SwiftConvertHub â€” components.js
    Injects nav and footer + handles theme & i18n (EN/ES)
    ========================================================= */
 
@@ -11,7 +11,7 @@
   document.documentElement.setAttribute('data-theme', savedTheme);
 
   /* =========================================================
-     i18n — English / Español
+     i18n â€” English / EspaÃ±ol
      ========================================================= */
   let currentLang = localStorage.getItem('sch-lang') || 'en';
 
@@ -91,6 +91,12 @@
       feat5_p: 'No sign-up, no email, no tracking. Just open and convert.',
       feat6_h3: 'Always Free',
       feat6_p: 'Every converter on this site is free and always will be.',
+      // Category tiles
+      cat_length: 'Length',
+      cat_weight: 'Weight',
+      cat_temp: 'Temperature',
+      cat_storage: 'Storage',
+      cat_binary: 'Binary',
       // Footer
       footer_tagline: 'Free, instant unit conversions for everyone. No sign-up, no ads clutter \u2014 just fast, accurate results.',
       footer_col1_h4: 'Converters',
@@ -199,6 +205,12 @@
       feat5_p: 'Sin registro, sin email, sin rastreo. Solo abre y convierte.',
       feat6_h3: 'Siempre Gratis',
       feat6_p: 'Cada conversor en este sitio es gratuito y siempre lo ser\u00e1.',
+      // Category tiles
+      cat_length: 'Longitud',
+      cat_weight: 'Peso',
+      cat_temp: 'Temperatura',
+      cat_storage: 'Almacenamiento',
+      cat_binary: 'Binario',
       // Footer
       footer_tagline: 'Conversiones de unidades gratuitas e instant\u00e1neas. Sin registro, sin anuncios molestos \u2014 solo resultados r\u00e1pidos y precisos.',
       footer_col1_h4: 'Conversores',
@@ -380,3 +392,4 @@
   }
 
 })();
+
