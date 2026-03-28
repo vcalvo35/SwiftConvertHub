@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLQEN72B5R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TLQEN72B5R');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SwiftConvertHub — Free Unit Converter | Length, Weight, Temperature & More</title>
+  <meta name="description" content="Convert units instantly and for free. Length, weight, temperature, digital storage, binary and number systems. No sign-up required." />
+  <meta name="keywords" content="unit converter, length converter, weight converter, temperature converter, digital storage converter, binary converter, free online converter" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://swiftconverthub.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SwiftConvertHub — Free Unit Converter" />
+  <meta property="og:description" content="Convert length, weight, temperature, storage and binary numbers instantly. Free, no login." />
+  <meta property="og:url" content="https://swiftconverthub.com/" />
+  <meta property="og:site_name" content="SwiftConvertHub" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SwiftConvertHub — Free Unit Converter" />
+  <meta name="twitter:description" content="Instant unit conversions: length, weight, temperature, storage, binary. Free forever." />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SwiftConvertHub",
+    "url": "https://swiftconverthub.com",
+    "description": "Free online unit converter for length, weight, temperature, digital storage, and binary/number systems.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="google-adsense-account" content="ca-pub-6069037516718532">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6069037516718532" crossorigin="anonymous"></script>
+</head>
+<body data-page="home">
+
+  <div id="nav-placeholder"></div>
+
+  <!-- ── Hero ── -->
+  <header class="hero" role="banner">
+    <div class="container">
+      <div class="hero-badge fade-up">
+        <span>⚡</span>
+        <span>5 Converter Categories</span>
+      </div>
+      <h1 class="fade-up fade-up-d1">
+        Convert Anything,<br>
+        <span class="gradient">Instantly</span>
+      </h1>
+      <p class="fade-up fade-up-d2">
+        Free unit converters for length, weight, temperature, digital storage and binary numbers. No sign-up, no fluff — instant results.
+      </p>
+      <div class="hero-btns fade-up fade-up-d3">
+        <a href="#length" class="btn-primary">⚡ Start Converting</a>
+        <a href="/about.html" class="btn-secondary">Learn More</a>
+      </div>
+      <div class="hero-stats fade-up fade-up-d3">
+        <div class="stat">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Unit Types</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Free Forever</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">0</div>
+          <div class="stat-label">No Login</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Ad: Top -->
+  <div class="section-sm">
+    <div class="container text-center">
+      <div class="ad-placeholder ad-banner" role="complementary" aria-label="Advertisement">
+        <span>Advertisement · 728×90</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Converters ── -->
+  <main id="converters">
+
+    <!-- ── 1. LENGTH ── -->
+    <section class="section" id="length" aria-labelledby="length-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">📏 Length</div>
+          <h2 id="length-heading">Length &amp; Distance Converter</h2>
+          <p>Convert between meters, kilometers, miles, feet, inches and more.</p>
+        </div>
+
+        <div class="converter-card">
+          <div class="card-header">
+            <div class="card-icon length">📏</div>
+            <div>
+              <div class="card-title">Length &amp; Distance</div>
+              <div class="card-subtitle">Metric · Imperial · Astronomical</div>
+            </div>
+          </div>
+          <div class="converter-ui">
+            <div class="converter-field">
+              <label for="len-from">From</label>
+              <select id="len-from" onchange="convertLength()"></select>
+              <label for="len-val" style="margin-top:10px">Value</label>
+              <input type="number" id="len-val" placeholder="Enter value" oninput="convertLength()" />
+            </div>
+            <button class="swap-btn" onclick="swapLength()" title="Swap units" aria-label="Swap units">⇄</button>
+            <div class="converter-field">
+              <label for="len-to">To</label>
+              <select id="len-to" onchange="convertLength()"></select>
+              <label for="len-result" style="margin-top:10px">Result</label>
+              <input type="text" id="len-result" readonly placeholder="Result" />
+            </div>
+          </div>
+          <div class="quick-list" aria-label="Quick conversions">
+            <button class="quick-chip" onclick="quickConvert('len','kilometer','mile',1)">1 km → miles</button>
+            <button class="quick-chip" onclick="quickConvert('len','mile','kilometer',1)">1 mile → km</button>
+            <button class="quick-chip" onclick="quickConvert('len','foot','meter',1)">1 ft → m</button>
+            <button class="quick-chip" onclick="quickConvert('len','meter','foot',1)">1 m → ft</button>
+            <button class="quick-chip" onclick="quickConvert('len','inch','centimeter',1)">1 in → cm</button>
+            <button class="quick-chip" onclick="quickConvert('len','meter','inch',1)">1 m → in</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad mid -->
+    <div style="padding:0 0 40px;">
+      <div class="container text-center">
+        <div class="ad-placeholder ad-rectangle" role="complementary">
+          <span>Advertisement · 400×100</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 2. WEIGHT ── -->
+    <section class="section" id="weight" style="padding-top:0" aria-labelledby="weight-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">⚖️ Weight</div>
+          <h2 id="weight-heading">Weight &amp; Mass Converter</h2>
+          <p>Convert between kilograms, pounds, ounces, stones, tonnes and more.</p>
+        </div>
+        <div class="converter-card">
+          <div class="card-header">
+            <div class="card-icon weight">⚖️</div>
+            <div>
+              <div class="card-title">Weight &amp; Mass</div>
+              <div class="card-subtitle">Metric · Imperial · Avoirdupois</div>
+            </div>
+          </div>
+          <div class="converter-ui">
+            <div class="converter-field">
+              <label for="wt-from">From</label>
+              <select id="wt-from" onchange="convertWeight()"></select>
+              <label for="wt-val" style="margin-top:10px">Value</label>
+              <input type="number" id="wt-val" placeholder="Enter value" oninput="convertWeight()" />
+            </div>
+            <button class="swap-btn" onclick="swapWeight()" title="Swap units" aria-label="Swap units">⇄</button>
+            <div class="converter-field">
+              <label for="wt-to">To</label>
+              <select id="wt-to" onchange="convertWeight()"></select>
+              <label for="wt-result" style="margin-top:10px">Result</label>
+              <input type="text" id="wt-result" readonly placeholder="Result" />
+            </div>
+          </div>
+          <div class="quick-list">
+            <button class="quick-chip" onclick="quickConvert('wt','kilogram','pound',1)">1 kg → lbs</button>
+            <button class="quick-chip" onclick="quickConvert('wt','pound','kilogram',1)">1 lb → kg</button>
+            <button class="quick-chip" onclick="quickConvert('wt','kilogram','ounce',1)">1 kg → oz</button>
+            <button class="quick-chip" onclick="quickConvert('wt','stone','kilogram',1)">1 stone → kg</button>
+            <button class="quick-chip" onclick="quickConvert('wt','tonne','pound',1)">1 tonne → lbs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. TEMPERATURE ── -->
+    <section class="section" id="temperature" style="padding-top:0" aria-labelledby="temp-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">🌡️ Temperature</div>
+          <h2 id="temp-heading">Temperature Converter</h2>
+          <p>Convert between Celsius, Fahrenheit, Kelvin and Rankine instantly.</p>
+        </div>
+        <div class="converter-card">
+          <div class="card-header">
+            <div class="card-icon temp">🌡️</div>
+            <div>
+              <div class="card-title">Temperature</div>
+              <div class="card-subtitle">Celsius · Fahrenheit · Kelvin · Rankine</div>
+            </div>
+          </div>
+          <div class="converter-ui">
+            <div class="converter-field">
+              <label for="tmp-from">From</label>
+              <select id="tmp-from" onchange="convertTemp()">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+                <option value="rankine">Rankine (°R)</option>
+              </select>
+              <label for="tmp-val" style="margin-top:10px">Value</label>
+              <input type="number" id="tmp-val" placeholder="Enter value" oninput="convertTemp()" />
+            </div>
+            <button class="swap-btn" onclick="swapTemp()" title="Swap units" aria-label="Swap units">⇄</button>
+            <div class="converter-field">
+              <label for="tmp-to">To</label>
+              <select id="tmp-to" onchange="convertTemp()">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit" selected>Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+                <option value="rankine">Rankine (°R)</option>
+              </select>
+              <label for="tmp-result" style="margin-top:10px">Result</label>
+              <input type="text" id="tmp-result" readonly placeholder="Result" />
+            </div>
+          </div>
+          <div class="quick-list">
+            <button class="quick-chip" onclick="quickConvert('tmp','celsius','fahrenheit',100)">100°C → °F</button>
+            <button class="quick-chip" onclick="quickConvert('tmp','fahrenheit','celsius',32)">32°F → °C</button>
+            <button class="quick-chip" onclick="quickConvert('tmp','celsius','kelvin',0)">0°C → K</button>
+            <button class="quick-chip" onclick="quickConvert('tmp','fahrenheit','celsius',98.6)">98.6°F → °C</button>
+            <button class="quick-chip" onclick="quickConvert('tmp','celsius','fahrenheit',37)">37°C → °F</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad mid -->
+    <div style="padding:0 0 40px;">
+      <div class="container text-center">
+        <div class="ad-placeholder ad-rectangle" role="complementary">
+          <span>Advertisement · 400×100</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 4. DIGITAL STORAGE ── -->
+    <section class="section" id="storage" style="padding-top:0" aria-labelledby="storage-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">💾 Storage</div>
+          <h2 id="storage-heading">Digital Storage Converter</h2>
+          <p>Convert between bits, bytes, KB, MB, GB, TB, PB and binary prefixes (KiB, MiB, GiB).</p>
+        </div>
+        <div class="converter-card">
+          <div class="card-header">
+            <div class="card-icon storage">💾</div>
+            <div>
+              <div class="card-title">Digital Storage</div>
+              <div class="card-subtitle">Decimal · Binary (IEC) · Bits</div>
+            </div>
+          </div>
+          <div class="converter-ui">
+            <div class="converter-field">
+              <label for="st-from">From</label>
+              <select id="st-from" onchange="convertStorage()"></select>
+              <label for="st-val" style="margin-top:10px">Value</label>
+              <input type="number" id="st-val" placeholder="Enter value" oninput="convertStorage()" />
+            </div>
+            <button class="swap-btn" onclick="swapStorage()" title="Swap units" aria-label="Swap units">⇄</button>
+            <div class="converter-field">
+              <label for="st-to">To</label>
+              <select id="st-to" onchange="convertStorage()"></select>
+              <label for="st-result" style="margin-top:10px">Result</label>
+              <input type="text" id="st-result" readonly placeholder="Result" />
+            </div>
+          </div>
+          <div class="quick-list">
+            <button class="quick-chip" onclick="quickConvert('st','gigabyte','megabyte',1)">1 GB → MB</button>
+            <button class="quick-chip" onclick="quickConvert('st','terabyte','gigabyte',1)">1 TB → GB</button>
+            <button class="quick-chip" onclick="quickConvert('st','megabyte','kilobyte',1)">1 MB → KB</button>
+            <button class="quick-chip" onclick="quickConvert('st','gigabyte','byte',1)">1 GB → Bytes</button>
+            <button class="quick-chip" onclick="quickConvert('st','kilobyte','bit',1)">1 KB → Bits</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. BINARY / NUMBER SYSTEMS ── -->
+    <section class="section" id="binary" style="padding-top:0" aria-labelledby="binary-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">🔢 Numbers</div>
+          <h2 id="binary-heading">Binary &amp; Number Systems</h2>
+          <p>Convert between Decimal, Binary, Hexadecimal and Octal number systems instantly.</p>
+        </div>
+        <div class="converter-card">
+          <div class="card-header">
+            <div class="card-icon binary">🔢</div>
+            <div>
+              <div class="card-title">Binary &amp; Number Systems</div>
+              <div class="card-subtitle">Decimal · Binary · Hex · Octal</div>
+            </div>
+          </div>
+          <div class="binary-input-row">
+            <div class="converter-field">
+              <label for="bin-from">Input Base</label>
+              <select id="bin-from" onchange="convertBinary()">
+                <option value="10" selected>Decimal (Base 10)</option>
+                <option value="2">Binary (Base 2)</option>
+                <option value="16">Hexadecimal (Base 16)</option>
+                <option value="8">Octal (Base 8)</option>
+              </select>
+            </div>
+            <div class="converter-field">
+              <label for="bin-input">Enter Number</label>
+              <input type="text" id="bin-input" placeholder="e.g. 255" oninput="convertBinary()" />
+            </div>
+          </div>
+          <div class="binary-ui">
+            <div>
+              <div class="base-tag">DEC</div>
+              <div class="binary-label">Decimal (Base 10)</div>
+              <div class="binary-result" id="bin-dec">—</div>
+            </div>
+            <div>
+              <div class="base-tag">BIN</div>
+              <div class="binary-label">Binary (Base 2)</div>
+              <div class="binary-result" id="bin-bin">—</div>
+            </div>
+            <div>
+              <div class="base-tag">HEX</div>
+              <div class="binary-label">Hexadecimal (Base 16)</div>
+              <div class="binary-result" id="bin-hex">—</div>
+            </div>
+            <div>
+              <div class="base-tag">OCT</div>
+              <div class="binary-label">Octal (Base 8)</div>
+              <div class="binary-result" id="bin-oct">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Why SwiftConvertHub ── -->
+  <section class="section" style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-label" style="margin:0 auto 12px">✨ Why Us</div>
+        <h2>The Smartest Way to Convert Units</h2>
+        <p>Everything you need, nothing you don't.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Instant Results</h3>
+          <p>Conversions happen as you type — no button to press, no waiting. Pure speed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>High Precision</h3>
+          <p>Up to 10 significant digits of accuracy. Scientific notation for very large or small values.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌓</div>
+          <h3>Dark &amp; Light Mode</h3>
+          <p>Switch between themes with one click. Your preference is saved automatically.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Mobile Friendly</h3>
+          <p>Works perfectly on phones and tablets. Convert on the go, anywhere.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>No Account Needed</h3>
+          <p>No sign-up, no email, no tracking. Just open and convert.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🆓</div>
+          <h3>Always Free</h3>
+          <p>Every converter on this site is free and always will be.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad: pre-footer -->
+  <div style="padding:40px 0;">
+    <div class="container text-center">
+      <div class="ad-placeholder ad-banner" role="complementary">
+        <span>Advertisement · 728×90</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
