@@ -464,6 +464,94 @@
     </div>
   </div>
 
+  <!-- ── FAQ Section ────────────────────────────────────────── -->
+  <section class="section" aria-label="Frequently Asked Questions" style="padding-top:0;">
+    <div class="container" style="max-width:780px;margin:0 auto;">
+      <div class="section-header text-center" style="margin-bottom:32px;">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions about unit conversions and how our converters work.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+
+        <details style="background:var(--card-bg,#f9f9f9);border:1px solid var(--border,#e5e5e5);border-radius:10px;padding:18px 22px;">
+          <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;">How many kilometers are in a mile?</summary>
+          <p style="margin-top:12px;line-height:1.7;opacity:0.85;">One mile equals exactly 1.60934 kilometers. Conversely, one kilometer equals approximately 0.621371 miles. This conversion is commonly used when traveling between countries that use the metric system (km) and those that use the imperial system (miles), such as the United States and the United Kingdom. Use our Length Converter to instantly switch between miles, kilometers, and dozens of other units.</p>
+        </details>
+
+        <details style="background:var(--card-bg,#f9f9f9);border:1px solid var(--border,#e5e5e5);border-radius:10px;padding:18px 22px;">
+          <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;">How do you convert Celsius to Fahrenheit?</summary>
+          <p style="margin-top:12px;line-height:1.7;opacity:0.85;">To convert Celsius to Fahrenheit, multiply the Celsius value by 9/5 and then add 32. The formula is: °F = (°C × 9/5) + 32. For example, 100°C equals 212°F (boiling point of water), and 0°C equals 32°F (freezing point). To convert Fahrenheit to Celsius, subtract 32 and multiply by 5/9: °C = (°F − 32) × 5/9. Our Temperature Converter handles all conversions instantly, including Kelvin and Rankine.</p>
+        </details>
+
+        <details style="background:var(--card-bg,#f9f9f9);border:1px solid var(--border,#e5e5e5);border-radius:10px;padding:18px 22px;">
+          <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;">What is the difference between GB and GiB (gigabytes vs gibibytes)?</summary>
+          <p style="margin-top:12px;line-height:1.7;opacity:0.85;">A gigabyte (GB) uses a decimal base: 1 GB = 1,000,000,000 bytes (10⁹). A gibibyte (GiB) uses a binary base: 1 GiB = 1,073,741,824 bytes (2³⁰). This is why a 1 TB hard drive shows as roughly 931 GiB in your operating system — the drive manufacturer uses decimal GB while the OS reports in binary GiB. Our Digital Storage Converter handles both decimal (GB, TB) and binary (GiB, TiB) units accurately.</p>
+        </details>
+
+        <details style="background:var(--card-bg,#f9f9f9);border:1px solid var(--border,#e5e5e5);border-radius:10px;padding:18px 22px;">
+          <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;">How do you convert pounds to kilograms?</summary>
+          <p style="margin-top:12px;line-height:1.7;opacity:0.85;">To convert pounds (lbs) to kilograms (kg), divide the pound value by 2.20462. The formula is: kg = lbs ÷ 2.20462. For example, 150 lbs equals approximately 68.04 kg. To convert kg to lbs, multiply by 2.20462. This conversion is frequently needed in fitness, cooking, shipping, and international commerce. Our Weight Converter also supports ounces, stones, tonnes, and more.</p>
+        </details>
+
+        <details style="background:var(--card-bg,#f9f9f9);border:1px solid var(--border,#e5e5e5);border-radius:10px;padding:18px 22px;">
+          <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;">How do you convert a decimal number to binary?</summary>
+          <p style="margin-top:12px;line-height:1.7;opacity:0.85;">To convert a decimal number to binary, repeatedly divide the number by 2 and record the remainders from bottom to top. For example, to convert 13: 13÷2=6 remainder 1, 6÷2=3 remainder 0, 3÷2=1 remainder 1, 1÷2=0 remainder 1. Reading remainders upward gives 1101 in binary. Our Binary & Number Systems converter instantly converts between decimal, binary, hexadecimal, and octal — no manual steps required.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many kilometers are in a mile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One mile equals exactly 1.60934 kilometers. One kilometer equals approximately 0.621371 miles. This conversion is commonly used when traveling between countries using metric and imperial systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you convert Celsius to Fahrenheit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply the Celsius value by 9/5 and add 32. Formula: F = (C x 9/5) + 32. For example, 100C = 212F. To convert Fahrenheit to Celsius: C = (F - 32) x 5/9."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between GB and GiB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A gigabyte (GB) equals 1,000,000,000 bytes (decimal). A gibibyte (GiB) equals 1,073,741,824 bytes (binary). Hard drive manufacturers use decimal GB while operating systems often report in binary GiB."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you convert pounds to kilograms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide the pound value by 2.20462 to get kilograms. For example, 150 lbs equals approximately 68.04 kg. To convert kg to lbs, multiply by 2.20462."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you convert a decimal number to binary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Repeatedly divide the number by 2 and record remainders from bottom to top. For example, 13 in decimal equals 1101 in binary."
+        }
+      }
+    ]
+  }
+  </script>
+
   <div id="footer-placeholder"></div>
 
   <script src="js/components.js"></script>

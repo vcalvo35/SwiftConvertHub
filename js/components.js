@@ -340,10 +340,17 @@
   '</footer>';
 
   /* ---- Inject ---- */
+  const NETWORK_BAR_HTML = '<div style="background:#1a1a2e;color:#a0a8c8;font-size:12px;text-align:center;padding:6px 16px;letter-spacing:0.02em;">' +
+    'More free tools:&nbsp;' +
+    '<a href="https://instantlinkhub.com" target="_blank" rel="noopener" style="color:#7eb8f7;text-decoration:none;margin:0 6px;">InstantLinkHub</a>&middot;' +
+    '<a href="https://feexio.com" target="_blank" rel="noopener" style="color:#7eb8f7;text-decoration:none;margin:0 6px;">Feexio</a>&middot;' +
+    '<a href="https://swiftconverthub.com" target="_blank" rel="noopener" style="color:#c8d0e8;text-decoration:none;margin:0 6px;font-weight:600;">SwiftConvertHub</a>' +
+    '</div>';
+
   function inject() {
     const navEl = document.getElementById('nav-placeholder');
     const footerEl = document.getElementById('footer-placeholder');
-    if (navEl) navEl.outerHTML = NAV_HTML;
+    if (navEl) navEl.outerHTML = NETWORK_BAR_HTML + NAV_HTML;
     if (footerEl) footerEl.outerHTML = FOOTER_HTML;
 
     // Mark active nav link
