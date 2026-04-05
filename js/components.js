@@ -135,6 +135,8 @@
       jp_weight_to_feexio_link: 'Calculate your fees and profit margins',
       jp_temp_to_ilh: 'Sharing this conversion with your audience?',
       jp_temp_to_ilh_link: 'Create a WhatsApp link or QR code in seconds',
+      jp_storage_to_feexio: 'Pricing digital services or storage plans?',
+      jp_storage_to_feexio_link: 'Calculate your profit margins and fees',
 
       // FAQ Section
       faq_title: 'Frequently Asked Questions',
@@ -281,6 +283,8 @@
       jp_weight_to_feexio_link: 'Calcula tus comisiones y m\u00e1rgenes de ganancia',
       jp_temp_to_ilh: '\u00bfCompartes esta conversi\u00f3n con tu audiencia?',
       jp_temp_to_ilh_link: 'Crea un enlace de WhatsApp o c\u00f3digo QR en segundos',
+      jp_storage_to_feexio: '\u00bfCalculas el precio de servicios digitales o planes de almacenamiento?',
+      jp_storage_to_feexio_link: 'Calcula tus m\u00e1rgenes de ganancia y comisiones',
 
       // FAQ Section
       faq_title: 'Preguntas Frecuentes',
