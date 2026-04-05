@@ -382,6 +382,7 @@ a:hover { text-decoration: underline; }
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   margin-top: 0;
+  min-height: 80px;
 }
 .cat-tile {
   flex: 1;
@@ -421,13 +422,14 @@ a:hover { text-decoration: underline; }
 .cat-tile.cat-storage::before  { background: var(--success); }
 .cat-tile.cat-binary::before   { background: var(--pink); }
 
-.cat-tile-icon { font-size: 1.6rem; line-height: 1; }
+.cat-tile-icon { font-size: 1.6rem; line-height: 1; color: initial; }
 .cat-tile-name {
   font-family: var(--font-head);
   font-size: .78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .05em;
+  color: var(--text-muted);
 }
 
 /* =========================================================
