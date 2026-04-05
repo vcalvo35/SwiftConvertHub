@@ -129,6 +129,24 @@
       contact_subject_label: 'Subject',
       contact_msg_label: 'Message',
       contact_submit: 'Send Message \ud83d\ude80',
+
+      // Jump Points
+      jp_weight_to_feexio: 'Selling products or services online?',
+      jp_weight_to_feexio_link: 'Calculate your fees and profit margins',
+
+      // FAQ Section
+      faq_title: 'Frequently Asked Questions',
+      faq_subtitle: 'Common questions about unit conversions and how our converters work.',
+      faq_q1: 'How many kilometers are in a mile?',
+      faq_a1: 'One mile equals exactly 1.60934 kilometers. Conversely, one kilometer equals approximately 0.621371 miles. This conversion is commonly needed when traveling between countries using metric and imperial systems.',
+      faq_q2: 'How do you convert Celsius to Fahrenheit?',
+      faq_a2: 'Multiply the Celsius value by 9/5 and add 32. Formula: \u00b0F = (\u00b0C \u00d7 9/5) + 32. For example, 100\u00b0C = 212\u00b0F and 0\u00b0C = 32\u00b0F. To reverse: \u00b0C = (\u00b0F \u2212 32) \u00d7 5/9.',
+      faq_q3: 'What is the difference between GB and GiB?',
+      faq_a3: 'A gigabyte (GB) equals 1,000,000,000 bytes (decimal). A gibibyte (GiB) equals 1,073,741,824 bytes (binary). Hard drive makers use decimal GB while operating systems often report in binary GiB \u2014 that\'s why a 1 TB drive shows ~931 GiB.',
+      faq_q4: 'How do you convert pounds to kilograms?',
+      faq_a4: 'Divide the pound value by 2.20462 to get kilograms. Example: 150 lbs \u00f7 2.20462 \u2248 68.04 kg. To convert kg to lbs, multiply by 2.20462. Our Weight Converter also handles ounces, stones, and tonnes.',
+      faq_q5: 'How do you convert a decimal number to binary?',
+      faq_a5: 'Repeatedly divide the number by 2 and record the remainders from bottom to top. Example: 13 \u2192 1101 in binary. Our Binary & Number Systems converter handles decimal, binary, hexadecimal and octal instantly.',
     },
     es: {
       // Nav
@@ -256,6 +274,10 @@
       faq_a5: 'Repeatedly divide the number by 2 and record the remainders from bottom to top. Example: 13 → 1101 in binary. Our Binary & Number Systems converter handles decimal, binary, hexadecimal and octal instantly.',
     },
     es: {
+      // Jump Points
+      jp_weight_to_feexio: '\u00bfVendes productos o servicios en l\u00ednea?',
+      jp_weight_to_feexio_link: 'Calcula tus comisiones y m\u00e1rgenes de ganancia',
+
       // FAQ Section
       faq_title: 'Preguntas Frecuentes',
       faq_subtitle: 'Preguntas comunes sobre conversión de unidades y cómo funcionan nuestros conversores.',
