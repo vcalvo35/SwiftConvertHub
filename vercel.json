@@ -1,5 +1,13 @@
 {
   "version": 2,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.swiftconverthub.com" }],
+      "destination": "https://swiftconverthub.com/$1",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)\\.html",
@@ -8,22 +16,32 @@
     {
       "source": "/sitemap\\.xml",
       "headers": [{"key": "Cache-Control", "value": "public, max-age=3600"}]
+    },
+    {
+      "source": "/ads\\.txt",
+      "headers": [
+        {"key": "Cache-Control", "value": "public, max-age=3600"},
+        {"key": "Content-Type", "value": "text/plain; charset=utf-8"}
+      ]
     }
   ],
   "builds": [
     {"src": "*.html", "use": "@vercel/static"},
     {"src": "css/*.css", "use": "@vercel/static"},
     {"src": "js/*.js", "use": "@vercel/static"},
-    {"src": "assets/**", "use": "@vercel/static"}
+    {"src": "assets/**", "use": "@vercel/static"},
+    {"src": "ads.txt", "use": "@vercel/static"},
+    {"src": "robots.txt", "use": "@vercel/static"},
+    {"src": "sitemap.xml", "use": "@vercel/static"}
   ],
   "routes": [
-    {"src": "^/css/(.*)", "dest": "/css/$1"},
-    {"src": "^/js/(.*)", "dest": "/js/$1"},
-    {"src": "^/assets/(.*)", "dest": "/assets/$1"},
     {"src": "^/ads\\.txt$", "dest": "/ads.txt"},
     {"src": "^/sitemap\\.xml$", "dest": "/sitemap.xml"},
     {"src": "^/robots\\.txt$", "dest": "/robots.txt"},
+    {"src": "^/css/(.*)", "dest": "/css/$1"},
+    {"src": "^/js/(.*)", "dest": "/js/$1"},
+    {"src": "^/assets/(.*)", "dest": "/assets/$1"},
     {"src": "^/([a-zA-Z0-9_-]+\\.html)$", "dest": "/$1"},
-    {"src": "^/(.*)", "dest": "/index.html"}
+    {"src": "^/$", "dest": "/index.html"}
   ]
 }
