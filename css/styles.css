@@ -137,6 +137,11 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
 }
 .nav-logo span { color: var(--primary); }
+
+/* Logo theme switching — picture element handles OS preference,
+   data-theme attribute handles manual toggle */
+[data-theme="light"] #nav-logo-img { content: url('/assets/logo-nav-light.png'); }
+[data-theme="dark"]  #nav-logo-img { content: url('/assets/logo-nav-dark.png'); }
 .nav-links {
   display: flex;
   align-items: center;

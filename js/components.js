@@ -293,7 +293,10 @@
   const NAV_HTML = '<nav class="nav" role="navigation" aria-label="Main navigation">' +
     '<div class="container">' +
       '<a class="nav-logo" href="/" aria-label="SwiftConvertHub Home">' +
-        '<img src="/assets/horizontal_t.png" alt="SwiftConvertHub" style="height:36px;width:auto;display:block;" />' +
+        '<picture>' +
+          '<source media="(prefers-color-scheme: dark)" srcset="/assets/logo-nav-dark.png">' +
+          '<img src="/assets/logo-nav-light.png" alt="SwiftConvertHub" style="height:44px;width:auto;display:block;" id="nav-logo-img">' +
+        '</picture>' +
       '</a>' +
       '<ul class="nav-links" id="nav-links">' +
         '<li><a href="/" data-page="home" data-i18n="nav_converters">Converters</a></li>' +
@@ -318,7 +321,10 @@
       '<div class="footer-grid">' +
         '<div class="footer-brand">' +
           '<a class="nav-logo" href="/" style="text-decoration:none;" aria-label="SwiftConvertHub Home">' +
-            '<img src="/assets/logoprincipal_t.png" alt="SwiftConvertHub" style="height:32px;width:auto;display:block;margin-bottom:12px;" />' +
+            '<picture>' +
+              '<source media="(prefers-color-scheme: dark)" srcset="/assets/logo-footer-dark.png">' +
+              '<img src="/assets/logo-footer-light.png" alt="SwiftConvertHub" style="height:32px;width:auto;display:block;margin-bottom:12px;" />' +
+            '</picture>' +
           '</a>' +
           '<p data-i18n="footer_tagline">Free, instant unit conversions for everyone. No sign-up, no ads clutter \u2014 just fast, accurate results.</p>' +
         '</div>' +
