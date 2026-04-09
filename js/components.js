@@ -292,9 +292,8 @@
   /* ---- Nav HTML ---- */
   const NAV_HTML = '<nav class="nav" role="navigation" aria-label="Main navigation">' +
     '<div class="container">' +
-      '<a class="nav-logo" href="/">' +
-        '<div class="logo-mark">\u26a1</div>' +
-        'Swift<span>Convert</span>Hub' +
+      '<a class="nav-logo" href="/" aria-label="SwiftConvertHub Home">' +
+        '<img src="/assets/logos.png" alt="SwiftConvertHub" style="height:36px;width:auto;display:block;" />' +
       '</a>' +
       '<ul class="nav-links" id="nav-links">' +
         '<li><a href="/" data-page="home" data-i18n="nav_converters">Converters</a></li>' +
@@ -318,9 +317,8 @@
     '<div class="container">' +
       '<div class="footer-grid">' +
         '<div class="footer-brand">' +
-          '<a class="nav-logo" href="/" style="text-decoration:none;">' +
-            '<div class="logo-mark">\u26a1</div>' +
-            'Swift<span>Convert</span>Hub' +
+          '<a class="nav-logo" href="/" style="text-decoration:none;" aria-label="SwiftConvertHub Home">' +
+            '<img src="/assets/logos.png" alt="SwiftConvertHub" style="height:32px;width:auto;display:block;margin-bottom:12px;" />' +
           '</a>' +
           '<p data-i18n="footer_tagline">Free, instant unit conversions for everyone. No sign-up, no ads clutter \u2014 just fast, accurate results.</p>' +
         '</div>' +
