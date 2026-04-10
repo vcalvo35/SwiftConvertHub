@@ -293,10 +293,7 @@
   const NAV_HTML = '<nav class="nav" role="navigation" aria-label="Main navigation">' +
     '<div class="container">' +
       '<a class="nav-logo" href="/" aria-label="SwiftConvertHub Home">' +
-        '<picture>' +
-          '<source media="(prefers-color-scheme: dark)" srcset="/assets/logo-nav-dark.png">' +
-          '<img src="/assets/logo-nav-light.png" alt="SwiftConvertHub" style="height:44px;width:auto;display:block;" id="nav-logo-img">' +
-        '</picture>' +
+        '<img src="/assets/logo-nav-light.png" alt="SwiftConvertHub" id="nav-logo-img" style="height:44px;width:auto;display:block;" />' +
       '</a>' +
       '<ul class="nav-links" id="nav-links">' +
         '<li><a href="/" data-page="home" data-i18n="nav_converters">Converters</a></li>' +
@@ -322,9 +319,7 @@
         '<div class="footer-brand">' +
           '<a class="nav-logo" href="/" style="text-decoration:none;" aria-label="SwiftConvertHub Home">' +
             '<picture>' +
-              '<source media="(prefers-color-scheme: dark)" srcset="/assets/logo-footer-dark.png">' +
-              '<img src="/assets/logo-footer-light.png" alt="SwiftConvertHub" style="height:32px;width:auto;display:block;margin-bottom:12px;" />' +
-            '</picture>' +
+              '<img src="/assets/logo-footer-light.png" alt="SwiftConvertHub" id="footer-logo-img" style="height:32px;width:auto;display:block;margin-bottom:12px;" />' +
           '</a>' +
           '<p data-i18n="footer_tagline">Free, instant unit conversions for everyone. No sign-up, no ads clutter \u2014 just fast, accurate results.</p>' +
         '</div>' +
@@ -364,6 +359,14 @@
     '<a href="https://swiftconverthub.com" target="_blank" rel="noopener" style="color:#c8d0e8;text-decoration:none;margin:0 6px;font-weight:600;">SwiftConvertHub</a>' +
     '</div>';
 
+  function updateLogos(theme) {
+    var navImg = document.getElementById('nav-logo-img');
+    var footerImg = document.getElementById('footer-logo-img');
+    var isDark = theme === 'dark';
+    if (navImg) navImg.src = isDark ? '/assets/logo-nav-dark.png' : '/assets/logo-nav-light.png';
+    if (footerImg) footerImg.src = isDark ? '/assets/logo-footer-dark.png' : '/assets/logo-footer-light.png';
+  }
+
   function inject() {
     const navEl = document.getElementById('nav-placeholder');
     const footerEl = document.getElementById('footer-placeholder');
@@ -387,8 +390,12 @@
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('sch-theme', next);
         themeBtn.textContent = next === 'dark' ? '\u2600\ufe0f' : '\ud83c\udf19';
+        updateLogos(next);
       });
     }
+
+    // Set correct logo on load
+    updateLogos(document.documentElement.getAttribute('data-theme') || 'light');
 
     // Lang button
     const langBtn = document.getElementById('lang-btn');
