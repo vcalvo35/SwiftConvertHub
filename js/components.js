@@ -318,8 +318,7 @@
       '<div class="footer-grid">' +
         '<div class="footer-brand">' +
           '<a class="nav-logo" href="/" style="text-decoration:none;" aria-label="SwiftConvertHub Home">' +
-            '<picture>' +
-              '<img src="/assets/logo-footer-light.png" alt="SwiftConvertHub" id="footer-logo-img" style="height:32px;width:auto;display:block;margin-bottom:12px;" />' +
+            '<img src="/assets/logo-footer-light.png" alt="SwiftConvertHub" id="footer-logo-img" style="height:32px;width:auto;display:block;margin-bottom:12px;" />' +
           '</a>' +
           '<p data-i18n="footer_tagline">Free, instant unit conversions for everyone. No sign-up, no ads clutter \u2014 just fast, accurate results.</p>' +
         '</div>' +
