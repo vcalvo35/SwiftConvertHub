@@ -317,10 +317,15 @@
     '<div class="container">' +
       '<div class="footer-grid">' +
         '<div class="footer-brand">' +
-          '<a class="nav-logo" href="/" style="text-decoration:none;" aria-label="SwiftConvertHub Home">' +
-            '<img src="/assets/logo-footer-light.png" alt="SwiftConvertHub" id="footer-logo-img" style="height:32px;width:auto;display:block;margin-bottom:12px;" />' +
+          '<a href="/" style="text-decoration:none;display:inline-block;margin-bottom:12px;" aria-label="SwiftConvertHub">' +
+            '<img src="/assets/logo-footer-light.png" alt="SwiftConvertHub" id="footer-logo-img" style="height:32px;width:auto;display:block;" />' +
           '</a>' +
           '<p data-i18n="footer_tagline">Free, instant unit conversions for everyone. No sign-up, no ads clutter \u2014 just fast, accurate results.</p>' +
+          '<div style="display:flex;gap:12px;margin-top:16px;align-items:center;">' +
+            '<a href="https://www.facebook.com/toolsynergylab" target="_blank" rel="noopener" aria-label="Facebook" style="display:inline-flex;color:#9CA3AF;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>' +
+            '<a href="https://www.instagram.com/toolsynergylab" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;color:#9CA3AF;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>' +
+            '<a href="https://www.youtube.com/channel/UCRcgmNeRDcBtk1S3UFjr1gw" target="_blank" rel="noopener" aria-label="YouTube" style="display:inline-flex;color:#9CA3AF;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>' +
+          '</div>' +
         '</div>' +
         '<div class="footer-col">' +
           '<h4 data-i18n="footer_col1_h4">Converters</h4>' +
@@ -343,11 +348,6 @@
           '</ul>' +
         '</div>' +
       '</div>' +
-      '<div class="footer-social" style="display:flex;gap:12px;margin-top:12px;align-items:center;">' +
-        '<a href="https://www.facebook.com/toolsynergylab" target="_blank" rel="noopener noreferrer" aria-label="ToolSynergyLab on Facebook" style="display:inline-flex;color:#ccc;transition:color 0.2s;" onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='#ccc'"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>' +
-        '<a href="https://www.instagram.com/toolsynergylab?igsh=cHI3ZTJ4MG4wNjc1" target="_blank" rel="noopener noreferrer" aria-label="ToolSynergyLab on Instagram" style="display:inline-flex;color:#ccc;transition:color 0.2s;" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#ccc'"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>' +
-        '<a href="https://www.youtube.com/channel/UCRcgmNeRDcBtk1S3UFjr1gw" target="_blank" rel="noopener noreferrer" aria-label="ToolSynergyLab on YouTube" style="display:inline-flex;color:#ccc;transition:color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#ccc'"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>' +
-      '</div>' +
       '<div class="footer-bottom">' +
         '<p>&copy; ' + year + ' SwiftConvertHub. <span data-i18n="footer_rights">All rights reserved.</span></p>' +
         '<p data-i18n="footer_free">Free unit converter \u2014 No login required</p>' +
@@ -355,7 +355,7 @@
     '</div>' +
   '</footer>';
 
-  /* ---- Inject ---- */
+    /* ---- Inject ---- */
   const NETWORK_BAR_HTML = '<div style="background:#1a1a2e;color:#a0a8c8;font-size:12px;text-align:center;padding:6px 16px;letter-spacing:0.02em;">' +
     'More free tools:&nbsp;' +
     '<a href="https://instantlinkhub.com" target="_blank" rel="noopener" style="color:#7eb8f7;text-decoration:none;margin:0 6px;">InstantLinkHub</a>&middot;' +
