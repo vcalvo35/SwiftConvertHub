@@ -4,34 +4,42 @@
    ========================================================= */
 
 /* ---------- Google Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+/* =========================================================
+   SwiftConvertHub — styles.css  v2
+   Brand: Amigable · Simple · Accesible
+   Fonts: Manrope (display) · Nunito (body)
+   Colors: OKLCH with violet-tinted neutrals
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /* ---------- CSS Variables ---------- */
 :root {
-  --primary:        #7C3AED;
-  --primary-dark:   #5B21B6;
-  --primary-light:  #A78BFA;
-  --accent:         #06B6D4;
-  --accent-dark:    #0891B2;
-  --success:        #10B981;
-  --warning:        #F59E0B;
-  --pink:           #EC4899;
+  /* Brand accent — violet, perceptually calibrated */
+  --primary:        oklch(52% 0.22 290deg);
+  --primary-dark:   oklch(42% 0.22 290deg);
+  --primary-light:  oklch(66% 0.18 290deg);
+  --accent:         oklch(62% 0.17 220deg);
+  --accent-dark:    oklch(52% 0.17 220deg);
+  --success:        oklch(63% 0.17 155deg);
+  --warning:        oklch(72% 0.17 65deg);
+  --pink:           oklch(62% 0.22 350deg);
 
-  --bg:             #FAFAFA;
-  --bg-alt:         #F3F0FF;
-  --surface:        #FFFFFF;
-  --surface-alt:    #F5F3FF;
-  --border:         #E2D9F3;
-  --border-strong:  #C4B5FD;
+  /* Light mode — violet-tinted neutrals */
+  --bg:             oklch(98.5% 0.006 290deg);
+  --bg-alt:         oklch(96.5% 0.012 290deg);
+  --surface:        oklch(100% 0 0);
+  --surface-alt:    oklch(97% 0.01 290deg);
+  --border:         oklch(89% 0.015 290deg);
+  --border-strong:  oklch(80% 0.03 290deg);
 
-  --text:           #1E1B4B;
-  --text-2:         #4C1D95;
-  --text-muted:     #6B7280;
-  --text-light:     #9CA3AF;
+  --text:           oklch(18% 0.02 290deg);
+  --text-2:         oklch(30% 0.06 290deg);
+  --text-muted:     oklch(54% 0.012 290deg);
+  --text-light:     oklch(68% 0.008 290deg);
 
-  --shadow-sm:  0 1px 3px rgba(124,58,237,.08), 0 1px 2px rgba(124,58,237,.06);
-  --shadow-md:  0 4px 16px rgba(124,58,237,.12), 0 2px 8px rgba(124,58,237,.08);
-  --shadow-lg:  0 10px 40px rgba(124,58,237,.16), 0 4px 16px rgba(124,58,237,.10);
+  --shadow-sm:  0 1px 3px oklch(52% 0.22 290deg / 0.08);
+  --shadow-md:  0 4px 16px oklch(52% 0.22 290deg / 0.12);
+  --shadow-lg:  0 10px 40px oklch(52% 0.22 290deg / 0.16);
 
   --radius-sm:  8px;
   --radius-md:  14px;
@@ -39,38 +47,40 @@
   --radius-xl:  28px;
 
   --nav-h:      64px;
-  --font:       'Inter', system-ui, sans-serif;
-  --font-head:  'Space Grotesk', 'Inter', system-ui, sans-serif;
-  --font-mono:  'Courier New', Courier, monospace;
+  --font:       'Nunito', system-ui, sans-serif;
+  --font-head:  'Manrope', system-ui, sans-serif;
+  --font-mono:  ui-monospace, 'Cascadia Code', monospace;
 
-  --transition: .2s cubic-bezier(.4,0,.2,1);
+  /* ease-out-expo for natural deceleration */
+  --ease:       cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: 0.24s var(--ease);
 }
 
 [data-theme="dark"] {
-  --primary:        #A78BFA;
-  --primary-dark:   #7C3AED;
-  --primary-light:  #C4B5FD;
-  --accent:         #22D3EE;
-  --accent-dark:    #06B6D4;
-  --success:        #34D399;
-  --warning:        #FBBF24;
-  --pink:           #F472B6;
+  --primary:        oklch(68% 0.18 290deg);
+  --primary-dark:   oklch(52% 0.22 290deg);
+  --primary-light:  oklch(78% 0.14 290deg);
+  --accent:         oklch(72% 0.16 220deg);
+  --accent-dark:    oklch(62% 0.17 220deg);
+  --success:        oklch(72% 0.15 155deg);
+  --warning:        oklch(80% 0.16 65deg);
+  --pink:           oklch(72% 0.20 350deg);
 
-  --bg:             #0D0B1A;
-  --bg-alt:         #120F24;
-  --surface:        #1A1630;
-  --surface-alt:    #221D3E;
-  --border:         #2D2750;
-  --border-strong:  #4C3B80;
+  --bg:             oklch(12% 0.018 290deg);
+  --bg-alt:         oklch(16% 0.02 290deg);
+  --surface:        oklch(17% 0.02 290deg);
+  --surface-alt:    oklch(20% 0.024 290deg);
+  --border:         oklch(28% 0.024 290deg);
+  --border-strong:  oklch(38% 0.04 290deg);
 
-  --text:           #F1EEFF;
-  --text-2:         #C4B5FD;
-  --text-muted:     #9CA3AF;
-  --text-light:     #6B7280;
+  --text:           oklch(93% 0.008 290deg);
+  --text-2:         oklch(78% 0.05 290deg);
+  --text-muted:     oklch(66% 0.01 290deg);
+  --text-light:     oklch(52% 0.01 290deg);
 
-  --shadow-sm:  0 1px 3px rgba(0,0,0,.4);
-  --shadow-md:  0 4px 16px rgba(0,0,0,.5);
-  --shadow-lg:  0 10px 40px rgba(0,0,0,.6);
+  --shadow-sm:  0 1px 3px oklch(0% 0 0 / 0.40);
+  --shadow-md:  0 4px 16px oklch(0% 0 0 / 0.50);
+  --shadow-lg:  0 10px 40px oklch(0% 0 0 / 0.60);
 }
 
 /* ---------- Reset ---------- */
@@ -278,10 +288,7 @@ a:hover { text-decoration: underline; }
   margin-bottom: 20px;
 }
 .hero h1 .gradient {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
 }
 .hero p {
   font-size: 1.05rem;
@@ -445,9 +452,10 @@ a:hover { text-decoration: underline; }
   text-transform: uppercase;
   letter-spacing: .08em;
   margin-bottom: 12px;
-  padding-left: 12px;
-  border-left: 3px solid var(--primary);
-  line-height: 1.2;
+  padding: 4px 12px;
+  background: oklch(52% 0.22 290deg / 0.08);
+  border-radius: 20px;
+  line-height: 1.4;
 }
 .section-header { margin-bottom: 40px; }
 .section-header h2 {
@@ -863,3 +871,20 @@ a:hover { text-decoration: underline; }
 .related-articles ul { list-style: none; padding: 0; }
 .related-articles li { margin-bottom: 8px; }
 .related-articles a { font-size: .875rem; color: var(--primary); }
+
+/* ── Focus — accessible, brand-coloured ──────────────────────── */
+:focus-visible {
+  outline: 2.5px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Reduced Motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
