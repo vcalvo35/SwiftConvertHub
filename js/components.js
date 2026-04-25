@@ -91,12 +91,21 @@
       feat5_p: 'No sign-up, no email, no tracking. Just open and convert.',
       feat6_h3: 'Always Free',
       feat6_p: 'Every converter on this site is free and always will be.',
+      // Cooking converter section
+      sec_cooking_label: '\ud83c\udf73 Cooking',
+      sec_cooking_h2: 'Cooking &amp; Recipe Converter',
+      sec_cooking_p: 'Convert cups, tablespoons, teaspoons, fluid ounces and milliliters. Plus grams, ounces and pounds for baking.',
+      card_cooking_vol_title: 'Volume (Cups, tbsp, mL\u2026)',
+      card_cooking_vol_sub: 'US Cup \u2194 Metric \u2194 fl oz \u2194 mL',
+      card_cooking_wt_title: 'Weight (g, kg, oz, lb)',
+      card_cooking_wt_sub: 'Grams \u2194 Ounces \u2194 Pounds \u2194 Kilograms',
       // Category tiles
       cat_length: 'Length',
       cat_weight: 'Weight',
       cat_temp: 'Temperature',
       cat_storage: 'Storage',
       cat_binary: 'Binary',
+      cat_cooking: 'Cooking',
       // Footer
       footer_tagline: 'Free, instant unit conversions for everyone. No sign-up, no ads clutter \u2014 just fast, accurate results.',
       footer_col1_h4: 'Converters',
@@ -105,6 +114,7 @@
       footer_temp: 'Temperature',
       footer_storage: 'Digital Storage',
       footer_binary: 'Binary & Numbers',
+      footer_cooking: 'Cooking & Recipes',
       footer_col2_h4: 'Pages',
       footer_privacy: 'Privacy Policy',
       footer_terms: 'Terms of Use',
@@ -228,8 +238,16 @@
       feat5_p: 'Sin registro, sin email, sin rastreo. Solo abre y convierte.',
       feat6_h3: 'Siempre Gratis',
       feat6_p: 'Cada conversor en este sitio es gratuito y siempre lo ser\u00e1.',
+      sec_cooking_label: '\ud83c\udf73 Cocina',
+      sec_cooking_h2: 'Conversor de Cocina y Recetas',
+      sec_cooking_p: 'Convierte tazas, cucharadas, cucharaditas, onzas l\u00edquidas y mililitros. Tambi\u00e9n gramos, onzas y libras para hornear.',
+      card_cooking_vol_title: 'Volumen (Tazas, cdas, mL\u2026)',
+      card_cooking_vol_sub: 'Taza USA \u2194 M\u00e9trico \u2194 fl oz \u2194 mL',
+      card_cooking_wt_title: 'Peso (g, kg, oz, lb)',
+      card_cooking_wt_sub: 'Gramos \u2194 Onzas \u2194 Libras \u2194 Kilogramos',
       cat_length: 'Longitud', cat_weight: 'Peso', cat_temp: 'Temperatura',
-      cat_storage: 'Almacenamiento', cat_binary: 'Binario',
+      cat_storage: 'Almacenamiento', cat_binary: 'Binario', cat_cooking: 'Cocina',
+      footer_cooking: 'Cocina y Recetas',
       footer_tagline: 'Conversiones de unidades gratuitas e instant\u00e1neas. Sin registro, sin anuncios molestos \u2014 solo resultados r\u00e1pidos y precisos.',
       footer_col1_h4: 'Conversores', footer_length: 'Longitud y Distancia',
       footer_weight: 'Peso y Masa', footer_temp: 'Temperatura',
@@ -366,6 +384,7 @@
             '<li><a href="/#temperature" data-i18n="footer_temp">Temperature</a></li>' +
             '<li><a href="/#storage" data-i18n="footer_storage">Digital Storage</a></li>' +
             '<li><a href="/#binary" data-i18n="footer_binary">Binary &amp; Numbers</a></li>' +
+            '<li><a href="/cooking-converter.html" data-i18n="footer_cooking">Cooking &amp; Recipes</a></li>' +
           '</ul>' +
         '</div>' +
         '<div class="footer-col">' +

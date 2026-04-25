@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLQEN72B5R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TLQEN72B5R');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cooking &amp; Recipe Converter — Free Online Tool | SwiftConvertHub</title>
+  <meta name="description" content="Free cooking converter: cups to mL, tablespoons to teaspoons, grams to ounces, pounds to kilograms. Instant, accurate, no sign-up required." />
+  <meta name="keywords" content="cooking converter, cups to ml, tablespoons to teaspoons, grams to ounces, recipe converter, baking converter, cooking measurements" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://swiftconverthub.com/cooking-converter.html" />
+  <meta property="og:title" content="Cooking &amp; Recipe Converter — Free Online Tool" />
+  <meta property="og:description" content="Convert cups, tablespoons, teaspoons, fluid ounces, mL, grams, ounces and pounds instantly. Free and accurate." />
+  <meta property="og:url" content="https://swiftconverthub.com/cooking-converter.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SwiftConvertHub" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/logo-square-light.png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Cooking & Recipe Converter",
+    "url": "https://swiftconverthub.com/cooking-converter.html",
+    "description": "Free online cooking and recipe converter for volume (cups, tablespoons, teaspoons, fluid ounces, mL, liters) and weight (grams, kilograms, ounces, pounds).",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6069037516718532"
+       crossorigin="anonymous"></script>
+</head>
+<body data-page="home">
+  <div id="nav-placeholder"></div>
+
+  <!-- Page Header -->
+  <div class="article-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &rsaquo; Cooking &amp; Recipe Converter
+      </div>
+      <div class="section-label">&#127859; Cooking</div>
+      <h1 style="font-family:var(--font-head);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--text);margin:12px 0 12px;letter-spacing:-0.5px;">Cooking &amp; Recipe Converter</h1>
+      <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.7;max-width:640px;">Convert cups, tablespoons, teaspoons, fluid ounces and milliliters. Plus grams, ounces, pounds and kilograms for baking. Free, instant, and accurate to 10 significant digits.</p>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top:24px;padding-bottom:40px;">
+
+    <!-- AdSense top -->
+    <div style="margin:0 auto 28px;text-align:center;max-width:720px;">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+           data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Volume Converter Widget -->
+    <div style="max-width:720px;margin:0 auto 32px;">
+      <h2 style="font-family:var(--font-head);font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:16px;">&#129354; Volume Converter</h2>
+      <div class="converter-card">
+        <div class="converter-card-accent"></div>
+        <div class="converter-card-inner">
+          <div class="card-header">
+            <div class="card-icon cooking" style="background:linear-gradient(135deg,#f59e0b,#d97706);">&#129354;</div>
+            <div>
+              <div class="card-title">Volume (Cups, tbsp, mL&hellip;)</div>
+              <div class="card-subtitle">US Cup &#8596; Metric &#8596; fl oz &#8596; mL</div>
+            </div>
+          </div>
+          <div class="converter-ui">
+            <div class="converter-field">
+              <label for="vol-from">From</label>
+              <select id="vol-from" onchange="convertVolume()"></select>
+              <label for="vol-val" style="margin-top:10px">Value</label>
+              <input type="number" id="vol-val" placeholder="Enter value" oninput="convertVolume()" />
+            </div>
+            <button class="swap-btn" onclick="swapVolume()" title="Swap units" aria-label="Swap units">&#8644;</button>
+            <div class="converter-field">
+              <label for="vol-to">To</label>
+              <select id="vol-to" onchange="convertVolume()"></select>
+              <label for="vol-result" style="margin-top:10px">Result</label>
+              <input type="text" id="vol-result" readonly placeholder="Result" />
+            </div>
+          </div>
+          <div class="quick-list" aria-label="Quick volume conversions">
+            <button class="quick-chip" onclick="quickConvert('vol','us_cup','ml',1)">1 cup &#8594; mL</button>
+            <button class="quick-chip" onclick="quickConvert('vol','us_tbsp','us_tsp',1)">1 tbsp &#8594; tsp</button>
+            <button class="quick-chip" onclick="quickConvert('vol','us_fl_oz','ml',1)">1 fl oz &#8594; mL</button>
+            <button class="quick-chip" onclick="quickConvert('vol','ml','us_cup',250)">250 mL &#8594; cups</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weight Converter Widget -->
+    <div style="max-width:720px;margin:0 auto 40px;">
+      <h2 style="font-family:var(--font-head);font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:16px;">&#9878;&#65039; Weight Converter</h2>
+      <div class="converter-card">
+        <div class="converter-card-accent"></div>
+        <div class="converter-card-inner">
+          <div class="card-header">
+            <div class="card-icon cooking" style="background:linear-gradient(135deg,#f59e0b,#d97706);">&#9878;&#65039;</div>
+            <div>
+              <div class="card-title">Weight (g, kg, oz, lb)</div>
+              <div class="card-subtitle">Grams &#8596; Ounces &#8596; Pounds &#8596; Kilograms</div>
+            </div>
+          </div>
+          <div class="converter-ui">
+            <div class="converter-field">
+              <label for="cwt-from">From</label>
+              <select id="cwt-from" onchange="convertCookingWeight()"></select>
+              <label for="cwt-val" style="margin-top:10px">Value</label>
+              <input type="number" id="cwt-val" placeholder="Enter value" oninput="convertCookingWeight()" />
+            </div>
+            <button class="swap-btn" onclick="swapCookingWeight()" title="Swap units" aria-label="Swap units">&#8644;</button>
+            <div class="converter-field">
+              <label for="cwt-to">To</label>
+              <select id="cwt-to" onchange="convertCookingWeight()"></select>
+              <label for="cwt-result" style="margin-top:10px">Result</label>
+              <input type="text" id="cwt-result" readonly placeholder="Result" />
+            </div>
+          </div>
+          <div class="quick-list" aria-label="Quick cooking weight conversions">
+            <button class="quick-chip" onclick="quickConvert('cwt','gram','ounce',100)">100 g &#8594; oz</button>
+            <button class="quick-chip" onclick="quickConvert('cwt','pound','gram',1)">1 lb &#8594; g</button>
+            <button class="quick-chip" onclick="quickConvert('cwt','kilogram','pound',1)">1 kg &#8594; lbs</button>
+            <button class="quick-chip" onclick="quickConvert('cwt','ounce','gram',1)">1 oz &#8594; g</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <article style="max-width:720px;margin:0 auto;">
+
+      <!-- AdSense mid -->
+      <div style="margin:0 auto 32px;text-align:center;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+             data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <h2>Cooking Measurement Systems Explained</h2>
+      <p>Recipes around the world use three different measurement systems: the US customary system (cups, tablespoons, teaspoons, fluid ounces), the metric system (milliliters, liters, grams, kilograms), and the Imperial system (UK fluid ounces, which differ slightly from US). Understanding these differences is essential when adapting recipes across countries.</p>
+
+      <h2>Volume: US Cups vs Metric Cups</h2>
+      <p>One of the most common sources of confusion in international recipes is the cup. A US customary cup equals 236.588 mL (typically rounded to 240 mL), while an Australian or metric cup equals exactly 250 mL. That is a difference of about 13 mL per cup — small for one cup, but significant when a recipe calls for 4 cups of flour. Canadian recipes generally use the metric cup (250 mL); UK recipes use milliliters or Imperial fluid ounces rather than cups altogether.</p>
+
+      <h3>US Volume Measurement Hierarchy</h3>
+      <p>The US system has a neat hierarchy worth memorizing: 1 US cup = 16 tablespoons = 48 teaspoons = 8 fluid ounces = 236.588 mL. A tablespoon equals 3 teaspoons or 14.787 mL. A teaspoon is approximately 4.929 mL. These relationships make it easy to scale recipes up or down without a converter — half a cup is 8 tablespoons, a quarter cup is 4 tablespoons, and so on.</p>
+
+      <h2>Volume Reference Table</h2>
+      <div style="overflow-x:auto;margin:16px 0 28px;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+          <thead>
+            <tr style="background:var(--surface);border-bottom:2px solid var(--border);">
+              <th style="padding:10px 14px;text-align:left;color:var(--text);font-weight:700;">Measurement</th>
+              <th style="padding:10px 14px;text-align:right;color:var(--text);font-weight:700;">mL</th>
+              <th style="padding:10px 14px;text-align:right;color:var(--text);font-weight:700;">US fl oz</th>
+              <th style="padding:10px 14px;text-align:right;color:var(--text);font-weight:700;">tbsp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--text);">1 US teaspoon (tsp)</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">4.93</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">0.167</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">0.333</td></tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--surface);"><td style="padding:9px 14px;color:var(--text);">1 US tablespoon (tbsp)</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">14.79</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">0.5</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">1</td></tr>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--text);">1 US fluid ounce (fl oz)</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">29.57</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">1</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">2</td></tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--surface);"><td style="padding:9px 14px;color:var(--text);">¼ US cup</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">59.15</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">2</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">4</td></tr>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--text);">⅓ US cup</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">78.86</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">2.67</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">5.33</td></tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--surface);"><td style="padding:9px 14px;color:var(--text);">½ US cup</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">118.29</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">4</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">8</td></tr>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--text);">1 US cup</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">236.59</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">8</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">16</td></tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--surface);"><td style="padding:9px 14px;color:var(--text);">1 metric cup</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">250</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">8.45</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">16.91</td></tr>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--text);">1 liter</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">1000</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">33.81</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">67.63</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Weight in the Kitchen: Grams vs Ounces</h2>
+      <p>Professional bakers and recipe developers overwhelmingly prefer grams over cups and ounces because weight is unambiguous — 200 g of flour is always 200 g regardless of how you spoon it into a container. Volume-based measurements for dry ingredients suffer from a packing problem: a cup of all-purpose flour measured by dipping into the bag can weigh 160 g, while a cup scooped lightly with a spoon levels out to around 120 g. That 33% variance is why professional recipes specify weight.</p>
+      <p>For those still working with US ounces: 1 ounce equals exactly 28.3495 grams (avoirdupois). A pound equals 16 ounces or 453.592 grams. For typical baking quantities, the conversion table below covers the most useful ranges.</p>
+
+      <h3>Weight Reference Table</h3>
+      <div style="overflow-x:auto;margin:16px 0 28px;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+          <thead>
+            <tr style="background:var(--surface);border-bottom:2px solid var(--border);">
+              <th style="padding:10px 14px;text-align:left;color:var(--text);font-weight:700;">Grams (g)</th>
+              <th style="padding:10px 14px;text-align:right;color:var(--text);font-weight:700;">Ounces (oz)</th>
+              <th style="padding:10px 14px;text-align:right;color:var(--text);font-weight:700;">Pounds (lb)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--text);">28.35 g</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">1 oz</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">0.0625 lb</td></tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--surface);"><td style="padding:9px 14px;color:var(--text);">100 g</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">3.527 oz</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">0.220 lb</td></tr>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--text);">200 g</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">7.055 oz</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">0.441 lb</td></tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--surface);"><td style="padding:9px 14px;color:var(--text);">250 g</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">8.818 oz</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">0.551 lb</td></tr>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--text);">453.59 g</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">16 oz</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">1 lb</td></tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--surface);"><td style="padding:9px 14px;color:var(--text);">500 g</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">17.637 oz</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">1.102 lb</td></tr>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--text);">1000 g (1 kg)</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">35.274 oz</td><td style="padding:9px 14px;text-align:right;color:var(--text-muted);">2.205 lb</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Practical Tips for Converting Recipes</h2>
+      <p>When adapting a US recipe for a metric kitchen, the first step is to identify which cup standard the recipe uses — always assume 237 mL (US cup) unless the recipe explicitly states "metric cup" or comes from Australia or New Zealand. For flour, sugar, and other dry ingredients, it is better to weigh in grams rather than trust a volume conversion, since the density of dry ingredients varies by how tightly packed they are. For liquids — water, milk, oil, vinegar — volume conversions are reliable: 1 US cup of water = 236.6 mL ≈ 237 g.</p>
+      <p>A practical shortcut for rounding: for most liquid ingredient conversions, 1 US cup ≈ 240 mL (close enough for home cooking). For precision baking — bread, pastry, soufflé — use the exact factor of 236.588 mL or simply weigh your liquids.</p>
+
+      <h2>Common Baking Substitutions by Weight</h2>
+      <p>Different baking ingredients have very different densities. Here are the standard weights for common ingredients when measured in 1 US cup: all-purpose flour is approximately 125 g (when spooned and leveled), granulated white sugar is 200 g, brown sugar (packed) is 220 g, butter is 227 g, honey is 340 g, cocoa powder is 85 g, and milk or water is approximately 240 g. These values are accepted industry standards used by USDA and leading culinary schools; they may vary slightly by brand or measurement technique.</p>
+
+      <h2>The US vs UK Fluid Ounce Difference</h2>
+      <p>A US fluid ounce equals 29.5735 mL. A UK (Imperial) fluid ounce equals 28.4131 mL. The difference is about 4%. This matters when a UK cookbook uses "fluid ounce" — always check the country of origin. Most modern UK recipes use milliliters rather than fluid ounces to avoid this ambiguity. Our converter handles both US and UK fluid ounces as separate units.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div style="margin-top:24px;">
+        <div style="margin-bottom:24px;">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px;">How many mL are in a US cup?</h3>
+          <p style="color:var(--text-muted);line-height:1.7;margin:0;">A US customary cup equals 236.588 mL, often rounded to 237 mL or 240 mL in recipes. It is defined as exactly 8 US fluid ounces. Note that an Australian or metric cup equals 250 mL, which is slightly larger.</p>
+        </div>
+        <div style="margin-bottom:24px;">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px;">How many tablespoons are in a cup?</h3>
+          <p style="color:var(--text-muted);line-height:1.7;margin:0;">There are exactly 16 US tablespoons in 1 US cup. Each tablespoon is 3 teaspoons or 14.787 mL. So 1 cup = 16 tablespoons = 48 teaspoons = 8 fluid ounces = 236.588 mL.</p>
+        </div>
+        <div style="margin-bottom:24px;">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px;">How many grams are in an ounce?</h3>
+          <p style="color:var(--text-muted);line-height:1.7;margin:0;">One avoirdupois ounce equals exactly 28.3495 grams. This is the standard ounce used in kitchen recipes. (The troy ounce — used for precious metals — is 31.1035 g and is not used in cooking.)</p>
+        </div>
+        <div style="margin-bottom:24px;">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px;">Is a fluid ounce the same as a weight ounce?</h3>
+          <p style="color:var(--text-muted);line-height:1.7;margin:0;">No — they are different units. A fluid ounce (fl oz) measures volume (29.57 mL). A weight ounce (oz) measures mass (28.35 g). For water they are nearly equal (1 fl oz water ≈ 29.57 g), but for denser or lighter ingredients the difference is significant. Baking recipes that say "2 oz flour" mean weight ounces, not fluid ounces.</p>
+        </div>
+        <div style="margin-bottom:24px;">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px;">How do I convert a US recipe to metric?</h3>
+          <p style="color:var(--text-muted);line-height:1.7;margin:0;">For liquids: multiply US cups by 236.6 to get mL. For dry ingredients: use ingredient-specific weight equivalents rather than volume (e.g., 1 cup all-purpose flour = 125 g). This avoids packing inconsistency. For temperatures: use the formula °C = (°F − 32) × 5/9, or use our <a href="/temperature-converter.html" style="color:var(--primary);">temperature converter</a>.</p>
+        </div>
+      </div>
+
+      <!-- AdSense bottom -->
+      <div style="margin:32px auto;text-align:center;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+             data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- FAQPage Schema JSON-LD -->
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many mL are in a US cup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A US customary cup equals 236.588 mL, often rounded to 237 mL. It is defined as 8 US fluid ounces. An Australian or metric cup equals 250 mL."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many tablespoons are in a cup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There are exactly 16 US tablespoons in 1 US cup. Each tablespoon equals 3 teaspoons or 14.787 mL. So 1 cup = 16 tablespoons = 48 teaspoons = 8 fl oz = 236.588 mL."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many grams are in an ounce?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "One avoirdupois ounce equals exactly 28.3495 grams. This is the standard ounce used in kitchen recipes. The troy ounce (31.1035 g) is not used in cooking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a fluid ounce the same as a weight ounce?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. A fluid ounce (fl oz) measures volume (29.57 mL). A weight ounce (oz) measures mass (28.35 g). For water they are nearly equal, but for other ingredients they differ significantly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I convert a US recipe to metric?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For liquids: multiply US cups by 236.6 to get mL. For dry ingredients: use ingredient-specific weight equivalents (e.g., 1 cup flour = 125 g) instead of volume conversions to avoid packing inconsistency."
+            }
+          }
+        ]
+      }
+      </script>
+
+      <!-- Related Articles -->
+      <section style="margin-top:12px;padding:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);">
+        <h2 style="margin-top:0;">Related Articles</h2>
+        <ul style="padding-left:1.25rem;line-height:2.2;margin:0;">
+          <li><a href="/blog/blog-grams-to-ounces-baking.html" style="color:var(--primary);">Grams to Ounces in Baking: Precision Conversions for Better Recipes</a></li>
+          <li><a href="/blog/blog-cups-to-ml.html" style="color:var(--primary);">Cups to mL: The Complete Guide to Liquid Measurement Conversion</a></li>
+          <li><a href="/blog/blog-temperature-cooking-guide.html" style="color:var(--primary);">Temperature Conversion for Cooking: Celsius, Fahrenheit &amp; Fan Ovens</a></li>
+          <li><a href="/blog/blog-metric-vs-imperial.html" style="color:var(--primary);">Metric vs Imperial: Key Differences and How to Convert</a></li>
+        </ul>
+      </section>
+
+      <!-- Sister site cross-link -->
+      <div style="margin-top:20px;padding:12px 16px;background:rgba(124,58,237,0.08);border:1px solid var(--primary-light);border-radius:var(--radius-sm);font-size:0.875rem;color:var(--text);">
+        &#128722; Selling food products or running a catering business? <a href="https://feexio.com" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;margin-left:4px;">Calculate your profit margins and payment fees at Feexio</a> &#8594;
+      </div>
+
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-top:24px;">Volume conversion factors sourced from NIST Handbook 44. Weight conversion factors from the International Yard and Pound Agreement (1959). <a href="/disclaimer.html" style="color:var(--text-muted);">Accuracy note</a>.</p>
+
+    </article>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      buildSelect('vol-from', VOLUME_UNITS, 'us_cup');
+      buildSelect('vol-to',   VOLUME_UNITS, 'ml');
+      buildSelect('cwt-from', COOKING_WEIGHT_UNITS, 'gram');
+      buildSelect('cwt-to',   COOKING_WEIGHT_UNITS, 'ounce');
+    });
+  </script>
+</body>
+</html>

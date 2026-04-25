@@ -184,6 +184,63 @@ function convertBinary() {
 }
 
 /* =========================================================
+   6. COOKING & RECIPE CONVERTER
+   Volume base unit: milliliter
+   Weight base unit: gram
+   ========================================================= */
+const VOLUME_UNITS = {
+  ml:         { label: 'Milliliter (mL)',          factor: 1 },
+  liter:      { label: 'Liter (L)',                factor: 1000 },
+  us_cup:     { label: 'US Cup (240 mL)',          factor: 236.588 },
+  us_tbsp:    { label: 'US Tablespoon (tbsp)',     factor: 14.7868 },
+  us_tsp:     { label: 'US Teaspoon (tsp)',        factor: 4.92892 },
+  us_fl_oz:   { label: 'US Fluid Ounce (fl oz)',  factor: 29.5735 },
+  metric_cup: { label: 'Metric Cup (250 mL)',     factor: 250 },
+  uk_fl_oz:   { label: 'UK Fluid Ounce',          factor: 28.4131 },
+};
+
+const COOKING_WEIGHT_UNITS = {
+  gram:     { label: 'Gram (g)',      factor: 1 },
+  kilogram: { label: 'Kilogram (kg)', factor: 1000 },
+  ounce:    { label: 'Ounce (oz)',    factor: 28.3495 },
+  pound:    { label: 'Pound (lb)',    factor: 453.592 },
+};
+
+function convertVolume() {
+  const val  = parseFloat(document.getElementById('vol-val').value);
+  const from = document.getElementById('vol-from').value;
+  const to   = document.getElementById('vol-to').value;
+  const out  = document.getElementById('vol-result');
+  if (isNaN(val)) { out.value = ''; return; }
+  const ml   = val * VOLUME_UNITS[from].factor;
+  out.value  = formatNumber(ml / VOLUME_UNITS[to].factor);
+}
+
+function swapVolume() {
+  const f = document.getElementById('vol-from');
+  const t = document.getElementById('vol-to');
+  [f.value, t.value] = [t.value, f.value];
+  convertVolume();
+}
+
+function convertCookingWeight() {
+  const val  = parseFloat(document.getElementById('cwt-val').value);
+  const from = document.getElementById('cwt-from').value;
+  const to   = document.getElementById('cwt-to').value;
+  const out  = document.getElementById('cwt-result');
+  if (isNaN(val)) { out.value = ''; return; }
+  const g    = val * COOKING_WEIGHT_UNITS[from].factor;
+  out.value  = formatNumber(g / COOKING_WEIGHT_UNITS[to].factor);
+}
+
+function swapCookingWeight() {
+  const f = document.getElementById('cwt-from');
+  const t = document.getElementById('cwt-to');
+  [f.value, t.value] = [t.value, f.value];
+  convertCookingWeight();
+}
+
+/* =========================================================
    Helper: populate <select> from units object
    ========================================================= */
 function buildSelect(selectId, units, defaultVal) {
@@ -223,10 +280,12 @@ window.quickConvert = function(converterId, fromUnit, toUnit, value) {
     case 'wt':  convertWeight(); break;
     case 'tmp': convertTemp();   break;
     case 'st':  convertStorage(); break;
+    case 'vol': convertVolume(); break;
+    case 'cwt': convertCookingWeight(); break;
   }
-  document.getElementById(converterId === 'len' ? 'length' :
-    converterId === 'wt' ? 'weight' :
-    converterId === 'tmp' ? 'temperature' : 'storage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const sectionMap = { len: 'length', wt: 'weight', tmp: 'temperature', st: 'storage', vol: 'cooking', cwt: 'cooking' };
+  const target = document.getElementById(sectionMap[converterId] || 'cooking');
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
 /* =========================================================
@@ -270,4 +329,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const binFrom  = document.getElementById('bin-from');
   if (binInput) binInput.addEventListener('input', convertBinary);
   if (binFrom)  binFrom.addEventListener('change', convertBinary);
+
+  // Build selects — Cooking
+  buildSelect('vol-from', VOLUME_UNITS, 'us_cup');
+  buildSelect('vol-to',   VOLUME_UNITS, 'ml');
+  buildSelect('cwt-from', COOKING_WEIGHT_UNITS, 'gram');
+  buildSelect('cwt-to',   COOKING_WEIGHT_UNITS, 'ounce');
+
+  // Attach events — Cooking volume
+  ['vol-val','vol-from','vol-to'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', convertVolume);
+  });
+
+  // Attach events — Cooking weight
+  ['cwt-val','cwt-from','cwt-to'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', convertCookingWeight);
+  });
 });

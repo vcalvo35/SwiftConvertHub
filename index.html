@@ -395,6 +395,92 @@
       </div>
     </section>
 
+    <!-- ═══ 6. COOKING & RECIPE ═══ -->
+    <section class="section" id="cooking" style="padding-top:0" aria-labelledby="cooking-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-i18n="sec_cooking_label">&#127859; Cooking</div>
+          <h2 id="cooking-heading" data-i18n="sec_cooking_h2">Cooking &amp; Recipe Converter</h2>
+          <p data-i18n="sec_cooking_p">Convert cups, tablespoons, teaspoons, fluid ounces and milliliters. Plus grams, ounces and pounds for baking.</p>
+        </div>
+
+        <!-- Volume sub-card -->
+        <div class="converter-card" style="margin-bottom:16px;">
+          <div class="converter-card-accent"></div>
+          <div class="converter-card-inner">
+            <div class="card-header">
+              <div class="card-icon cooking" style="background:linear-gradient(135deg,#f59e0b,#d97706);">&#129354;</div>
+              <div>
+                <div class="card-title" data-i18n="card_cooking_vol_title">Volume (Cups, tbsp, mL&hellip;)</div>
+                <div class="card-subtitle" data-i18n="card_cooking_vol_sub">US Cup &#8596; Metric &#8596; fl oz &#8596; mL</div>
+              </div>
+            </div>
+            <div class="converter-ui">
+              <div class="converter-field">
+                <label for="vol-from" data-i18n="label_from">From</label>
+                <select id="vol-from" onchange="convertVolume()"></select>
+                <label for="vol-val" style="margin-top:10px" data-i18n="label_value">Value</label>
+                <input type="number" id="vol-val" placeholder="Enter value" oninput="convertVolume()" />
+              </div>
+              <button class="swap-btn" onclick="swapVolume()" title="Swap units" aria-label="Swap units">&#8644;</button>
+              <div class="converter-field">
+                <label for="vol-to" data-i18n="label_to">To</label>
+                <select id="vol-to" onchange="convertVolume()"></select>
+                <label for="vol-result" style="margin-top:10px" data-i18n="label_result">Result</label>
+                <input type="text" id="vol-result" readonly placeholder="Result" />
+              </div>
+            </div>
+            <div class="quick-list" aria-label="Quick volume conversions">
+              <button class="quick-chip" onclick="quickConvert('vol','us_cup','ml',1)">1 cup &#8594; mL</button>
+              <button class="quick-chip" onclick="quickConvert('vol','us_tbsp','us_tsp',1)">1 tbsp &#8594; tsp</button>
+              <button class="quick-chip" onclick="quickConvert('vol','us_fl_oz','ml',1)">1 fl oz &#8594; mL</button>
+              <button class="quick-chip" onclick="quickConvert('vol','ml','us_cup',250)">250 mL &#8594; cups</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weight sub-card -->
+        <div class="converter-card">
+          <div class="converter-card-accent"></div>
+          <div class="converter-card-inner">
+            <div class="card-header">
+              <div class="card-icon cooking" style="background:linear-gradient(135deg,#f59e0b,#d97706);">&#9878;&#65039;</div>
+              <div>
+                <div class="card-title" data-i18n="card_cooking_wt_title">Weight (g, kg, oz, lb)</div>
+                <div class="card-subtitle" data-i18n="card_cooking_wt_sub">Grams &#8596; Ounces &#8596; Pounds &#8596; Kilograms</div>
+              </div>
+            </div>
+            <div class="converter-ui">
+              <div class="converter-field">
+                <label for="cwt-from" data-i18n="label_from">From</label>
+                <select id="cwt-from" onchange="convertCookingWeight()"></select>
+                <label for="cwt-val" style="margin-top:10px" data-i18n="label_value">Value</label>
+                <input type="number" id="cwt-val" placeholder="Enter value" oninput="convertCookingWeight()" />
+              </div>
+              <button class="swap-btn" onclick="swapCookingWeight()" title="Swap units" aria-label="Swap units">&#8644;</button>
+              <div class="converter-field">
+                <label for="cwt-to" data-i18n="label_to">To</label>
+                <select id="cwt-to" onchange="convertCookingWeight()"></select>
+                <label for="cwt-result" style="margin-top:10px" data-i18n="label_result">Result</label>
+                <input type="text" id="cwt-result" readonly placeholder="Result" />
+              </div>
+            </div>
+            <div class="quick-list" aria-label="Quick cooking weight conversions">
+              <button class="quick-chip" onclick="quickConvert('cwt','gram','ounce',100)">100 g &#8594; oz</button>
+              <button class="quick-chip" onclick="quickConvert('cwt','pound','gram',1)">1 lb &#8594; g</button>
+              <button class="quick-chip" onclick="quickConvert('cwt','kilogram','pound',1)">1 kg &#8594; lbs</button>
+              <button class="quick-chip" onclick="quickConvert('cwt','ounce','gram',1)">1 oz &#8594; g</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;text-align:right;">
+          <a href="/cooking-converter.html" style="color:var(--primary);font-size:0.9rem;font-weight:600;text-decoration:none;">Full Cooking Converter Guide &#8594;</a>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
 
