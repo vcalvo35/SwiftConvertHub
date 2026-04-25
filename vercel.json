@@ -6,7 +6,30 @@
       "has": [{ "type": "host", "value": "www.swiftconverthub.com" }],
       "destination": "https://swiftconverthub.com/$1",
       "permanent": true
-    }
+    },
+    {"source": "/blog.html", "destination": "/blog/", "permanent": true},
+    {"source": "/blog-miles-to-kilometers.html", "destination": "/blog/blog-miles-to-kilometers.html", "permanent": true},
+    {"source": "/blog-celsius-to-fahrenheit.html", "destination": "/blog/blog-celsius-to-fahrenheit.html", "permanent": true},
+    {"source": "/blog-digital-storage-explained.html", "destination": "/blog/blog-digital-storage-explained.html", "permanent": true},
+    {"source": "/blog-binary-to-decimal.html", "destination": "/blog/blog-binary-to-decimal.html", "permanent": true},
+    {"source": "/blog-metric-vs-imperial.html", "destination": "/blog/blog-metric-vs-imperial.html", "permanent": true},
+    {"source": "/blog-pounds-to-kilograms.html", "destination": "/blog/blog-pounds-to-kilograms.html", "permanent": true},
+    {"source": "/blog-hexadecimal-explained.html", "destination": "/blog/blog-hexadecimal-explained.html", "permanent": true},
+    {"source": "/blog-temperature-cooking-guide.html", "destination": "/blog/blog-temperature-cooking-guide.html", "permanent": true},
+    {"source": "/blog-gb-vs-tb-storage.html", "destination": "/blog/blog-gb-vs-tb-storage.html", "permanent": true},
+    {"source": "/blog-octal-number-system.html", "destination": "/blog/blog-octal-number-system.html", "permanent": true},
+    {"source": "/blog-international-shipping-qr-codes.html", "destination": "/blog/blog-international-shipping-qr-codes.html", "permanent": true},
+    {"source": "/blog-saas-storage-pricing-strategy.html", "destination": "/blog/blog-saas-storage-pricing-strategy.html", "permanent": true},
+    {"source": "/blog-feet-to-meters.html", "destination": "/blog/blog-feet-to-meters.html", "permanent": true},
+    {"source": "/blog-kelvin-explained.html", "destination": "/blog/blog-kelvin-explained.html", "permanent": true},
+    {"source": "/blog-metros-a-pies.html", "destination": "/blog/blog-metros-a-pies.html", "permanent": true},
+    {"source": "/blog-celsius-a-fahrenheit.html", "destination": "/blog/blog-celsius-a-fahrenheit.html", "permanent": true},
+    {"source": "/blog-kilogramos-a-libras.html", "destination": "/blog/blog-kilogramos-a-libras.html", "permanent": true},
+    {"source": "/blog-millas-a-kilometros.html", "destination": "/blog/blog-millas-a-kilometros.html", "permanent": true},
+    {"source": "/blog-almacenamiento-digital-explicado.html", "destination": "/blog/blog-almacenamiento-digital-explicado.html", "permanent": true},
+    {"source": "/blog-grams-to-ounces-baking.html", "destination": "/blog/blog-grams-to-ounces-baking.html", "permanent": true},
+    {"source": "/blog-cups-to-ml.html", "destination": "/blog/blog-cups-to-ml.html", "permanent": true},
+    {"source": "/blog-celsius-fahrenheit-mental-math.html", "destination": "/blog/blog-celsius-fahrenheit-mental-math.html", "permanent": true}
   ],
   "headers": [
     {
@@ -27,6 +50,7 @@
   ],
   "builds": [
     {"src": "*.html", "use": "@vercel/static"},
+    {"src": "blog/*.html", "use": "@vercel/static"},
     {"src": "css/*.css", "use": "@vercel/static"},
     {"src": "js/*.js", "use": "@vercel/static"},
     {"src": "assets/**", "use": "@vercel/static"},
@@ -41,6 +65,8 @@
     {"src": "^/css/(.*)", "dest": "/css/$1"},
     {"src": "^/js/(.*)", "dest": "/js/$1"},
     {"src": "^/assets/(.*)", "dest": "/assets/$1"},
+    {"src": "^/blog/$", "dest": "/blog/index.html"},
+    {"src": "^/blog/([a-zA-Z0-9_-]+\\.html)$", "dest": "/blog/$1"},
     {"src": "^/([a-zA-Z0-9_-]+\\.html)$", "dest": "/$1"},
     {"src": "^/$", "dest": "/index.html"}
   ]

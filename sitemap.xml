@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://swiftconverthub.com/</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://swiftconverthub.com/</loc><lastmod>2026-04-25</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://swiftconverthub.com/about.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://swiftconverthub.com/contact.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://swiftconverthub.com/privacy.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://swiftconverthub.com/terms.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://swiftconverthub.com/blog.html</loc><lastmod>2026-04-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-miles-to-kilometers.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-celsius-to-fahrenheit.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-digital-storage-explained.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-binary-to-decimal.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-metric-vs-imperial.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-pounds-to-kilograms.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-hexadecimal-explained.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-temperature-cooking-guide.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-gb-vs-tb-storage.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-octal-number-system.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-international-shipping-qr-codes.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-saas-storage-pricing-strategy.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/disclaimer.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-feet-to-meters.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-kelvin-explained.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-metros-a-pies.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-celsius-a-fahrenheit.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-kilogramos-a-libras.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-millas-a-kilometros.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-almacenamiento-digital-explicado.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/disclaimer.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
   <!-- Individual converter pages -->
-  <url><loc>https://swiftconverthub.com/length-converter.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://swiftconverthub.com/weight-converter.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://swiftconverthub.com/temperature-converter.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://swiftconverthub.com/digital-storage-converter.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://swiftconverthub.com/binary-converter.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://swiftconverthub.com/length-converter.html</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://swiftconverthub.com/weight-converter.html</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://swiftconverthub.com/temperature-converter.html</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://swiftconverthub.com/digital-storage-converter.html</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://swiftconverthub.com/binary-converter.html</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
-  <!-- New blog articles — April 2026 -->
-  <url><loc>https://swiftconverthub.com/blog-grams-to-ounces-baking.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-cups-to-ml.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://swiftconverthub.com/blog-celsius-fahrenheit-mental-math.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Blog index -->
+  <url><loc>https://swiftconverthub.com/blog/</loc><lastmod>2026-04-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog articles -->
+  <url><loc>https://swiftconverthub.com/blog/blog-miles-to-kilometers.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-celsius-to-fahrenheit.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-digital-storage-explained.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-binary-to-decimal.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-metric-vs-imperial.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-pounds-to-kilograms.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-hexadecimal-explained.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-temperature-cooking-guide.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-gb-vs-tb-storage.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-octal-number-system.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-international-shipping-qr-codes.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-saas-storage-pricing-strategy.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-feet-to-meters.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-kelvin-explained.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-metros-a-pies.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-celsius-a-fahrenheit.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-kilogramos-a-libras.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-millas-a-kilometros.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-almacenamiento-digital-explicado.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-grams-to-ounces-baking.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-cups-to-ml.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog/blog-celsius-fahrenheit-mental-math.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

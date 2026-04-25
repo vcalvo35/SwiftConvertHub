@@ -297,7 +297,7 @@
       '</a>' +
       '<ul class="nav-links" id="nav-links">' +
         '<li><a href="/" data-page="home" data-i18n="nav_converters">Converters</a></li>' +
-        '<li><a href="/blog.html" data-page="blog" data-i18n="nav_blog">Blog</a></li>' +
+        '<li><a href="/blog/" data-page="blog" data-i18n="nav_blog">Blog</a></li>' +
         '<li><a href="/about.html" data-page="about" data-i18n="nav_about">About</a></li>' +
         '<li><a href="/contact.html" data-page="contact" data-i18n="nav_contact">Contact</a></li>' +
       '</ul>' +
@@ -340,7 +340,7 @@
         '<div class="footer-col">' +
           '<h4 data-i18n="footer_col2_h4">Pages</h4>' +
           '<ul>' +
-            '<li><a href="/blog.html" data-i18n="nav_blog">Blog</a></li>' +
+            '<li><a href="/blog/" data-i18n="nav_blog">Blog</a></li>' +
             '<li><a href="/about.html" data-i18n="nav_about">About</a></li>' +
             '<li><a href="/contact.html" data-i18n="nav_contact">Contact</a></li>' +
             '<li><a href="/privacy.html" data-i18n="footer_privacy">Privacy Policy</a></li>' +
