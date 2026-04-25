@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLQEN72B5R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TLQEN72B5R');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temperature Converter — Celsius, Fahrenheit, Kelvin | SwiftConvertHub</title>
+  <meta name="description" content="Free temperature converter: Celsius, Fahrenheit, Kelvin and Rankine. Instant results, exact formulas, reference table. No sign-up required." />
+  <meta name="keywords" content="temperature converter, celsius to fahrenheit, fahrenheit to celsius, kelvin converter, rankine, temperature conversion" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://swiftconverthub.com/temperature-converter.html" />
+  <meta property="og:title" content="Temperature Converter — Celsius, Fahrenheit, Kelvin" />
+  <meta property="og:description" content="Convert Celsius to Fahrenheit, Kelvin, Rankine and back. Free, instant, with exact formulas." />
+  <meta property="og:url" content="https://swiftconverthub.com/temperature-converter.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SwiftConvertHub" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/logo-square-light.png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Temperature Converter",
+    "url": "https://swiftconverthub.com/temperature-converter.html",
+    "description": "Free online temperature converter supporting Celsius, Fahrenheit, Kelvin and Rankine with exact formulas.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6069037516718532"
+       crossorigin="anonymous"></script>
+</head>
+<body data-page="home">
+  <div id="nav-placeholder"></div>
+
+  <!-- Page Header -->
+  <div class="article-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &rsaquo; Temperature Converter
+      </div>
+      <div class="section-label">🌡️ Temperature</div>
+      <h1 style="font-family:var(--font-head);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--text);margin:12px 0 12px;letter-spacing:-0.5px;">Temperature Converter</h1>
+      <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.7;max-width:640px;">Convert between Celsius (°C), Fahrenheit (°F), Kelvin (K) and Rankine (°R). Instant results using exact formulas — covering everyday, cooking, and scientific temperature ranges.</p>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top:24px;padding-bottom:40px;">
+
+    <!-- AdSense top -->
+    <div style="margin:0 auto 28px;text-align:center;max-width:720px;">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+           data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Converter Widget -->
+    <div style="max-width:720px;margin:0 auto 40px;">
+      <div class="converter-card">
+        <div class="converter-card-accent"></div>
+        <div class="converter-card-inner">
+          <div class="card-header">
+            <div class="card-icon temp">🌡️</div>
+            <div>
+              <div class="card-title">Temperature</div>
+              <div class="card-subtitle">Celsius &#8596; Fahrenheit &#8596; Kelvin &#8596; Rankine</div>
+            </div>
+          </div>
+          <div class="converter-ui">
+            <div class="converter-field">
+              <label for="tmp-from">From</label>
+              <select id="tmp-from" onchange="convertTemp()">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+                <option value="rankine">Rankine (°R)</option>
+              </select>
+              <label for="tmp-val" style="margin-top:10px">Value</label>
+              <input type="number" id="tmp-val" placeholder="Enter value" oninput="convertTemp()" />
+            </div>
+            <button class="swap-btn" onclick="swapTemp()" title="Swap units" aria-label="Swap units">&#8644;</button>
+            <div class="converter-field">
+              <label for="tmp-to">To</label>
+              <select id="tmp-to" onchange="convertTemp()">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit" selected>Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+                <option value="rankine">Rankine (°R)</option>
+              </select>
+              <label for="tmp-result" style="margin-top:10px">Result</label>
+              <input type="text" id="tmp-result" readonly placeholder="Result" />
+            </div>
+          </div>
+          <div class="quick-list" aria-label="Quick conversions">
+            <button class="quick-chip" onclick="quickConvert('tmp','celsius','fahrenheit',100)">100°C → °F</button>
+            <button class="quick-chip" onclick="quickConvert('tmp','fahrenheit','celsius',32)">32°F → °C</button>
+            <button class="quick-chip" onclick="quickConvert('tmp','celsius','kelvin',0)">0°C → K</button>
+            <button class="quick-chip" onclick="quickConvert('tmp','fahrenheit','celsius',98.6)">98.6°F → °C</button>
+            <button class="quick-chip" onclick="quickConvert('tmp','celsius','fahrenheit',37)">37°C → °F</button>
+            <button class="quick-chip" onclick="quickConvert('tmp','celsius','fahrenheit',180)">180°C → °F</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO Content -->
+    <article class="article-body" style="max-width:720px;margin:0 auto;">
+
+      <h2>The Four Temperature Scales</h2>
+      <p>Temperature can be expressed on four different scales. Understanding which scale to use — and how to convert between them — matters for daily life, cooking, travel, medicine, and scientific work.</p>
+
+      <h3>Celsius (°C)</h3>
+      <p>Celsius is the standard temperature scale in science and in everyday life for 95% of the world's population. It's defined with reference to water: 0°C is the freezing point of water at standard atmospheric pressure (101.325 kPa), and 100°C is the boiling point. The scale was originally designed by Anders Celsius in 1742, though he actually defined it in reverse (100° as freezing, 0° as boiling) — it was reversed by Carl Linnaeus shortly after.</p>
+
+      <h3>Fahrenheit (°F)</h3>
+      <p>Fahrenheit is used primarily in the United States, its territories, and a handful of other countries for everyday weather, cooking, and body temperature. On this scale, water freezes at 32°F and boils at 212°F. Body temperature is 98.6°F (37°C). The scale was created by Daniel Fahrenheit in 1724; he set 0°F as the temperature of a brine solution and 96°F as human body temperature (since adjusted to 98.6°F).</p>
+
+      <h3>Kelvin (K)</h3>
+      <p>Kelvin is the SI base unit of thermodynamic temperature and the standard scale in science. Unlike Celsius and Fahrenheit, Kelvin has no negative values — it starts at absolute zero (0 K = −273.15°C = −459.67°F), the coldest theoretically possible temperature where all molecular motion ceases. Kelvin intervals are identical to Celsius intervals; K = °C + 273.15. Scientists use Kelvin for thermodynamics, astrophysics, and chemistry.</p>
+
+      <h3>Rankine (°R)</h3>
+      <p>Rankine is an absolute temperature scale like Kelvin, but based on Fahrenheit degrees rather than Celsius. Absolute zero is 0°R = 0 K = −459.67°F. Rankine intervals are the same size as Fahrenheit intervals. It's used in some American engineering applications (e.g., thermodynamics in aerospace), but rarely elsewhere.</p>
+
+      <!-- AdSense mid -->
+      <div style="margin:32px auto;text-align:center;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+             data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <h2>Exact Conversion Formulas</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:0.9rem;margin:20px 0;">
+        <thead>
+          <tr style="background:var(--bg-alt);border-bottom:2px solid var(--border);">
+            <th style="text-align:left;padding:10px 12px;">From → To</th>
+            <th style="text-align:left;padding:10px 12px;">Formula</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Celsius → Fahrenheit</td><td style="padding:9px 12px;">°F = (°C × 9/5) + 32</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);"><td style="padding:9px 12px;">Fahrenheit → Celsius</td><td style="padding:9px 12px;">°C = (°F − 32) × 5/9</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Celsius → Kelvin</td><td style="padding:9px 12px;">K = °C + 273.15</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);"><td style="padding:9px 12px;">Kelvin → Celsius</td><td style="padding:9px 12px;">°C = K − 273.15</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Fahrenheit → Kelvin</td><td style="padding:9px 12px;">K = (°F − 32) × 5/9 + 273.15</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);"><td style="padding:9px 12px;">Kelvin → Fahrenheit</td><td style="padding:9px 12px;">°F = (K − 273.15) × 9/5 + 32</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Celsius → Rankine</td><td style="padding:9px 12px;">°R = (°C + 273.15) × 9/5</td></tr>
+          <tr style="background:var(--bg-alt);"><td style="padding:9px 12px;">Rankine → Kelvin</td><td style="padding:9px 12px;">K = °R × 5/9</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Key Temperature Reference Points</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:0.9rem;margin:20px 0;">
+        <thead>
+          <tr style="background:var(--bg-alt);border-bottom:2px solid var(--border);">
+            <th style="text-align:left;padding:10px 12px;">Reference</th>
+            <th style="text-align:left;padding:10px 12px;">Celsius</th>
+            <th style="text-align:left;padding:10px 12px;">Fahrenheit</th>
+            <th style="text-align:left;padding:10px 12px;">Kelvin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Absolute zero</td><td style="padding:9px 12px;">−273.15°C</td><td style="padding:9px 12px;">−459.67°F</td><td style="padding:9px 12px;">0 K</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);"><td style="padding:9px 12px;">Water freezes</td><td style="padding:9px 12px;">0°C</td><td style="padding:9px 12px;">32°F</td><td style="padding:9px 12px;">273.15 K</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Room temperature</td><td style="padding:9px 12px;">20–22°C</td><td style="padding:9px 12px;">68–72°F</td><td style="padding:9px 12px;">293–295 K</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);"><td style="padding:9px 12px;">Body temperature</td><td style="padding:9px 12px;">37°C</td><td style="padding:9px 12px;">98.6°F</td><td style="padding:9px 12px;">310.15 K</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Water boils</td><td style="padding:9px 12px;">100°C</td><td style="padding:9px 12px;">212°F</td><td style="padding:9px 12px;">373.15 K</td></tr>
+          <tr style="background:var(--bg-alt);"><td style="padding:9px 12px;">Oven (moderate)</td><td style="padding:9px 12px;">180°C</td><td style="padding:9px 12px;">356°F</td><td style="padding:9px 12px;">453.15 K</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Common Use Cases</h2>
+
+      <h3>Weather &amp; Travel</h3>
+      <p>Traveling between the US and the rest of the world means constant temperature scale switching. A quick mental trick: to estimate Celsius from Fahrenheit, subtract 30 then divide by 2 (e.g., 86°F → 56 ÷ 2 = 28°C, exact is 30°C). For precision, use the converter. Useful reference: 0°C = 32°F (cold), 10°C = 50°F (cool), 20°C = 68°F (mild), 30°C = 86°F (warm), 40°C = 104°F (very hot).</p>
+
+      <h3>Cooking &amp; Baking</h3>
+      <p>Oven temperatures are a constant source of confusion between metric and imperial cookbooks. Common conversions: 160°C = 320°F (low), 180°C = 356°F (moderate), 200°C = 392°F (hot), 220°C = 428°F (very hot). Fan-assisted ovens typically run 10–20°C hotter than conventional, so reduce by that amount when adapting recipes.</p>
+
+      <h3>Medical</h3>
+      <p>Normal human body temperature is 37.0°C (98.6°F). A temperature above 38°C (100.4°F) is generally considered a fever. Hypothermia begins below 35°C (95°F). Most of the world uses Celsius for medical measurements; the US uses Fahrenheit on patient-facing devices but Celsius in scientific and pharmaceutical contexts.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <details style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;color:var(--text);">What is the formula to convert Celsius to Fahrenheit?</summary>
+        <p style="margin-top:12px;line-height:1.7;color:var(--text-muted);">°F = (°C × 9/5) + 32. Example: 25°C × 1.8 + 32 = 45 + 32 = 77°F. To reverse: °C = (°F − 32) × 5/9. Example: (77°F − 32) × 5/9 = 45 × 0.5556 = 25°C.</p>
+      </details>
+
+      <details style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;color:var(--text);">At what temperature are Celsius and Fahrenheit the same?</summary>
+        <p style="margin-top:12px;line-height:1.7;color:var(--text-muted);">Celsius and Fahrenheit are equal at −40°. That is, −40°C = −40°F. This is the only temperature where the two scales intersect. You can verify: (−40 × 9/5) + 32 = −72 + 32 = −40°F. ✓</p>
+      </details>
+
+      <details style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;color:var(--text);">What is absolute zero in Celsius?</summary>
+        <p style="margin-top:12px;line-height:1.7;color:var(--text-muted);">Absolute zero is 0 Kelvin = −273.15°C = −459.67°F. At this temperature, all classical molecular motion would cease. It has never been reached in practice; the coldest recorded lab temperatures are about 100 picokelvin (1 × 10⁻¹⁰ K) above absolute zero.</p>
+      </details>
+
+      <!-- AdSense bottom -->
+      <div style="margin:32px auto;text-align:center;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+             data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Related Articles -->
+      <section style="margin-top:12px;padding:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);">
+        <h2 style="margin-top:0;">Related Articles</h2>
+        <ul style="padding-left:1.25rem;line-height:2.2;margin:0;">
+          <li><a href="blog-celsius-to-fahrenheit.html" style="color:var(--primary);">Celsius to Fahrenheit: The Complete Conversion Guide</a></li>
+          <li><a href="blog-kelvin-explained.html" style="color:var(--primary);">What is Kelvin? How to Convert Kelvin to Celsius and Fahrenheit</a></li>
+          <li><a href="blog-temperature-cooking-guide.html" style="color:var(--primary);">Temperature Conversion for Cooking: Celsius, Fahrenheit &amp; Fan Ovens</a></li>
+        </ul>
+      </section>
+
+      <!-- Sister site cross-link -->
+      <div style="margin-top:20px;padding:12px 16px;background:rgba(124,58,237,0.08);border:1px solid var(--primary-light);border-radius:var(--radius-sm);font-size:0.875rem;color:var(--text);">
+        📲 Sharing weather conversions with your audience? <a href="https://instantlinkhub.com" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;margin-left:4px;">Create a WhatsApp link or QR code at InstantLinkHub</a> →
+      </div>
+
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-top:24px;">Temperature formulas are exact per SI and NIST standards. <a href="disclaimer.html" style="color:var(--text-muted);">Accuracy note</a>.</p>
+    </article>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

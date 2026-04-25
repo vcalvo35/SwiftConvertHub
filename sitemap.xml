@@ -26,4 +26,16 @@
   <url><loc>https://swiftconverthub.com/blog-kilogramos-a-libras.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://swiftconverthub.com/blog-millas-a-kilometros.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://swiftconverthub.com/blog-almacenamiento-digital-explicado.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Individual converter pages -->
+  <url><loc>https://swiftconverthub.com/length-converter.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://swiftconverthub.com/weight-converter.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://swiftconverthub.com/temperature-converter.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://swiftconverthub.com/digital-storage-converter.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://swiftconverthub.com/binary-converter.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- New blog articles — April 2026 -->
+  <url><loc>https://swiftconverthub.com/blog-grams-to-ounces-baking.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog-cups-to-ml.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://swiftconverthub.com/blog-celsius-fahrenheit-mental-math.html</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

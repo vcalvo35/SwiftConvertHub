@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLQEN72B5R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TLQEN72B5R');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weight &amp; Mass Converter — Free Online Tool | SwiftConvertHub</title>
+  <meta name="description" content="Free weight converter: kilograms, pounds, ounces, grams, stones, tonnes, and more. NIST-accurate to 10 significant digits. No sign-up required." />
+  <meta name="keywords" content="weight converter, mass converter, kg to lbs, pounds to kilograms, ounces to grams, stones to kg, unit converter" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://swiftconverthub.com/weight-converter.html" />
+  <meta property="og:title" content="Weight &amp; Mass Converter — Free Online Tool" />
+  <meta property="og:description" content="Convert kilograms, pounds, ounces, stones, grams and more. Free, instant, NIST-accurate." />
+  <meta property="og:url" content="https://swiftconverthub.com/weight-converter.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SwiftConvertHub" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/logo-square-light.png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Weight & Mass Converter",
+    "url": "https://swiftconverthub.com/weight-converter.html",
+    "description": "Free online weight and mass converter supporting kilograms, pounds, ounces, grams, stones, tonnes, US ton, and UK ton.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6069037516718532"
+       crossorigin="anonymous"></script>
+</head>
+<body data-page="home">
+  <div id="nav-placeholder"></div>
+
+  <!-- Page Header -->
+  <div class="article-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &rsaquo; Weight &amp; Mass Converter
+      </div>
+      <div class="section-label">⚖️ Weight</div>
+      <h1 style="font-family:var(--font-head);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--text);margin:12px 0 12px;letter-spacing:-0.5px;">Weight &amp; Mass Converter</h1>
+      <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.7;max-width:640px;">Convert between kilograms, pounds, ounces, grams, stones, tonnes and more. Free, instant, accurate to 10 significant digits — based on the International Pound and Kilogram agreement (1959).</p>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top:24px;padding-bottom:40px;">
+
+    <!-- AdSense top -->
+    <div style="margin:0 auto 28px;text-align:center;max-width:720px;">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+           data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Converter Widget -->
+    <div style="max-width:720px;margin:0 auto 40px;">
+      <div class="converter-card">
+        <div class="converter-card-accent"></div>
+        <div class="converter-card-inner">
+          <div class="card-header">
+            <div class="card-icon weight">⚖️</div>
+            <div>
+              <div class="card-title">Weight &amp; Mass</div>
+              <div class="card-subtitle">Metric &#8596; Imperial &#8596; Avoirdupois</div>
+            </div>
+          </div>
+          <div class="converter-ui">
+            <div class="converter-field">
+              <label for="wt-from">From</label>
+              <select id="wt-from" onchange="convertWeight()"></select>
+              <label for="wt-val" style="margin-top:10px">Value</label>
+              <input type="number" id="wt-val" placeholder="Enter value" oninput="convertWeight()" />
+            </div>
+            <button class="swap-btn" onclick="swapWeight()" title="Swap units" aria-label="Swap units">&#8644;</button>
+            <div class="converter-field">
+              <label for="wt-to">To</label>
+              <select id="wt-to" onchange="convertWeight()"></select>
+              <label for="wt-result" style="margin-top:10px">Result</label>
+              <input type="text" id="wt-result" readonly placeholder="Result" />
+            </div>
+          </div>
+          <div class="quick-list" aria-label="Quick conversions">
+            <button class="quick-chip" onclick="quickConvert('wt','kilogram','pound',1)">1 kg → lbs</button>
+            <button class="quick-chip" onclick="quickConvert('wt','pound','kilogram',1)">1 lb → kg</button>
+            <button class="quick-chip" onclick="quickConvert('wt','kilogram','ounce',1)">1 kg → oz</button>
+            <button class="quick-chip" onclick="quickConvert('wt','stone','kilogram',1)">1 stone → kg</button>
+            <button class="quick-chip" onclick="quickConvert('wt','tonne','pound',1)">1 tonne → lbs</button>
+            <button class="quick-chip" onclick="quickConvert('wt','ounce','gram',1)">1 oz → g</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO Content -->
+    <article class="article-body" style="max-width:720px;margin:0 auto;">
+
+      <h2>Weight Unit Conversion Reference</h2>
+      <p>Weight conversion is needed daily for everything from cooking recipes and gym workouts to medical forms and international shipping. The metric system uses kilograms and grams; the imperial system uses pounds, ounces, and stones. Our weight converter handles all nine standard units with precision sourced from the International Bureau of Weights and Measures (BIPM).</p>
+
+      <h2>The 9 Units We Support</h2>
+      <ul>
+        <li><strong>Kilogram (kg)</strong> — the SI base unit of mass. Defined since 2019 by fixing the Planck constant (h) to an exact value. 1 kg = 1,000 grams = 2.20462 pounds.</li>
+        <li><strong>Gram (g)</strong> — 0.001 kg. The go-to unit in cooking (a teaspoon of salt weighs ~6 g) and pharmacy.</li>
+        <li><strong>Milligram (mg)</strong> — 0.000001 kg. Used in medicine for dosages and in chemistry for trace quantities.</li>
+        <li><strong>Pound (lb)</strong> — exactly 0.45359237 kg by international agreement. The standard US and UK unit for body weight, grocery items, and shipping.</li>
+        <li><strong>Ounce (oz)</strong> — exactly 0.0283495 kg, or 1/16 of a pound. Used in US recipes, postal scales, and jewelry (troy ounce ≈ 1.097 oz avoirdupois).</li>
+        <li><strong>Stone (st)</strong> — 14 pounds = 6.35029 kg. Used in the UK and Ireland for body weight. A person weighing 11 stone 4 pounds = 71.7 kg.</li>
+        <li><strong>Metric Tonne (t)</strong> — 1,000 kg. Used in bulk shipping, agriculture, and industrial contexts.</li>
+        <li><strong>US Short Ton</strong> — 2,000 pounds = 907.185 kg. Used in American industry and trade.</li>
+        <li><strong>UK Long Ton</strong> — 2,240 pounds = 1,016.05 kg. The traditional British ton.</li>
+      </ul>
+
+      <!-- AdSense mid -->
+      <div style="margin:32px auto;text-align:center;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+             data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <h2>Key Conversion Formulas</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:0.9rem;margin:20px 0;">
+        <thead>
+          <tr style="background:var(--bg-alt);border-bottom:2px solid var(--border);">
+            <th style="text-align:left;padding:10px 12px;">From</th>
+            <th style="text-align:left;padding:10px 12px;">To</th>
+            <th style="text-align:left;padding:10px 12px;">Multiply by</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Kilograms</td><td style="padding:9px 12px;">Pounds</td><td style="padding:9px 12px;">2.20462</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);"><td style="padding:9px 12px;">Pounds</td><td style="padding:9px 12px;">Kilograms</td><td style="padding:9px 12px;">0.453592</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Kilograms</td><td style="padding:9px 12px;">Ounces</td><td style="padding:9px 12px;">35.274</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);"><td style="padding:9px 12px;">Pounds</td><td style="padding:9px 12px;">Ounces</td><td style="padding:9px 12px;">16 (exact)</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Stone</td><td style="padding:9px 12px;">Kilograms</td><td style="padding:9px 12px;">6.35029</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);"><td style="padding:9px 12px;">Grams</td><td style="padding:9px 12px;">Ounces</td><td style="padding:9px 12px;">0.035274</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 12px;">Metric Tonne</td><td style="padding:9px 12px;">Pounds</td><td style="padding:9px 12px;">2,204.62</td></tr>
+          <tr style="background:var(--bg-alt);"><td style="padding:9px 12px;">US Short Ton</td><td style="padding:9px 12px;">Metric Tonne</td><td style="padding:9px 12px;">0.907185</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Common Use Cases</h2>
+
+      <h3>Body Weight</h3>
+      <p>The US, Liberia, and Myanmar use pounds for body weight. The UK traditionally uses stone and pounds. Most of the world uses kilograms. A quick rule of thumb: divide pounds by 2.2 to get kilograms (it's not exact, but it's fast for estimation). For medical precision, use our calculator above. Example conversions: 150 lbs = 68.0 kg; 70 kg = 154.3 lbs; 11 stone = 69.9 kg.</p>
+
+      <h3>Cooking &amp; Baking</h3>
+      <p>US recipes measure dry ingredients in cups or ounces; European and UK recipes use grams. A cup of all-purpose flour weighs about 120–130 g (4.2–4.6 oz), depending on how it's packed. One stick of US butter is 4 oz = 113 g. When baking with precision, grams are far more accurate than volume measures — a kitchen scale is the professional baker's preferred tool.</p>
+
+      <h3>Fitness &amp; Gym</h3>
+      <p>Olympic weightlifting and powerlifting use kilograms; US gyms mark weights in pounds. Common conversions: 45 lb plate = 20.4 kg; 25 lb dumbbell = 11.3 kg; 100 kg squat = 220.5 lbs. Many athletes track their personal bests in both units.</p>
+
+      <h3>Shipping &amp; Parcels</h3>
+      <p>Postal services in metric countries (Europe, Australia, Canada) use kilograms; US carriers use pounds. For international shipping, you'll often need to convert: 1 kg = 2.205 lbs. A 5 kg parcel = 11 lbs; a 20 lb parcel = 9.07 kg.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <details style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;color:var(--text);">How many pounds are in a kilogram?</summary>
+        <p style="margin-top:12px;line-height:1.7;color:var(--text-muted);">One kilogram equals approximately 2.20462 pounds. This is the exact conversion factor (1 kg = 2.2046226218... lbs) derived from the definition of 1 pound = 0.45359237 kg, which has been exact since the 1959 international agreement.</p>
+      </details>
+
+      <details style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;color:var(--text);">How many ounces are in a pound?</summary>
+        <p style="margin-top:12px;line-height:1.7;color:var(--text-muted);">There are exactly 16 avoirdupois ounces in 1 pound. This is the common "ounce" used for food and everyday weights. (The troy ounce, used for precious metals, is slightly heavier: 1 troy oz = 31.1035 g, while 1 avoirdupois oz = 28.3495 g.)</p>
+      </details>
+
+      <details style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;color:var(--text);">What is the difference between mass and weight?</summary>
+        <p style="margin-top:12px;line-height:1.7;color:var(--text-muted);">Mass is the amount of matter in an object (kilograms, grams) — it doesn't change wherever you are. Weight is the gravitational force on that mass (technically measured in newtons). In everyday speech, "weight" and "mass" are used interchangeably because on Earth's surface the difference is negligible. You'd weigh about 16.5% less on the Moon, but your mass stays the same.</p>
+      </details>
+
+      <details style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;color:var(--text);">How many stones and pounds is 70 kg?</summary>
+        <p style="margin-top:12px;line-height:1.7;color:var(--text-muted);">70 kg = 154.32 lbs = 11 stone 0.32 lbs = 11 stone (approximately). The stone is used in the UK and Ireland for body weight. To convert kg to stone: divide by 6.35029. To get the remaining pounds, multiply the decimal part of the stone result by 14.</p>
+      </details>
+
+      <!-- AdSense bottom -->
+      <div style="margin:32px auto;text-align:center;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+             data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Related Articles -->
+      <section style="margin-top:12px;padding:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);">
+        <h2 style="margin-top:0;">Related Articles</h2>
+        <ul style="padding-left:1.25rem;line-height:2.2;margin:0;">
+          <li><a href="blog-pounds-to-kilograms.html" style="color:var(--primary);">How to Convert Pounds to Kilograms (lbs to kg)</a></li>
+          <li><a href="blog-metric-vs-imperial.html" style="color:var(--primary);">Metric vs Imperial: Key Differences and How to Convert</a></li>
+          <li><a href="blog-temperature-cooking-guide.html" style="color:var(--primary);">Temperature Conversion for Cooking: Celsius, Fahrenheit &amp; Fan Ovens</a></li>
+        </ul>
+      </section>
+
+      <!-- Sister site cross-link -->
+      <div style="margin-top:20px;padding:12px 16px;background:rgba(124,58,237,0.08);border:1px solid var(--primary-light);border-radius:var(--radius-sm);font-size:0.875rem;color:var(--text);">
+        💰 Selling products or services online? <a href="https://feexio.com" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;margin-left:4px;">Calculate your fees and profit margins at Feexio</a> →
+      </div>
+
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-top:24px;">Conversion factors sourced from the International Bureau of Weights and Measures (BIPM) and the International Pound and Kilogram Agreement (1959). <a href="disclaimer.html" style="color:var(--text-muted);">Accuracy note</a>.</p>
+    </article>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      buildSelect('wt-from', WEIGHT_UNITS, 'kilogram');
+      buildSelect('wt-to', WEIGHT_UNITS, 'pound');
+    });
+  </script>
+</body>
+</html>

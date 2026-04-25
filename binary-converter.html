@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLQEN72B5R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TLQEN72B5R');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binary &amp; Number Systems Converter — Decimal, Hex, Octal | SwiftConvertHub</title>
+  <meta name="description" content="Free binary converter: instantly convert between decimal, binary, hexadecimal and octal. All four representations shown simultaneously. No sign-up required." />
+  <meta name="keywords" content="binary converter, decimal to binary, hex converter, octal converter, number system converter, binary to decimal, hexadecimal converter" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://swiftconverthub.com/binary-converter.html" />
+  <meta property="og:title" content="Binary &amp; Number Systems Converter — Decimal, Hex, Octal" />
+  <meta property="og:description" content="Convert between decimal, binary, hexadecimal and octal instantly. All four bases shown at once. Free, no sign-up." />
+  <meta property="og:url" content="https://swiftconverthub.com/binary-converter.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SwiftConvertHub" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/logo-square-light.png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Binary & Number Systems Converter",
+    "url": "https://swiftconverthub.com/binary-converter.html",
+    "description": "Free online number system converter: instantly convert between decimal (base 10), binary (base 2), hexadecimal (base 16), and octal (base 8).",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6069037516718532"
+       crossorigin="anonymous"></script>
+</head>
+<body data-page="home">
+  <div id="nav-placeholder"></div>
+
+  <!-- Page Header -->
+  <div class="article-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &rsaquo; Binary &amp; Number Systems Converter
+      </div>
+      <div class="section-label">🔢 Binary</div>
+      <h1 style="font-family:var(--font-head);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--text);margin:12px 0 12px;letter-spacing:-0.5px;">Binary &amp; Number Systems Converter</h1>
+      <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.7;max-width:640px;">Enter any number in decimal, binary, hexadecimal, or octal — all four representations appear instantly. Essential for programmers, CS students, and digital hardware work.</p>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top:24px;padding-bottom:40px;">
+
+    <!-- AdSense top -->
+    <div style="margin:0 auto 28px;text-align:center;max-width:720px;">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+           data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Converter Widget -->
+    <div style="max-width:720px;margin:0 auto 40px;">
+      <div class="converter-card">
+        <div class="converter-card-accent"></div>
+        <div class="converter-card-inner">
+          <div class="card-header">
+            <div class="card-icon binary">🔢</div>
+            <div>
+              <div class="card-title">Binary &amp; Number Systems</div>
+              <div class="card-subtitle">Decimal &#8596; Binary &#8596; Hex &#8596; Octal</div>
+            </div>
+          </div>
+          <div class="binary-input-row">
+            <div class="converter-field">
+              <label for="bin-from">Input Base</label>
+              <select id="bin-from" onchange="convertBinary()">
+                <option value="10" selected>Decimal (Base 10)</option>
+                <option value="2">Binary (Base 2)</option>
+                <option value="16">Hexadecimal (Base 16)</option>
+                <option value="8">Octal (Base 8)</option>
+              </select>
+            </div>
+            <div class="converter-field">
+              <label for="bin-input">Enter Number</label>
+              <input type="text" id="bin-input" placeholder="e.g. 255" oninput="convertBinary()" />
+            </div>
+          </div>
+          <div class="binary-ui">
+            <div>
+              <div class="base-tag">DEC</div>
+              <div class="binary-label">Decimal (Base 10)</div>
+              <div class="binary-result" id="bin-dec">—</div>
+            </div>
+            <div>
+              <div class="base-tag">BIN</div>
+              <div class="binary-label">Binary (Base 2)</div>
+              <div class="binary-result" id="bin-bin">—</div>
+            </div>
+            <div>
+              <div class="base-tag">HEX</div>
+              <div class="binary-label">Hexadecimal (Base 16)</div>
+              <div class="binary-result" id="bin-hex">—</div>
+            </div>
+            <div>
+              <div class="base-tag">OCT</div>
+              <div class="binary-label">Octal (Base 8)</div>
+              <div class="binary-result" id="bin-oct">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Reference Table -->
+    <div style="max-width:720px;margin:0 auto 40px;overflow-x:auto;">
+      <h2 style="font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:12px;">Quick Reference: 0–15 in All Four Bases</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:0.9rem;font-family:monospace;">
+        <thead>
+          <tr style="background:var(--bg-alt);border-bottom:2px solid var(--border);">
+            <th style="text-align:center;padding:8px 10px;">DEC</th>
+            <th style="text-align:center;padding:8px 10px;">BIN</th>
+            <th style="text-align:center;padding:8px 10px;">HEX</th>
+            <th style="text-align:center;padding:8px 10px;">OCT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);text-align:center;"><td style="padding:6px 10px;">0</td><td style="padding:6px 10px;">0000</td><td style="padding:6px 10px;">0</td><td style="padding:6px 10px;">0</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);text-align:center;"><td style="padding:6px 10px;">1</td><td style="padding:6px 10px;">0001</td><td style="padding:6px 10px;">1</td><td style="padding:6px 10px;">1</td></tr>
+          <tr style="border-bottom:1px solid var(--border);text-align:center;"><td style="padding:6px 10px;">2</td><td style="padding:6px 10px;">0010</td><td style="padding:6px 10px;">2</td><td style="padding:6px 10px;">2</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);text-align:center;"><td style="padding:6px 10px;">4</td><td style="padding:6px 10px;">0100</td><td style="padding:6px 10px;">4</td><td style="padding:6px 10px;">4</td></tr>
+          <tr style="border-bottom:1px solid var(--border);text-align:center;"><td style="padding:6px 10px;">8</td><td style="padding:6px 10px;">1000</td><td style="padding:6px 10px;">8</td><td style="padding:6px 10px;">10</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);text-align:center;"><td style="padding:6px 10px;">10</td><td style="padding:6px 10px;">1010</td><td style="padding:6px 10px;">A</td><td style="padding:6px 10px;">12</td></tr>
+          <tr style="border-bottom:1px solid var(--border);text-align:center;"><td style="padding:6px 10px;">12</td><td style="padding:6px 10px;">1100</td><td style="padding:6px 10px;">C</td><td style="padding:6px 10px;">14</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);text-align:center;"><td style="padding:6px 10px;">15</td><td style="padding:6px 10px;">1111</td><td style="padding:6px 10px;">F</td><td style="padding:6px 10px;">17</td></tr>
+          <tr style="border-bottom:1px solid var(--border);text-align:center;"><td style="padding:6px 10px;">16</td><td style="padding:6px 10px;">10000</td><td style="padding:6px 10px;">10</td><td style="padding:6px 10px;">20</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);text-align:center;"><td style="padding:6px 10px;">255</td><td style="padding:6px 10px;">11111111</td><td style="padding:6px 10px;">FF</td><td style="padding:6px 10px;">377</td></tr>
+          <tr style="text-align:center;"><td style="padding:6px 10px;">256</td><td style="padding:6px 10px;">100000000</td><td style="padding:6px 10px;">100</td><td style="padding:6px 10px;">400</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SEO Content -->
+    <article class="article-body" style="max-width:720px;margin:0 auto;">
+
+      <!-- AdSense mid -->
+      <div style="margin:12px auto 32px;text-align:center;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+             data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <h2>The Four Number Systems Explained</h2>
+
+      <h3>Decimal (Base 10)</h3>
+      <p>The number system we use daily. It uses ten digits (0–9) and each position represents a power of 10: units, tens, hundreds, thousands, etc. The number 4,237 means 4×10³ + 2×10² + 3×10¹ + 7×10⁰ = 4,000 + 200 + 30 + 7. Humans use base 10 because we have 10 fingers.</p>
+
+      <h3>Binary (Base 2)</h3>
+      <p>Binary uses only two digits (0 and 1), called bits. Each position represents a power of 2: 1, 2, 4, 8, 16, 32, 64, 128, 256, ... Computers use binary because transistors have two states: on (1) and off (0). The number 1101 in binary = 1×2³ + 1×2² + 0×2¹ + 1×2⁰ = 8 + 4 + 0 + 1 = 13 in decimal. Eight bits form one byte (00000000 to 11111111 = 0 to 255).</p>
+
+      <h3>Hexadecimal (Base 16)</h3>
+      <p>Hexadecimal uses 16 symbols: 0–9 for values 0–9, and A–F for values 10–15. Each hex digit represents exactly 4 bits (a "nibble"), so one byte = two hex digits. This makes hex a compact, human-readable representation of binary data. Hex is ubiquitous in computing: web colors (#FF5733), memory addresses (0x7FFF), IPv6 addresses (2001:0db8), Unix permissions (0x755), and color profiles in graphics software.</p>
+
+      <h3>Octal (Base 8)</h3>
+      <p>Octal uses digits 0–7. Each octal digit represents exactly 3 bits. Octal was widely used in early computing but is now mainly encountered in Unix/Linux file permissions. The command <code>chmod 755</code> sets permissions to 111 101 101 in binary — owner can read/write/execute (7), group can read/execute (5), others can read/execute (5).</p>
+
+      <h2>How to Convert Between Number Systems</h2>
+
+      <h3>Decimal to Binary</h3>
+      <p>Divide the decimal number by 2 repeatedly, recording remainders, then read remainders from bottom to top. Example: 13 ÷ 2 = 6 R1 → 6 ÷ 2 = 3 R0 → 3 ÷ 2 = 1 R1 → 1 ÷ 2 = 0 R1. Read remainders upward: 1101₂ = 13₁₀. Alternatively, identify powers of 2 that sum to your target: 13 = 8+4+1 = 2³+2²+2⁰ = 1101₂.</p>
+
+      <h3>Binary to Hexadecimal</h3>
+      <p>Group binary digits into sets of 4 (from right). Convert each group to its hex digit. Example: 11111111₂ → groups: 1111 | 1111 → F | F → FF₁₆. This is why FF₁₆ = 255₁₀ = 11111111₂.</p>
+
+      <h2>Real-World Applications</h2>
+      <p>Web designers encounter hex colors daily — #FF5733 is red (R=255, G=87, B=51). Database engineers use hex for primary keys and memory addresses. Network engineers work with hex for IPv6 and MAC addresses. Students taking computer science courses need to convert between all four bases in exams. Embedded systems programmers use binary and hex to set hardware registers directly.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <details style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;color:var(--text);">How do you convert a decimal number to binary?</summary>
+        <p style="margin-top:12px;line-height:1.7;color:var(--text-muted);">Divide by 2 repeatedly, recording the remainder each time (0 or 1). When the quotient reaches 0, stop and read all remainders from bottom to top — that's your binary number. Example: 13 → remainders are 1,0,1,1 → binary = 1101. Or use our converter above for instant results.</p>
+      </details>
+
+      <details style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;color:var(--text);">What does FF mean in hexadecimal?</summary>
+        <p style="margin-top:12px;line-height:1.7;color:var(--text-muted);">FF in hex = 15×16 + 15 = 240 + 15 = 255 in decimal = 11111111 in binary. It represents one byte with all 8 bits set to 1. In web colors, #FFFFFF means R=255, G=255, B=255 = pure white. #000000 is R=0, G=0, B=0 = pure black.</p>
+      </details>
+
+      <details style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;font-size:1rem;list-style:none;color:var(--text);">Why do computers use binary?</summary>
+        <p style="margin-top:12px;line-height:1.7;color:var(--text-muted);">Computers use binary because electronic components naturally have two reliable states: on (voltage high = 1) and off (voltage low = 0). Building circuits with just two states is far simpler and more reliable than three or more. George Boole formalized the mathematics of two-value logic in 1854 (Boolean algebra), and Claude Shannon showed in 1937 how to implement it with electrical circuits.</p>
+      </details>
+
+      <!-- AdSense bottom -->
+      <div style="margin:32px auto;text-align:center;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6069037516718532"
+             data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Related Articles -->
+      <section style="margin-top:12px;padding:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);">
+        <h2 style="margin-top:0;">Related Articles</h2>
+        <ul style="padding-left:1.25rem;line-height:2.2;margin:0;">
+          <li><a href="blog-binary-to-decimal.html" style="color:var(--primary);">Binary to Decimal Conversion: A Complete Beginner's Guide</a></li>
+          <li><a href="blog-hexadecimal-explained.html" style="color:var(--primary);">Hexadecimal Explained: What is Hex and How to Convert It</a></li>
+          <li><a href="blog-octal-number-system.html" style="color:var(--primary);">The Octal Number System: What is Base 8 and When is it Used?</a></li>
+        </ul>
+      </section>
+
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-top:24px;">Number system conversions are mathematically exact. <a href="disclaimer.html" style="color:var(--text-muted);">Accuracy note</a>.</p>
+    </article>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
