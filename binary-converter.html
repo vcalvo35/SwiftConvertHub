@@ -219,6 +219,40 @@
 
   </main>
 
+  <!-- FAQPage Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you convert a decimal number to binary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide by 2 repeatedly, recording the remainder (0 or 1) each time. When the quotient reaches 0, read all remainders from bottom to top. Example: 13 gives remainders 1,0,1,1 (bottom to top) = 1101 in binary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does FF mean in hexadecimal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FF in hexadecimal = 15x16 + 15 = 255 in decimal = 11111111 in binary. It represents one byte with all 8 bits set to 1. In web colors, #FFFFFF = pure white; #000000 = pure black."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do computers use binary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Computers use binary because electronic components naturally have two reliable states: on (voltage high = 1) and off (voltage low = 0). Building circuits with two states is far simpler and more reliable than three or more. George Boole formalized two-value logic in 1854; Claude Shannon showed how to implement it with electrical circuits in 1937."
+        }
+      }
+    ]
+  }
+  </script>
+
   <div id="footer-placeholder"></div>
   <script src="js/components.js"></script>
   <script src="js/main.js"></script>

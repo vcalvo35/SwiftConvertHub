@@ -213,6 +213,40 @@
 
   </main>
 
+  <!-- FAQPage Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between GB and GiB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A gigabyte (GB) = 1,000,000,000 bytes (decimal, 10^9). A gibibyte (GiB) = 1,073,741,824 bytes (binary, 2^30) — about a 7.4% difference. Hard drive manufacturers use decimal GB; operating systems like Windows report in GiB while labeling it GB, which causes the apparent missing storage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many MB are in a GB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the decimal system: 1 GB = 1,000 MB. In the binary system: 1 GiB = 1,024 MiB. Confusion arises because both are often labeled GB or MB in consumer software even when the binary definition is used."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many bits are in a byte?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Exactly 8 bits = 1 byte. A 100 Mbps internet connection can download at 100 / 8 = 12.5 megabytes per second. Always check whether a spec uses bits (lowercase b) or bytes (uppercase B)."
+        }
+      }
+    ]
+  }
+  </script>
+
   <div id="footer-placeholder"></div>
   <script src="js/components.js"></script>
   <script src="js/main.js"></script>

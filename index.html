@@ -607,7 +607,7 @@
         "name": "How many kilometers are in a mile?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "One mile equals exactly 1.60934 kilometers. One kilometer equals approximately 0.621371 miles. This conversion is commonly used when traveling between countries using metric and imperial systems."
+          "text": "The exact conversion factor is 1 mile = 1.609344 kilometers, fixed by the International Yard and Pound Agreement of 1959. Conversely, 1 km = 0.621371 miles. A marathon is 42.195 km (26.219 miles); a 5K equals 3.107 miles. Note that a nautical mile (1.852 km) is different and used in aviation and maritime navigation."
         }
       },
       {
@@ -615,7 +615,7 @@
         "name": "How do you convert Celsius to Fahrenheit?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Multiply the Celsius value by 9/5 and add 32. Formula: F = (C x 9/5) + 32. For example, 100C = 212F. To convert Fahrenheit to Celsius: C = (F - 32) x 5/9."
+          "text": "Use the formula F = (C x 9/5) + 32. To reverse: C = (F - 32) x 5/9. Key reference points: 0C = 32F (water freezes), 100C = 212F (water boils), 37C = 98.6F (body temperature), -40 is the same in both scales. Mental math shortcut: double the Celsius value and add 30 for an approximation within 2F."
         }
       },
       {
@@ -623,7 +623,7 @@
         "name": "What is the difference between GB and GiB?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A gigabyte (GB) equals 1,000,000,000 bytes (decimal). A gibibyte (GiB) equals 1,073,741,824 bytes (binary). Hard drive manufacturers use decimal GB while operating systems often report in binary GiB."
+          "text": "A gigabyte (GB) equals exactly 1,000,000,000 bytes (decimal, 10^9). A gibibyte (GiB) equals 1,073,741,824 bytes (binary, 2^30). Hard drive manufacturers use decimal GB while operating systems like Windows report in binary GiB — that is why a 1 TB drive shows only about 931 GiB. The IEC 80000-13 standard introduced GiB in 1998 to eliminate this confusion."
         }
       },
       {
@@ -631,7 +631,7 @@
         "name": "How do you convert pounds to kilograms?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Divide the pound value by 2.20462 to get kilograms. For example, 150 lbs equals approximately 68.04 kg. To convert kg to lbs, multiply by 2.20462."
+          "text": "The exact factor is 1 pound = 0.45359237 kg, fixed in 1959. Practical examples: 150 lbs = 68.04 kg; the standard airline carry-on limit of 23 kg = 50.7 lbs. In the UK, body weight is often expressed in stones (1 stone = 14 lbs = 6.35 kg)."
         }
       },
       {
@@ -639,7 +639,7 @@
         "name": "How do you convert a decimal number to binary?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Repeatedly divide the number by 2 and record remainders from bottom to top. For example, 13 in decimal equals 1101 in binary."
+          "text": "Repeatedly divide the number by 2, recording the remainder (0 or 1) at each step, then read remainders from bottom to top. Example: 42 = 101010 in binary (42/2=21r0, 21/2=10r1, 10/2=5r0, 5/2=2r1, 2/2=1r0, 1/2=0r1). Each hex digit represents exactly 4 bits, making hexadecimal a compact shorthand for binary."
         }
       },
       {
@@ -647,23 +647,47 @@
         "name": "How many centimeters are in an inch?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Exactly 2.54 centimeters are in one inch by international definition. To convert inches to cm, multiply by 2.54. To convert cm to inches, divide by 2.54."
+          "text": "Exactly 2.54 centimeters are in one inch — this is exact by international definition since 1959. To convert inches to cm, multiply by 2.54. To convert cm to inches, divide by 2.54 (or multiply by 0.3937). Example: 12 inches = 30.48 cm; 1 meter = 39.3701 inches."
         }
       },
       {
         "@type": "Question",
-        "name": "What is absolute zero in Celsius?",
+        "name": "How do I convert Fahrenheit to Celsius?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolute zero is 0 Kelvin, which equals -273.15 degrees Celsius or -459.67 degrees Fahrenheit. It is the coldest theoretically possible temperature."
+          "text": "Subtract 32, then multiply by 5/9. Formula: C = (F - 32) x 5/9. Common examples: 32F = 0C, 98.6F = 37C (body temp), 212F = 100C, 350F = 176.7C (baking temp). Our temperature converter handles all four scales: Celsius, Fahrenheit, Kelvin, and Rankine."
         }
       },
       {
         "@type": "Question",
-        "name": "What is the difference between GB and GiB?",
+        "name": "What is absolute zero in Celsius and Fahrenheit?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A gigabyte (GB) = 1,000,000,000 bytes in the decimal system. A gibibyte (GiB) = 1,073,741,824 bytes in the binary system. Drive manufacturers use decimal GB; operating systems often report in binary GiB."
+          "text": "Absolute zero is 0 Kelvin, which equals -273.15 degrees Celsius and -459.67 degrees Fahrenheit. It is the coldest theoretically possible temperature, where all molecular motion ceases. It can be approached but never fully reached in practice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many ounces are in a kilogram?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One kilogram equals 35.274 ounces (avoirdupois). Conversely, one ounce equals approximately 28.3495 grams. Note that fluid ounce is a volume unit (approximately 29.57 mL) and is different from the weight ounce."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a megabyte and a mebibyte?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A megabyte (MB) equals 1,000,000 bytes (decimal SI). A mebibyte (MiB) equals 1,048,576 bytes (binary IEC) — a difference of about 4.86%. Operating systems often report file sizes in binary units but label them as MB, causing confusion. Our digital storage converter clearly distinguishes decimal and binary prefixes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is hexadecimal used for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hexadecimal (base 16) is used in computing as a compact representation of binary data. Common uses include web colors (#RRGGBB), memory addresses, MAC addresses, IPv6, and cryptographic hashes. Each hex digit represents exactly 4 bits, so 2 hex digits equal 1 byte. Example: #FF = 255 decimal = 11111111 binary."
         }
       },
       {
@@ -671,7 +695,31 @@
         "name": "How many feet are in a meter?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "One meter equals exactly 3.28084 feet, or 3 feet and 3.37 inches. The foot is defined as exactly 0.3048 meters by international agreement."
+          "text": "One meter equals exactly 3.28084 feet, or 3 feet and 3.37 inches. The foot is defined as exactly 0.3048 meters by international agreement. A standard doorway is about 2 meters (6.56 ft) tall."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does SwiftConvertHub store my data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. SwiftConvertHub performs all conversions client-side in your browser. No values you enter are transmitted to a server or stored. The only data collected is standard anonymous analytics (page views, country, device type) via Google Analytics — no personally identifiable information is stored."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate are SwiftConvertHub's converters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our converters use conversion factors from NIST Handbook 44, the SI Brochure (9th edition), and IEC 80000-13 for digital storage. Results are accurate to 10 or more significant digits. For safety-critical, engineering, or scientific applications, always verify with a calibrated instrument."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What countries use the metric system?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The metric system (SI) is official in every country except the United States, Liberia, and Myanmar. The UK officially uses metric but retains miles for road distances. Canada uses metric but miles per hour appear on older infrastructure. Most scientific, medical, and engineering work worldwide uses metric regardless of a country's official system."
         }
       }
     ]

@@ -233,6 +233,40 @@
 
   </main>
 
+  <!-- FAQPage Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the formula to convert Celsius to Fahrenheit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "F = (C x 9/5) + 32. Example: 25C x 1.8 + 32 = 77F. To reverse: C = (F - 32) x 5/9. Example: (77F - 32) x 5/9 = 25C."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "At what temperature are Celsius and Fahrenheit the same?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Celsius and Fahrenheit are equal at -40 degrees. That is, -40C = -40F. This is the only temperature where the two scales intersect. Verify: (-40 x 9/5) + 32 = -72 + 32 = -40F."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is absolute zero in Celsius and Fahrenheit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolute zero is 0 Kelvin = -273.15 degrees Celsius = -459.67 degrees Fahrenheit. At this temperature, all classical molecular motion would cease. It has never been reached in practice."
+        }
+      }
+    ]
+  }
+  </script>
+
   <div id="footer-placeholder"></div>
   <script src="js/components.js"></script>
   <script src="js/main.js"></script>
