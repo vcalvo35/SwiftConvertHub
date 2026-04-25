@@ -12,31 +12,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact &#8212; SwiftConvertHub</title>
-  <meta name="description" content="Contact the SwiftConvertHub team. Send us a message with suggestions, bug reports or feedback." />
+  <meta name="description" content="Contact SwiftConvertHub with bug reports, converter requests, or feedback. Managed by Victor A. Calvo S. Response within 2&#8211;3 business days." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://swiftconverthub.com/contact.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="SwiftConvertHub" />
-  <meta property="og:title" content="Contact — SwiftConvertHub" />
-  <meta property="og:description" content="Get in touch with SwiftConvertHub. We build free unit converters for length, weight, temperature, and more." />
+  <meta property="og:title" content="Contact &#8212; SwiftConvertHub" />
+  <meta property="og:description" content="Get in touch with SwiftConvertHub. Bug reports, new converter requests, and general feedback welcome." />
   <meta property="og:url" content="https://swiftconverthub.com/contact.html" />
   <meta property="og:image" content="https://swiftconverthub.com/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-512.png">
   <link rel="apple-touch-icon" href="/assets/logo-square-light.png">
   <link rel="stylesheet" href="css/styles.css" />
   <style>
-    .contact-form { display:flex; flex-direction:column; gap:16px; margin-top:24px; }
+    .contact-intro { color:var(--text-muted); line-height:1.75; margin-bottom:28px; }
+    .contact-help-box {
+      background:var(--surface); border:1.5px solid var(--border); border-radius:var(--radius);
+      padding:20px 24px; margin-bottom:32px;
+    }
+    .contact-help-box h2 {
+      font-family:var(--font-head); font-size:1.1rem; font-weight:700;
+      color:var(--text); margin:0 0 14px;
+    }
+    .contact-help-box ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
+    .contact-help-box li { color:var(--text-muted); font-size:.9rem; padding-left:20px; position:relative; }
+    .contact-help-box li::before { content:'›'; position:absolute; left:0; color:var(--primary); font-weight:700; }
+    .contact-form { display:flex; flex-direction:column; gap:18px; }
     .form-group { display:flex; flex-direction:column; gap:6px; }
     .form-group label { font-size:.85rem; font-weight:600; color:var(--text-muted); }
     .form-group input, .form-group textarea, .form-group select {
       padding:10px 14px; border:1.5px solid var(--border); border-radius:var(--radius-sm);
       background:var(--bg); color:var(--text); font-family:var(--font); font-size:.95rem;
     }
-    .form-group textarea { min-height:130px; resize:vertical; }
-    .form-group input:focus, .form-group textarea:focus { outline:none; border-color:var(--primary); }
-  </style>  <!-- Google AdSense -->
+    .form-group textarea { min-height:140px; resize:vertical; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      outline:none; border-color:var(--primary);
+    }
+    .contact-meta {
+      margin-top:28px; padding-top:20px; border-top:1px solid var(--border);
+      display:flex; flex-direction:column; gap:4px;
+    }
+    .contact-meta p { color:var(--text-muted); font-size:.85rem; margin:0; }
+  </style>
+  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6069037516718532"
        crossorigin="anonymous"></script>
 </head>
@@ -44,10 +64,23 @@
   <div id="nav-placeholder"></div>
 
   <section class="section">
-    <div class="container" style="max-width:640px">
+    <div class="container" style="max-width:680px">
       <div class="section-label" data-i18n="contact_label">Contact</div>
-      <h1 style="font-family:var(--font-head);font-size:2rem;font-weight:700;color:var(--text);margin:12px 0 8px;" data-i18n="contact_h1">Get in Touch</h1>
-      <p style="color:var(--text-muted);margin-bottom:4px;" data-i18n="contact_p">Have a suggestion, found a bug, or just want to say hello? Send us a message.</p>
+      <h1 style="font-family:var(--font-head);font-size:2rem;font-weight:700;color:var(--text);margin:12px 0 16px;" data-i18n="contact_h1">Contact SwiftConvertHub</h1>
+
+      <p class="contact-intro" data-i18n="contact_p">SwiftConvertHub is built and maintained by one person with the goal of making unit conversion fast, accurate, and free for everyone. Whether you spotted a bug, have an idea for a new converter, or just want to share feedback — your message goes directly to the person who built this site.</p>
+
+      <div class="contact-help-box">
+        <h2 data-i18n="contact_help_h2">What Can We Help With?</h2>
+        <ul>
+          <li data-i18n="contact_cat1">Bug Report — a converter is giving wrong results</li>
+          <li data-i18n="contact_cat2">New Converter — a unit or category you'd like to see</li>
+          <li data-i18n="contact_cat3">Content Feedback — an article or explanation to improve</li>
+          <li data-i18n="contact_cat4">General Question — anything about the site or conversions</li>
+          <li data-i18n="contact_cat5">Other — anything else</li>
+        </ul>
+      </div>
+
       <form class="contact-form" action="mailto:info@swiftconverthub.com" method="get" enctype="text/plain">
         <div class="form-group">
           <label for="cf-name" data-i18n="contact_name_label">Your Name</label>
@@ -58,20 +91,26 @@
           <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
         </div>
         <div class="form-group">
-          <label for="cf-subject" data-i18n="contact_subject_label">Subject</label>
+          <label for="cf-subject" data-i18n="contact_subject_label">What can we help with?</label>
           <select id="cf-subject" name="subject">
-            <option>Bug Report</option>
-            <option>Suggestion</option>
-            <option>General Question</option>
-            <option>Other</option>
+            <option data-i18n="contact_opt1">Bug Report</option>
+            <option data-i18n="contact_opt2">New Converter Request</option>
+            <option data-i18n="contact_opt3">Content Feedback</option>
+            <option data-i18n="contact_opt4">General Question</option>
+            <option data-i18n="contact_opt5">Other</option>
           </select>
         </div>
         <div class="form-group">
           <label for="cf-msg" data-i18n="contact_msg_label">Message</label>
-          <textarea id="cf-msg" name="body" placeholder="Tell us what&#8217;s on your mind..." required></textarea>
+          <textarea id="cf-msg" name="body" placeholder="Describe your question or feedback in detail&#8230;" required></textarea>
         </div>
         <button type="submit" class="btn-primary" style="align-self:flex-start" data-i18n="contact_submit">Send Message &#128640;</button>
       </form>
+
+      <div class="contact-meta">
+        <p data-i18n="contact_response">We typically respond within 2&#8211;3 business days.</p>
+        <p data-i18n="contact_managed">Managed by Victor A. Calvo S.</p>
+      </div>
     </div>
   </section>
 
