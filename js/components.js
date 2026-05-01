@@ -484,3 +484,67 @@
 
 })();
 
+// ── Cookie Consent Banner ──────────────────────────────────────────────────
+(function () {
+  const CONSENT_KEY = 'sch_cookie_consent';
+  if (localStorage.getItem(CONSENT_KEY)) return;
+
+  function createBanner() {
+    const banner = document.createElement('div');
+    banner.id = 'cookie-consent-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Cookie consent');
+    banner.style.cssText = [
+      'position:fixed', 'bottom:0', 'left:0', 'right:0', 'z-index:9999',
+      'background:#1e293b', 'color:#e2e8f0',
+      'padding:16px 24px', 'display:flex', 'align-items:center',
+      'justify-content:space-between', 'flex-wrap:wrap', 'gap:12px',
+      'box-shadow:0 -2px 16px rgba(0,0,0,0.3)',
+      'font-family:var(--font-sans,system-ui,sans-serif)',
+      'font-size:0.875rem', 'line-height:1.5'
+    ].join(';');
+
+    const text = document.createElement('p');
+    text.style.cssText = 'margin:0;flex:1;min-width:240px;';
+    text.innerHTML = 'We use cookies and similar technologies to serve ads and analyse traffic. '
+      + 'By clicking <strong>Accept</strong> you consent to our use of cookies. '
+      + '<a href="/privacy.html" style="color:#60a5fa;text-decoration:underline;">Privacy Policy</a>';
+
+    const btnGroup = document.createElement('div');
+    btnGroup.style.cssText = 'display:flex;gap:10px;flex-shrink:0;';
+
+    function makeBtn(label, value, bg, color) {
+      const btn = document.createElement('button');
+      btn.textContent = label;
+      btn.style.cssText = [
+        'padding:8px 20px', 'border:none', 'border-radius:6px',
+        'font-size:0.875rem', 'font-weight:600', 'cursor:pointer',
+        'background:' + bg, 'color:' + color, 'transition:opacity 0.15s'
+      ].join(';');
+      btn.addEventListener('mouseover', function () { this.style.opacity = '0.85'; });
+      btn.addEventListener('mouseout', function () { this.style.opacity = '1'; });
+      btn.addEventListener('click', function () {
+        localStorage.setItem(CONSENT_KEY, value);
+        banner.style.transition = 'opacity 0.3s';
+        banner.style.opacity = '0';
+        setTimeout(function () { banner.remove(); }, 320);
+      });
+      return btn;
+    }
+
+    btnGroup.appendChild(makeBtn('Accept', 'accepted', '#2563eb', '#fff'));
+    btnGroup.appendChild(makeBtn('Decline', 'declined', 'transparent', '#94a3b8'));
+    btnGroup.children[1].style.border = '1px solid #475569';
+
+    banner.appendChild(text);
+    banner.appendChild(btnGroup);
+    document.body.appendChild(banner);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createBanner);
+  } else {
+    createBanner();
+  }
+})();
+
