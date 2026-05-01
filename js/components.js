@@ -379,11 +379,11 @@
         '<div class="footer-col">' +
           '<h4 data-i18n="footer_col1_h4">Converters</h4>' +
           '<ul>' +
-            '<li><a href="/#length" data-i18n="footer_length">Length &amp; Distance</a></li>' +
-            '<li><a href="/#weight" data-i18n="footer_weight">Weight &amp; Mass</a></li>' +
-            '<li><a href="/#temperature" data-i18n="footer_temp">Temperature</a></li>' +
-            '<li><a href="/#storage" data-i18n="footer_storage">Digital Storage</a></li>' +
-            '<li><a href="/#binary" data-i18n="footer_binary">Binary &amp; Numbers</a></li>' +
+            '<li><a href="/length-converter.html" data-i18n="footer_length">Length &amp; Distance</a></li>' +
+            '<li><a href="/weight-converter.html" data-i18n="footer_weight">Weight &amp; Mass</a></li>' +
+            '<li><a href="/temperature-converter.html" data-i18n="footer_temp">Temperature</a></li>' +
+            '<li><a href="/digital-storage-converter.html" data-i18n="footer_storage">Digital Storage</a></li>' +
+            '<li><a href="/binary-converter.html" data-i18n="footer_binary">Binary &amp; Numbers</a></li>' +
             '<li><a href="/cooking-converter.html" data-i18n="footer_cooking">Cooking &amp; Recipes</a></li>' +
           '</ul>' +
         '</div>' +
