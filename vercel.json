@@ -1,11 +1,5 @@
 {
   "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.swiftconverthub.com" }],
-      "destination": "https://swiftconverthub.com/$1",
-      "permanent": true
-    },
     { "source": "/blog.html", "destination": "/blog/", "permanent": true },
     { "source": "/blog-miles-to-kilometers.html", "destination": "/blog/blog-miles-to-kilometers.html", "permanent": true },
     { "source": "/blog-celsius-to-fahrenheit.html", "destination": "/blog/blog-celsius-to-fahrenheit.html", "permanent": true },
