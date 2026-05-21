@@ -23,7 +23,7 @@
       nav_about: 'About',
       nav_contact: 'Contact',
       // Hero
-      hero_badge: '5 Converter Categories',
+      hero_badge: '6 Converter Categories',
       hero_h1: 'Convert Anything,',
       hero_h1_span: 'Instantly',
       hero_p: 'Free unit converters for length, weight, temperature, digital storage and binary numbers. NIST-sourced accuracy to 10 significant digits. No sign-up required.',
@@ -183,7 +183,7 @@
       nav_about: 'Nosotros',
       nav_contact: 'Contacto',
       // Hero
-      hero_badge: '5 Categor\u00edas de Conversi\u00f3n',
+      hero_badge: '6 Categor\u00edas de Conversi\u00f3n',
       hero_h1: 'Convierte Todo,',
       hero_h1_span: 'Instant\u00e1neamente',
       hero_p: 'Conversores de unidades gratuitos para longitud, peso, temperatura, almacenamiento digital y sistemas num\u00e9ricos. Precisi\u00f3n de 10 d\u00edgitos, factores de conversi\u00f3n seg\u00fan NIST. Sin registro.',
