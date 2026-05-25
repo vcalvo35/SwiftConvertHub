@@ -107,8 +107,28 @@
 </ul>
 <h2>Binary Prefixes (IEC Standard)</h2>
 <p>To eliminate confusion, the IEC introduced binary prefixes: kibibyte (KiB = 1,024 B), mebibyte (MiB = 1,024 KiB), gibibyte (GiB = 1,024 MiB). These are more precise but less commonly used in everyday language.</p>
-<p>Convert any storage value instantly with our <a href="/#storage">free digital storage converter</a>.</p>
-    
+<p>Convert any storage value instantly with our <a href="/digital-storage-converter.html">free digital storage converter</a>.</p>
+
+<h2>Step-by-Step Conversion Examples</h2>
+
+<h3>Why Your 1 TB Drive Shows Only 931 GB in Windows</h3>
+<p>A drive manufacturer labels a hard drive as "1 TB." That means it contains exactly 1,000,000,000,000 bytes (decimal). When Windows reads the drive, it reports in GiB (binary gibibytes), even though it labels the number "GB":</p>
+<p>1,000,000,000,000 bytes ÷ 1,073,741,824 bytes/GiB = <strong>931.32 GiB</strong></p>
+<p>The ~69 GB that appears "missing" hasn't gone anywhere — it's a labeling discrepancy between decimal (manufacturer) and binary (OS) systems. macOS Monterey and later correctly shows decimal GB, so the same drive appears as 1.00 TB. The IEC introduced the GiB prefix in 1998 (IEC 80000-13) precisely to eliminate this confusion.</p>
+
+<h3>Calculating Download Time from Internet Speed</h3>
+<p>Your internet connection is 100 Mbps (megabits per second). How long to download a 4 GB movie?</p>
+<p>Step 1: Convert 4 GB to megabits: 4 GB × 1,000 MB/GB × 8 bits/byte = 32,000 Mb</p>
+<p>Step 2: Divide by speed: 32,000 Mb ÷ 100 Mbps = <strong>320 seconds ≈ 5.3 minutes</strong></p>
+<p>Key rule: bits vs. bytes — a "100 Mbps" connection downloads at 100 ÷ 8 = 12.5 MB/s. Internet speeds are always advertised in bits (lowercase b); file sizes are always in bytes (uppercase B). Confusing the two is a common source of "my internet seems slower than advertised."</p>
+
+<h3>Cloud Storage Planning</h3>
+<p>You have 5,000 photos averaging 8 MB each. How much cloud storage is needed?</p>
+<p>5,000 × 8 MB = 40,000 MB = <strong>40 GB (decimal)</strong></p>
+<p>In GiB (as some cloud dashboards display): 40,000,000,000 bytes ÷ 1,073,741,824 = 37.25 GiB</p>
+<p>A 50 GB plan provides comfortable headroom. Google One's 100 GB plan holds roughly 12,500 photos at 8 MB each, plus email and document storage. Video files are far larger: a 1-minute 4K clip at 60fps can run 400–500 MB.</p>
+<p>Source: IEC 80000-13 (binary prefixes); SI Brochure 9th edition (decimal prefixes). Last verified: May 2026.</p>
+
 <div style="margin:40px auto 0;max-width:720px;">
   <div style="border-top:1px solid var(--border);padding-top:32px;">
     <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.4rem;color:var(--text);margin-bottom:24px;letter-spacing:-0.3px;">Frequently Asked Questions</h2>
@@ -128,7 +148,7 @@
 </div>
 <div style="margin:32px auto;max-width:720px;padding:24px 28px;background:linear-gradient(135deg,var(--primary-soft,#ede9fe) 0%,var(--bg-card) 100%);border:1px solid var(--primary,#6366f1);border-radius:var(--radius);text-align:center;">
   <p style="color:var(--text);font-weight:600;margin:0 0 14px;font-size:1rem;">Convert between bits, bytes, KB, MB, GB, TB, PB and binary prefixes instantly.</p>
-  <a href="/#storage" class="btn-primary" style="text-decoration:none;display:inline-block;">⚡ Digital Storage Converter — Free</a>
+  <a href="/digital-storage-converter.html" class="btn-primary" style="text-decoration:none;display:inline-block;">⚡ Digital Storage Converter — Free</a>
 </div>
 <div style="margin:32px 0 0;padding:14px 18px;background:var(--bg-card);border-left:3px solid var(--border);border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
   <p style="margin:0;font-size:0.85rem;color:var(--text-muted);line-height:1.6;"><strong>Accuracy note:</strong> Conversion factors on SwiftConvertHub are sourced from NIST and IEC standards. Results are accurate for general use. For safety-critical or professional applications, verify results independently. <a href="disclaimer.html" style="color:var(--primary);">Full disclaimer →</a></p>

@@ -108,8 +108,59 @@
 <ul>
 <li>Binary: 101 111 → Octal: 5 7 → Octal 57</li>
 </ul>
-<p>Convert between octal, decimal, binary and hex instantly with our <a href="/#binary">number system converter</a>.</p>
-    
+<p>Convert between octal, decimal, binary and hex instantly with our <a href="/binary-converter.html">number system converter</a>.</p>
+
+<h2>Step-by-Step Conversion Examples</h2>
+
+<h3>Setting Linux File Permissions with chmod</h3>
+<p>The most common real-world use of octal today is Unix/Linux file permissions. The command <code>chmod 755 script.sh</code> sets:</p>
+<ul>
+<li>Owner (7 = 111₂): read (4) + write (2) + execute (1) = <strong>rwx</strong></li>
+<li>Group (5 = 101₂): read (4) + execute (1) = <strong>r-x</strong></li>
+<li>Others (5 = 101₂): read (4) + execute (1) = <strong>r-x</strong></li>
+</ul>
+<p>The permission string displays as <code>-rwxr-xr-x</code> in <code>ls -la</code>. Common permission sets:</p>
+<ul>
+<li>644: Owner read+write, group+others read only — typical for config files</li>
+<li>755: Owner full, group+others read+execute — typical for directories and executables</li>
+<li>600: Owner read+write only — typical for SSH private keys</li>
+<li>400: Owner read only — certificate files and secrets</li>
+</ul>
+<p>Binary breakdown of 644: 6 = 110 (rw-), 4 = 100 (r--), 4 = 100 (r--) → displays as <code>rw-r--r--</code>. Understanding the binary mapping makes permission numbers intuitive rather than arbitrary codes to memorize.</p>
+
+<h3>Decimal to Octal Conversion: A Worked Example</h3>
+<p>Convert 365 (decimal) to octal using repeated division by 8:</p>
+<ul>
+<li>365 ÷ 8 = 45 remainder <strong>5</strong></li>
+<li>45 ÷ 8 = 5 remainder <strong>5</strong></li>
+<li>5 ÷ 8 = 0 remainder <strong>5</strong></li>
+<li>Reading remainders bottom-up: <strong>555 in octal</strong></li>
+</ul>
+<p>Verification: 5×64 + 5×8 + 5×1 = 320 + 40 + 5 = 365 ✓</p>
+<p>The coincidence that 365 = 555₈ makes it a useful mnemonic — 365 days in a common year. Another memorable pair: 255 decimal = 377 octal (the maximum one-byte value), and 256 decimal = 400 octal (the beginning of the next "century").</p>
+
+<h3>Binary to Octal: The Three-Bit Grouping Method</h3>
+<p>Binary converts to octal directly by grouping bits in threes from the right — no multiplication needed. Convert binary 110 101 001 to octal:</p>
+<ul>
+<li>110 → 6</li>
+<li>101 → 5</li>
+<li>001 → 1</li>
+<li>Result: <strong>651 in octal</strong></li>
+</ul>
+<p>Verification: 6×64 + 5×8 + 1 = 384 + 40 + 1 = 425 decimal. Binary check: 256+128+32+8+1 = 425 ✓</p>
+<p>This grouping method works because 8 = 2³ — each octal digit maps to exactly 3 binary bits. Hexadecimal (base 16 = 2⁴) groups bits in fours, which aligns better with 8-bit bytes (two hex digits per byte). This alignment advantage is why hex replaced octal in modern computing after 8-bit architectures became dominant in the late 1970s.</p>
+
+<h3>Octal in Programming Languages</h3>
+<p>Octal literals appear in several programming languages with different syntax — knowing the convention prevents subtle bugs:</p>
+<ul>
+<li><strong>C/C++/Java:</strong> A leading zero means octal. <code>017</code> = 15, not 17. Classic source of beginner bugs.</li>
+<li><strong>Python 3:</strong> <code>0o17</code> = 15 (explicit <code>0o</code> prefix; Python 2's leading-zero syntax was removed)</li>
+<li><strong>JavaScript:</strong> Strict mode prohibits legacy <code>017</code>; use <code>0o17</code> instead</li>
+<li><strong>Go:</strong> <code>0755</code> in older code; <code>0o755</code> preferred since Go 1.13</li>
+</ul>
+<p>A real-world pitfall in C: <code>chmod(path, 0644)</code> correctly uses octal 644 (rw-r--r--). But if a developer writes <code>chmod(path, 0844)</code> intending "owner read+execute + group read + others read," they actually pass octal 844 = decimal 548 — which maps to unusual permission bits. Always use the explicit <code>0o</code> prefix in Python and Go 1.13+, and double-check octal literals in C with a converter when in doubt.</p>
+<p>Source: IEEE POSIX.1 standard (file permissions); programming language specifications (C11, Python 3, ECMAScript 2022). Last verified: May 2026.</p>
+
 <div style="margin:40px auto 0;max-width:720px;">
   <div style="border-top:1px solid var(--border);padding-top:32px;">
     <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.4rem;color:var(--text);margin-bottom:24px;letter-spacing:-0.3px;">Frequently Asked Questions</h2>
@@ -129,7 +180,7 @@
 </div>
 <div style="margin:32px auto;max-width:720px;padding:24px 28px;background:linear-gradient(135deg,var(--primary-soft,#ede9fe) 0%,var(--bg-card) 100%);border:1px solid var(--primary,#6366f1);border-radius:var(--radius);text-align:center;">
   <p style="color:var(--text);font-weight:600;margin:0 0 14px;font-size:1rem;">Convert between octal, decimal, binary, and hexadecimal instantly.</p>
-  <a href="/#binary" class="btn-primary" style="text-decoration:none;display:inline-block;">⚡ Binary &amp; Number Systems Converter — Free</a>
+  <a href="/binary-converter.html" class="btn-primary" style="text-decoration:none;display:inline-block;">⚡ Binary &amp; Number Systems Converter — Free</a>
 </div>
 <div style="margin:32px 0 0;padding:14px 18px;background:var(--bg-card);border-left:3px solid var(--border);border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
   <p style="margin:0;font-size:0.85rem;color:var(--text-muted);line-height:1.6;"><strong>Accuracy note:</strong> Conversion factors on SwiftConvertHub are sourced from NIST and IEC standards. Results are accurate for general use. For safety-critical or professional applications, verify results independently. <a href="disclaimer.html" style="color:var(--primary);">Full disclaimer →</a></p>

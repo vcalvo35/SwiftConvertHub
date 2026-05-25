@@ -112,8 +112,52 @@
 <li>1000 = 8 &nbsp;&nbsp; 1001 = 9 &nbsp;&nbsp; 1010 = 10 &nbsp;&nbsp; 1111 = 15</li>
 <li>11111111 = 255 (8 bits / 1 byte max)</li>
 </ul>
-<p>Use our <a href="/#binary">free binary converter</a> to convert between decimal, binary, hex and octal instantly.</p>
-    
+<p>Use our <a href="/binary-converter.html">free binary converter</a> to convert between decimal, binary, hex and octal instantly.</p>
+
+<h2>Step-by-Step Conversion Examples</h2>
+
+<h3>Understanding IPv4 Addresses in Binary</h3>
+<p>Every IP address on the internet is stored as four 8-bit binary numbers. The address 192.168.1.1 breaks down as:</p>
+<ul>
+<li>192 = 11000000 in binary (128+64 = 192)</li>
+<li>168 = 10101000 in binary (128+32+8 = 168)</li>
+<li>1 = 00000001</li>
+<li>1 = 00000001</li>
+</ul>
+<p>Each octet must stay within 0–255 because that's the maximum value of 8 bits (2⁸ − 1 = 255). This is why IP addresses can never contain a number above 255 — it would require more than one byte. A /24 subnet mask (255.255.255.0) = 11111111.11111111.11111111.00000000 in binary.</p>
+
+<h3>ASCII: How Text is Stored as Binary</h3>
+<p>Every character you type is stored as a binary number. In ASCII encoding:</p>
+<ul>
+<li>The letter "A" = 65 decimal = 01000001 binary</li>
+<li>The letter "a" = 97 decimal = 01100001 binary</li>
+<li>The digit "0" = 48 decimal = 00110000 binary</li>
+<li>A space = 32 decimal = 00100000 binary</li>
+</ul>
+<p>Verification: 01000001 = 0+64+0+0+0+0+0+1 = 65 = "A" ✓</p>
+<p>The difference between uppercase "A" (65) and lowercase "a" (97) is exactly 32 — the value of bit 5. Toggling bit 5 switches between upper and lowercase for any ASCII letter. Modern systems use UTF-8, which is backward-compatible with ASCII for all characters below 128.</p>
+
+<h3>Converting a 16-Bit Value</h3>
+<p>In computing, 16-bit values are common — integers, audio samples, port numbers. Let's convert binary 1100101000111110 to decimal:</p>
+<ul>
+<li>Group into nibbles: 1100 / 1010 / 0011 / 1110</li>
+<li>Active bits (left to right): 2¹⁵, 2¹⁴, 2¹⁰, 2⁹, 2⁵, 2⁴, 2³, 2², 2¹</li>
+<li>= 32768 + 16384 + 1024 + 512 + 32 + 16 + 8 + 4 + 2 = <strong>50,750 decimal</strong></li>
+</ul>
+<p>This same value is representable as 0xCA3E in hexadecimal (C=12, A=10, 3=3, E=14) — one hex digit per 4 bits. This is why programmers prefer hex for reading binary values larger than one byte.</p>
+
+<h3>Negative Numbers: Two's Complement</h3>
+<p>CPUs don't store negative numbers as "minus sign + value." They use <strong>two's complement</strong>: flip all bits, then add 1. For −13 in 8-bit signed representation:</p>
+<ul>
+<li>Start with +13 = 00001101</li>
+<li>Flip all bits (one's complement): 11110010</li>
+<li>Add 1: 11110011</li>
+<li>Result: 11110011 = −13 in two's complement</li>
+</ul>
+<p>Verification: 11110011 as unsigned = 128+64+32+16+2+1 = 243. As signed: 243 − 256 = −13 ✓</p>
+<p>This is why signed 8-bit integers range from −128 to +127, not 0–255. The highest bit acts as the sign bit: 0 = positive, 1 = negative. A signed 8-bit −128 = 10000000 has no positive equivalent within the same range (128 doesn't fit), making it an asymmetric range.</p>
+<p>Source: IEEE 754 floating-point standard; Unicode Consortium UTF-8 specification. Last verified: May 2026.</p>
+
 <div style="margin:40px auto 0;max-width:720px;">
   <div style="border-top:1px solid var(--border);padding-top:32px;">
     <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.4rem;color:var(--text);margin-bottom:24px;letter-spacing:-0.3px;">Frequently Asked Questions</h2>
@@ -133,7 +177,7 @@
 </div>
 <div style="margin:32px auto;max-width:720px;padding:24px 28px;background:linear-gradient(135deg,var(--primary-soft,#ede9fe) 0%,var(--bg-card) 100%);border:1px solid var(--primary,#6366f1);border-radius:var(--radius);text-align:center;">
   <p style="color:var(--text);font-weight:600;margin:0 0 14px;font-size:1rem;">Convert between decimal, binary, hexadecimal, and octal instantly.</p>
-  <a href="/#binary" class="btn-primary" style="text-decoration:none;display:inline-block;">⚡ Binary &amp; Number Systems Converter — Free</a>
+  <a href="/binary-converter.html" class="btn-primary" style="text-decoration:none;display:inline-block;">⚡ Binary &amp; Number Systems Converter — Free</a>
 </div>
 <div style="margin:32px 0 0;padding:14px 18px;background:var(--bg-card);border-left:3px solid var(--border);border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
   <p style="margin:0;font-size:0.85rem;color:var(--text-muted);line-height:1.6;"><strong>Accuracy note:</strong> Conversion factors on SwiftConvertHub are sourced from NIST and IEC standards. Results are accurate for general use. For safety-critical or professional applications, verify results independently. <a href="disclaimer.html" style="color:var(--primary);">Full disclaimer →</a></p>

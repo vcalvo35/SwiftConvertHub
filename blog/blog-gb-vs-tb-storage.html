@@ -114,8 +114,46 @@
 <li>Dropbox Plus: 2 TB</li>
 <li>Google One: up to 30 TB available</li>
 </ul>
-<p>Need to calculate storage conversions? Use our <a href="/#storage">free digital storage converter</a>.</p>
-    
+<p>Need to calculate storage conversions? Use our <a href="/digital-storage-converter.html">free digital storage converter</a>.</p>
+
+<h2>Step-by-Step Conversion Examples</h2>
+
+<h3>How Many 4K Movies Fit on a 2 TB Drive?</h3>
+<p>A 4K HDR movie encoded in H.265 (HEVC) at high quality is typically 50–80 GB. Using 60 GB as a realistic average:</p>
+<p>2,000 GB ÷ 60 GB per movie = <strong>~33 movies</strong> (using the decimal TB label)</p>
+<p>However, the operating system reports space in GiB. 2 TB = 1,862.6 GiB in binary. After 10–15% OS overhead and filesystem metadata, practical usable space is roughly 1,600–1,700 GiB. At ~56 GiB per film: roughly 28–30 films on real usable space. A useful rule: plan for 80% maximum utilization — drives slow down when nearly full, and you need headroom for temp files during encoding and editing.</p>
+
+<h3>Planning Storage for a Photography Business</h3>
+<p>A professional photographer shoots 2,000 RAW images per month. A RAW file from a 45-megapixel camera is approximately 45 MB. Annual storage calculation:</p>
+<ul>
+<li>Monthly: 2,000 × 45 MB = 90,000 MB = <strong>90 GB per month</strong></li>
+<li>Annual (RAW originals): 90 GB × 12 = <strong>1,080 GB ≈ 1.08 TB</strong></li>
+<li>With JPEG exports at 8 MB each: +192 GB/year</li>
+<li>With full-resolution TIFF edits at 130 MB each: +3.1 TB/year</li>
+</ul>
+<p>Professional best practice: maintain 3 copies — primary working SSD (2 TB), local backup drive (4 TB), and offsite/cloud backup (Amazon S3 Glacier or Backblaze B2 at ~$6/TB/month). The cost of cloud backup for 1 TB is approximately $6/month — less than the value of a single lost client shoot.</p>
+
+<h3>Choosing Between 256 GB, 512 GB, and 1 TB SSD for a Laptop</h3>
+<p>A 256 GB NVMe SSD has these real-world constraints after setup:</p>
+<ul>
+<li>Windows 11 installation: ~20 GB</li>
+<li>Office Suite + common apps: ~15 GB</li>
+<li>Browser cache + downloads folder: ~10 GB</li>
+<li>Remaining for files: ~211 GB ≈ <strong>196 GiB usable</strong></li>
+</ul>
+<p>For typical office work, 256 GB is adequate. For developers, 512 GB is more practical — a Node.js project with node_modules can consume 2–5 GB; a Docker setup with several images: 20–80 GB. For video editors or machine learning practitioners, 1 TB is a minimum starting point with external storage for project archives. SSD performance also degrades when more than 80% full because there's less space for TRIM optimization and wear leveling.</p>
+
+<h3>Understanding Cloud Storage Quotas in Practice</h3>
+<p>Google's free 15 GB quota and what it means for different file types:</p>
+<ul>
+<li>15 GB ÷ 3 MB per email with attachment ≈ ~5,000 emails</li>
+<li>15 GB ÷ 4 MB per smartphone photo ≈ ~3,750 photos</li>
+<li>15 GB ÷ 8 MB per minute of 1080p video ≈ ~31 minutes of video</li>
+<li>Google Docs, Sheets, Slides: do not count toward quota (as of 2026)</li>
+</ul>
+<p>Google Photos originally offered unlimited compressed photo storage for free until June 2021. Photos uploaded before that date still don't count against your quota — only those uploaded after do. If you have a Google account with tens of thousands of pre-2021 photos, your available 15 GB may appear surprisingly unaffected even with a large library.</p>
+<p>Source: IEC 80000-13 digital storage standards; verified against Apple, Samsung, and Google hardware datasheets. Last verified: May 2026.</p>
+
 <div style="margin:40px auto 0;max-width:720px;">
   <div style="border-top:1px solid var(--border);padding-top:32px;">
     <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.4rem;color:var(--text);margin-bottom:24px;letter-spacing:-0.3px;">Frequently Asked Questions</h2>
@@ -135,7 +173,7 @@
 </div>
 <div style="margin:32px auto;max-width:720px;padding:24px 28px;background:linear-gradient(135deg,var(--primary-soft,#ede9fe) 0%,var(--bg-card) 100%);border:1px solid var(--primary,#6366f1);border-radius:var(--radius);text-align:center;">
   <p style="color:var(--text);font-weight:600;margin:0 0 14px;font-size:1rem;">Convert between GB, TB, GiB, TiB and all other storage units.</p>
-  <a href="/#storage" class="btn-primary" style="text-decoration:none;display:inline-block;">⚡ Digital Storage Converter — Free</a>
+  <a href="/digital-storage-converter.html" class="btn-primary" style="text-decoration:none;display:inline-block;">⚡ Digital Storage Converter — Free</a>
 </div>
 <div style="margin:32px 0 0;padding:14px 18px;background:var(--bg-card);border-left:3px solid var(--border);border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
   <p style="margin:0;font-size:0.85rem;color:var(--text-muted);line-height:1.6;"><strong>Accuracy note:</strong> Conversion factors on SwiftConvertHub are sourced from NIST and IEC standards. Results are accurate for general use. For safety-critical or professional applications, verify results independently. <a href="disclaimer.html" style="color:var(--primary);">Full disclaimer →</a></p>

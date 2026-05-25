@@ -110,8 +110,47 @@
 <li><strong>MAC addresses</strong> on network devices (e.g. A1:B2:C3:D4:E5:F6)</li>
 <li><strong>File formats and encodings</strong> in low-level programming</li>
 </ul>
-<p>Convert hex to decimal, binary or octal instantly with our <a href="/#binary">free number system converter</a>.</p>
-    
+<p>Convert hex to decimal, binary or octal instantly with our <a href="/binary-converter.html">free number system converter</a>.</p>
+
+<h2>Step-by-Step Conversion Examples</h2>
+
+<h3>Decoding a Web Color: #3B82F6</h3>
+<p>The CSS color #3B82F6 (a shade of blue used widely in UI design) breaks down as three hex pairs — one per RGB channel:</p>
+<ul>
+<li>3B (red): 3×16 + 11 = 48 + 11 = <strong>59</strong> out of 255</li>
+<li>82 (green): 8×16 + 2 = 128 + 2 = <strong>130</strong> out of 255</li>
+<li>F6 (blue): 15×16 + 6 = 240 + 6 = <strong>246</strong> out of 255</li>
+</ul>
+<p>So #3B82F6 = RGB(59, 130, 246) — a strong blue with low red, moderate green, and high blue. There are exactly 16,777,216 possible web colors (256³), corresponding to six hex digits (two per channel). #FFFFFF = white (255,255,255); #000000 = black; #FF0000 = pure red.</p>
+
+<h3>Reading a Memory Address in a Debugger</h3>
+<p>A crash report shows address 0x00007FFE4A3C. The hex prefix tells a systems programmer the memory region instantly:</p>
+<ul>
+<li>Addresses 0x0000_0000 to 0x7FFF_FFFF → user space (below 2 GB boundary)</li>
+<li>Addresses 0xFFFF_8000_0000_0000 and above → kernel space (64-bit Linux)</li>
+<li>0x7FFE = 32,766 decimal — confirming this address is in user space</li>
+</ul>
+<p>In 64-bit Windows processes, user-mode addresses stay below 0x7FFF_FFFF_FFFF. Reading hex directly makes these region boundaries visible — 0x80000000 = exactly 2 GiB = the classic 32-bit user/kernel boundary — in a way that decimal (2,147,483,648) does not.</p>
+
+<h3>Converting Hex to Binary Directly</h3>
+<p>Every hex digit maps to exactly 4 binary bits (a nibble), making the conversion table worth memorizing:</p>
+<ul>
+<li>0 = 0000 &nbsp; 1 = 0001 &nbsp; 2 = 0010 &nbsp; 3 = 0011</li>
+<li>4 = 0100 &nbsp; 5 = 0101 &nbsp; 6 = 0110 &nbsp; 7 = 0111</li>
+<li>8 = 1000 &nbsp; 9 = 1001 &nbsp; A = 1010 &nbsp; B = 1011</li>
+<li>C = 1100 &nbsp; D = 1101 &nbsp; E = 1110 &nbsp; F = 1111</li>
+</ul>
+<p>Converting 0xDEAD to binary: D=1101, E=1110, A=1010, D=1101 → 1101 1110 1010 1101. To decimal: 8192+4096+2048+1024+512+256+128+32+8+4+1 = 57,005. The 0xDEAD value famously appears in embedded systems debugging as a sentinel value for uninitialized memory. 0xBEEF, 0xCAFE, and 0xFACE are similar mnemonics used as magic numbers.</p>
+
+<h3>Hex in Security and Networking</h3>
+<p>A MAC address identifies a network interface uniquely worldwide. The address A1:B2:C3:D4:E5:F6 translates as:</p>
+<ul>
+<li>First 3 bytes (OUI — Organizationally Unique Identifier): A1:B2:C3 — identifies the hardware manufacturer</li>
+<li>Last 3 bytes: D4:E5:F6 — device-specific identifier assigned by the manufacturer</li>
+</ul>
+<p>SHA-256 cryptographic hashes are 64 hex characters = 256 bits = 32 bytes. Git commit hashes are 40 hex characters (SHA-1 = 160 bits). UUID v4 identifiers follow the pattern xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx — all hex digits — providing 122 bits of randomness (approximately 5.3×10³⁶ unique values). Every time you install a package, clone a repo, or send a secure HTTPS request, you're working with hexadecimal behind the scenes.</p>
+<p>Source: IEEE 802 MAC address standard; W3C CSS Color Level 4 specification. Last verified: May 2026.</p>
+
 <div style="margin:40px auto 0;max-width:720px;">
   <div style="border-top:1px solid var(--border);padding-top:32px;">
     <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.4rem;color:var(--text);margin-bottom:24px;letter-spacing:-0.3px;">Frequently Asked Questions</h2>
@@ -131,7 +170,7 @@
 </div>
 <div style="margin:32px auto;max-width:720px;padding:24px 28px;background:linear-gradient(135deg,var(--primary-soft,#ede9fe) 0%,var(--bg-card) 100%);border:1px solid var(--primary,#6366f1);border-radius:var(--radius);text-align:center;">
   <p style="color:var(--text);font-weight:600;margin:0 0 14px;font-size:1rem;">Convert between hexadecimal, decimal, binary, and octal instantly.</p>
-  <a href="/#binary" class="btn-primary" style="text-decoration:none;display:inline-block;">⚡ Binary &amp; Number Systems Converter — Free</a>
+  <a href="/binary-converter.html" class="btn-primary" style="text-decoration:none;display:inline-block;">⚡ Binary &amp; Number Systems Converter — Free</a>
 </div>
 <div style="margin:32px 0 0;padding:14px 18px;background:var(--bg-card);border-left:3px solid var(--border);border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
   <p style="margin:0;font-size:0.85rem;color:var(--text-muted);line-height:1.6;"><strong>Accuracy note:</strong> Conversion factors on SwiftConvertHub are sourced from NIST and IEC standards. Results are accurate for general use. For safety-critical or professional applications, verify results independently. <a href="disclaimer.html" style="color:var(--primary);">Full disclaimer →</a></p>
