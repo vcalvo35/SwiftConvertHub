@@ -1,0 +1,4 @@
+*.py
+*.ps1
+blog_config.json
+commit_msg*.txt

@@ -396,6 +396,7 @@
             '<li><a href="/privacy.html" data-i18n="footer_privacy">Privacy Policy</a></li>' +
             '<li><a href="/terms.html" data-i18n="footer_terms">Terms of Use</a></li>' +
             '<li><a href="/disclaimer.html">Disclaimer</a></li>' +
+            '<li><a href="/cookies.html">Cookie Policy</a></li>' +
           '</ul>' +
         '</div>' +
       '</div>' +

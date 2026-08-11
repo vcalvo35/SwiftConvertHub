@@ -4,3 +4,5 @@ Thumbs.db
 node_modules/
 .vercel/
 blog_config.json
+*.ps1
+commit_msg*.txt
