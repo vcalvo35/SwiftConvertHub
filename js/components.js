@@ -28,6 +28,11 @@
       hero_h1_span: 'Instantly',
       hero_p: 'Free unit converters for length, weight, temperature, digital storage and binary numbers. NIST-sourced accuracy to 10 significant digits. No sign-up required.',
       hero_cta: '\u26a1 Start Converting',
+      hero2_h1: 'Unit converter with exact NIST and IEC factors',
+      hero2_more: 'More units in each converter below',
+      fac_h2: 'Conversion factors we use',
+      fac_p: 'Exact values come from the defining standard. The converters never round until the result is displayed.',
+      fac_th1: 'Conversion', fac_th2: 'Factor', fac_th3: 'Status', fac_th4: 'Source',
       hero_cta2: 'Learn More',
       stat1_label: 'Categories',
       stat2_label: 'Unit Types',
@@ -188,6 +193,11 @@
       hero_h1_span: 'Instant\u00e1neamente',
       hero_p: 'Conversores de unidades gratuitos para longitud, peso, temperatura, almacenamiento digital y sistemas num\u00e9ricos. Precisi\u00f3n de 10 d\u00edgitos, factores de conversi\u00f3n seg\u00fan NIST. Sin registro.',
       hero_cta: '\u26a1 Comenzar a Convertir',
+      hero2_h1: 'Conversor de unidades con factores exactos del NIST y la IEC',
+      hero2_more: 'Más unidades en cada conversor de abajo',
+      fac_h2: 'Factores de conversión que usamos',
+      fac_p: 'Los valores exactos vienen del estándar que los define. Los conversores no redondean hasta mostrar el resultado.',
+      fac_th1: 'Conversión', fac_th2: 'Factor', fac_th3: 'Estado', fac_th4: 'Fuente',
       hero_cta2: 'M\u00e1s Informaci\u00f3n',
       stat1_label: 'Categor\u00edas',
       stat2_label: 'Tipos de Unidades',
@@ -352,7 +362,7 @@
       '</ul>' +
       '<div class="nav-right">' +
         '<button class="lang-btn" id="lang-btn" aria-label="Switch language">' + (currentLang === 'en' ? 'ES' : 'EN') + '</button>' +
-        '<button class="theme-btn" id="theme-btn" aria-label="Toggle theme" title="Toggle dark/light mode">\ud83c\udf19</button>' +
+        '<button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode" title="Toggle dark/light mode"></button>' +
         '<button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">' +
           '<span></span><span></span><span></span>' +
         '</button>' +
@@ -413,12 +423,10 @@
   '</footer>';
 
     /* ---- Inject ---- */
-  const NETWORK_BAR_HTML = '<div style="background:#1a1a2e;color:#a0a8c8;font-size:12px;text-align:center;padding:6px 16px;letter-spacing:0.02em;">' +
-    'More free tools:&nbsp;' +
-    '<a href="https://instantlinkhub.com" target="_blank" rel="noopener" style="color:#7eb8f7;text-decoration:none;margin:0 6px;">InstantLinkHub</a>&middot;' +
-    '<a href="https://feexio.com" target="_blank" rel="noopener" style="color:#7eb8f7;text-decoration:none;margin:0 6px;">Feexio</a>&middot;' +
-    '<a href="https://swiftconverthub.com" target="_blank" rel="noopener" style="color:#c8d0e8;text-decoration:none;margin:0 6px;font-weight:600;">SwiftConvertHub</a>' +
-    '</div>';
+  const NETWORK_BAR_HTML = '<div class="tsl-bar"><div class="container"><span>Free tools by ToolSynergyLab:</span><a href="https://instantlinkhub.com" target="_blank" rel="noopener">InstantLinkHub</a><a href="https://feexio.com" target="_blank" rel="noopener">Feexio</a><a href="https://swiftconverthub.com" aria-current="true">SwiftConvertHub</a></div></div>';
+
+  const SUN_SVG = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>';
+  const MOON_SVG = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>';
 
   function updateLogos(theme) {
     var navImg = document.getElementById('nav-logo-img');
@@ -444,13 +452,15 @@
     const themeBtn = document.getElementById('theme-btn');
     if (themeBtn) {
       const t = document.documentElement.getAttribute('data-theme');
-      themeBtn.textContent = t === 'dark' ? '\u2600\ufe0f' : '\ud83c\udf19';
+      themeBtn.innerHTML = t === 'dark' ? SUN_SVG : MOON_SVG;
+      themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
       themeBtn.addEventListener('click', function () {
         const cur = document.documentElement.getAttribute('data-theme');
         const next = cur === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('sch-theme', next);
-        themeBtn.textContent = next === 'dark' ? '\u2600\ufe0f' : '\ud83c\udf19';
+        themeBtn.innerHTML = next === 'dark' ? SUN_SVG : MOON_SVG;
+        themeBtn.setAttribute('aria-label', next === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
         updateLogos(next);
       });
     }
