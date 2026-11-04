@@ -377,7 +377,7 @@
       '<div class="footer-grid">' +
         '<div class="footer-brand">' +
           '<a href="/" style="text-decoration:none;display:inline-block;margin-bottom:12px;" aria-label="SwiftConvertHub">' +
-            '<img src="/assets/logo-footer-light.png" alt="SwiftConvertHub" id="footer-logo-img" style="height:32px;width:auto;display:block;" />' +
+            '<img src="/assets/logo-nav-light.png" alt="SwiftConvertHub" id="footer-logo-img" style="height:36px;width:auto;display:block;" />' +
           '</a>' +
           '<p data-i18n="footer_tagline">Free, instant unit conversions for everyone. No sign-up, no ads clutter \u2014 just fast, accurate results.</p>' +
           '<div style="display:flex;gap:12px;margin-top:16px;align-items:center;">' +
@@ -433,7 +433,7 @@
     var footerImg = document.getElementById('footer-logo-img');
     var isDark = theme === 'dark';
     if (navImg) navImg.src = isDark ? '/assets/logo-nav-dark.png' : '/assets/logo-nav-light.png';
-    if (footerImg) footerImg.src = isDark ? '/assets/logo-footer-dark.png' : '/assets/logo-footer-light.png';
+    if (footerImg) footerImg.src = isDark ? '/assets/logo-nav-dark.png' : '/assets/logo-nav-light.png';
   }
 
   function inject() {
