@@ -98,6 +98,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); }
   background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 24px 24px;
   border-bottom: 1px solid var(--border-strong);
+  overflow: hidden;
 }
 .sch-hero .container { max-width: 1100px; padding-top: 48px; padding-bottom: 56px; display: flex; flex-direction: column; gap: 26px; }
 .sch-hero h1 { margin: 0; font-size: 1.3rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0; }
@@ -121,8 +122,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); }
 .sch-out { flex: 1 1 420px; min-width: 0; }
 .sch-out output { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; }
 .sch-num {
-  font-size: clamp(3.5rem, 9vw, 8rem); line-height: .95; font-weight: 800; font-stretch: 62%; letter-spacing: -0.01em; color: var(--text);
-  background: linear-gradient(transparent 58%, var(--highlight) 58%, var(--highlight) 92%, transparent 92%); padding: 0 6px; word-break: break-all;
+  font-size: var(--num-size, clamp(3rem, 8vw, 7rem)); line-height: .95; white-space: nowrap; font-weight: 800; font-stretch: 62%; letter-spacing: -0.01em; color: var(--text);
+  background: linear-gradient(transparent 58%, var(--highlight) 58%, var(--highlight) 92%, transparent 92%); padding: 0 6px;
 }
 .sch-unit { font-size: 2rem; font-weight: 700; color: var(--primary); }
 .sch-ruler { position: relative; height: 54px; border-top: 2px solid var(--text); margin-top: 6px; }
@@ -132,7 +133,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); }
 .sch-marker { position: absolute; top: -10px; width: 4px; height: 30px; background: var(--primary); transform: translateX(-2px); transition: left .2s ease; }
 .sch-note { margin: 0; color: var(--text-muted); font-size: 15px; }
 .sch-more { margin: 0; font-weight: 600; }
-.sch-hero input:focus-visible, .sch-tabs button:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.sch-field input:focus, .sch-field input:focus-visible { outline: none; box-shadow: none; }
+.sch-field:focus-within { outline: 3px solid var(--primary); outline-offset: 2px; }
+.sch-tabs button:focus-visible { outline: 3px solid var(--primary); outline-offset: -3px; }
 
 /* ---- Converter sections: flat technical cards ---- */
 .section-header h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 800; font-stretch: 70%; letter-spacing: 0; color: var(--text); }

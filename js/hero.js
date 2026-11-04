@@ -56,7 +56,14 @@
     var v = parseFloat(String(input.value).replace(',', '.'));
     var r = isNaN(v) ? null : c.fn(v);
     $('hc-num').textContent = r === null ? '—' : fmt(r);
-    var max = r === null ? 10 : Math.max(Math.ceil(Math.abs(r) / 10) * 10, 10);
+    var len = $('hc-num').textContent.length;
+    $('hc-num').style.setProperty('--num-size', len <= 6 ? 'clamp(3.5rem, 12vw, 8rem)' : len <= 9 ? 'clamp(2.8rem, 9vw, 6.5rem)' : len <= 12 ? 'clamp(2.2rem, 7vw, 5rem)' : 'clamp(1.8rem, 5.5vw, 3.8rem)');
+    var max = 10;
+    if (r !== null && Math.abs(r) > 0) {
+      var pw = Math.pow(10, Math.floor(Math.log10(Math.abs(r))));
+      max = [1, 2, 5, 10].map(function (k) { return k * pw; }).filter(function (m) { return m >= Math.abs(r); })[0];
+      if (max < 10 && Math.abs(r) <= 10) max = 10;
+    }
     var ticks = $('hc-ticks');
     ticks.innerHTML = '';
     for (var i = 0; i <= 10; i++) {
@@ -66,7 +73,7 @@
       var line = document.createElement('i');
       line.style.height = (i % 5 === 0 ? 18 : 10) + 'px';
       var lab = document.createElement('span');
-      lab.textContent = fmt(Math.round(max * i / 10 * 100) / 100);
+      if (i % 5 === 0) lab.textContent = new Intl.NumberFormat(lang() === 'es' ? 'es-ES' : 'en-US', { notation: 'compact', maximumFractionDigits: 2 }).format(max * i / 10);
       d.appendChild(line); d.appendChild(lab); ticks.appendChild(d);
     }
     $('hc-marker').style.left = (r === null ? 0 : Math.min(Math.abs(r) / max * 100, 100)) + '%';
