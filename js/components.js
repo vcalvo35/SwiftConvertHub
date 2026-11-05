@@ -500,6 +500,27 @@
   const CONSENT_KEY = 'sch_cookie_consent';
   if (localStorage.getItem(CONSENT_KEY)) return;
 
+  // Apply the visitor's choice to Google tags (Consent Mode v2) and AdSense
+  function applyConsentChoice(value) {
+    var v = value === 'declined' ? 'denied' : 'granted';
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', { ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v });
+    }
+    if (v === 'denied') { (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1; }
+  }
+  // In the EEA, UK and Switzerland, Google's certified consent message (TCF) takes over: our banner stays hidden there
+  function whenGdprKnown(cb) {
+    var done = false, tries = 0;
+    function finish(applies) { if (!done) { done = true; cb(applies); } }
+    (function poll() {
+      if (typeof window.__tcfapi === 'function') {
+        window.__tcfapi('addEventListener', 2, function (data, ok) { if (ok && data) finish(!!data.gdprApplies); });
+        setTimeout(function () { finish(false); }, 2500);
+      } else if (++tries < 15) { setTimeout(poll, 100); }
+      else { finish(false); }
+    })();
+  }
+
   function createBanner() {
     const banner = document.createElement('div');
     banner.id = 'cookie-consent-banner';
@@ -517,8 +538,7 @@
 
     const text = document.createElement('p');
     text.style.cssText = 'margin:0;flex:1;min-width:240px;';
-    text.innerHTML = 'We use cookies and similar technologies to serve ads and analyse traffic. '
-      + 'By clicking <strong>Accept</strong> you consent to our use of cookies. '
+    text.innerHTML = 'We use cookies to measure traffic and to show ads. Decline turns off analytics cookies and personalized ads. '
       + '<a href="/privacy.html" style="color:#60a5fa;text-decoration:underline;">Privacy Policy</a>';
 
     const btnGroup = document.createElement('div');
@@ -536,6 +556,7 @@
       btn.addEventListener('mouseout', function () { this.style.opacity = '1'; });
       btn.addEventListener('click', function () {
         localStorage.setItem(CONSENT_KEY, value);
+        applyConsentChoice(value);
         banner.style.transition = 'opacity 0.3s';
         banner.style.opacity = '0';
         setTimeout(function () { banner.remove(); }, 320);
@@ -552,10 +573,11 @@
     document.body.appendChild(banner);
   }
 
+  function start() { whenGdprKnown(function (gdprApplies) { if (!gdprApplies) createBanner(); }); }
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', createBanner);
+    document.addEventListener('DOMContentLoaded', start);
   } else {
-    createBanner();
+    start();
   }
 })();
 
